@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You | DFWIN International</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        slate: {
+                            800: '#073B7A',
+                            900: '#04254E',
+                            950: '#021630',
+                        },
+                        gray: {
+                            800: '#052A5A',
+                            900: '#04254E',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #04254E;
+            color: #f8fafc;
+        }
+        .glass-nav {
+            background: rgba(4, 37, 78, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .hero-bg {
+            background-image: linear-gradient(rgba(4, 37, 78, 0.85), rgba(4, 37, 78, 0.98)), url('https://images.unsplash.com/photo-1548574505-5e239809ee19?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #22d3ee, #3b82f6, #8b5cf6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+    </style>
+</head>
+<body class="antialiased overflow-x-hidden min-h-screen flex flex-col">
+
+    <!-- Minimal Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-center md:justify-start items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="images/dfwin_logo_dark.jpg" alt="DFWIN Logo" class="h-12 w-24 object-cover rounded-[50%] mix-blend-screen">
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="flex-grow flex items-center justify-center pt-28 pb-12 px-4 sm:px-6 lg:px-8 hero-bg">
+        <div class="max-w-3xl w-full text-center">
+            
+            <div class="glass-card p-10 md:p-16 rounded-3xl shadow-2xl relative overflow-hidden">
+                <!-- Decorative Elements -->
+                <div class="absolute -top-24 -right-24 w-48 h-48 bg-cyan-500 rounded-full mix-blend-screen filter blur-[80px] opacity-20"></div>
+                <div class="absolute -bottom-24 -left-24 w-48 h-48 bg-blue-600 rounded-full mix-blend-screen filter blur-[80px] opacity-20"></div>
+                
+                <div class="relative z-10">
+                    <!-- Success Icon -->
+                    <div class="w-20 h-20 bg-green-500/10 border border-green-500/30 rounded-full flex items-center justify-center mx-auto mb-8">
+                        <svg class="w-10 h-10 text-green-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                    </div>
+
+                    <h1 class="text-4xl md:text-5xl font-bold mb-6">Request Successfully Received.</h1>
+                    
+                    <p class="text-xl text-gray-300 mb-8 leading-relaxed">
+                        Thank you for reaching out. You have just taken the crucial first step toward <span class="gradient-text font-semibold">accelerating your global growth</span>.
+                    </p>
+
+                    <p class="text-gray-400 mb-10 leading-relaxed max-w-2xl mx-auto">
+                        A dedicated sourcing strategist is currently reviewing your operational requirements against our audited manufacturing network. We will be in touch shortly with your custom match report and next steps.
+                    </p>
+
+                    <div class="p-8 bg-slate-900/50 rounded-2xl border border-white/5 mb-10">
+                        <h3 class="text-lg font-bold text-white mb-3">Your Immediate Next Step:</h3>
+                        <p class="text-gray-400 mb-6 text-sm">Download our complete 2026 Capability Statement to review our full logistics footprint, use cases, and quality control standards.</p>
+                        
+                        <a href="#" class="inline-flex items-center justify-center gap-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white px-8 py-4 rounded-xl font-bold transition-all duration-300 shadow-[0_0_20px_rgba(6,182,212,0.4)] hover:shadow-[0_0_35px_rgba(6,182,212,0.7)] hover:-translate-y-1 w-full sm:w-auto">
+                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                            Download 2026 Capability Statement
+                        </a>
+                    </div>
+
+                    <a href="index.html" class="text-gray-400 hover:text-cyan-400 transition-colors font-medium text-sm inline-flex items-center gap-2 border-b border-transparent hover:border-cyan-400 pb-0.5">
+                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18"></path></svg>
+                        Return to Homepage
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
