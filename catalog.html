@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exhaustive Product Catalog | DFWIN International</title>
+    <meta name="description" content="Browse our meticulously sourced catalog of Technology, Marine, and Hospitality products, ready for immediate global logistics routing.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#020b18',
+                        panel: '#04152d',
+                        accent: '#06b6d4',
+                        primary: '#3b82f6',
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-color: #020b18;
+            color: #f8fafc;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+        .mesh-bg {
+            background-color: #020b18;
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(34, 211, 238, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+        .glass-nav {
+            background: rgba(4, 21, 45, 0.6);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.02);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        .glass-card:hover {
+            transform: translateY(-8px);
+            background: rgba(255, 255, 255, 0.05);
+            border-color: rgba(34, 211, 238, 0.4);
+            box-shadow: 0 15px 35px -10px rgba(6, 182, 212, 0.25);
+        }
+        .catalog-img {
+            background-color: white; 
+        }
+        .placeholder-overlay {
+            position: absolute;
+            inset: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(255, 255, 255, 0.6);
+            padding: 1rem;
+            text-align: center;
+            opacity: 1;
+            pointer-events: none;
+        }
+        .placeholder-text {
+            background: rgba(4, 21, 45, 0.9);
+            color: #22d3ee;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-weight: 800;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            border: 1px solid rgba(34, 211, 238, 0.5);
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+            max-width: 90%;
+        }
+    </style>
+</head>
+<body class="mesh-bg antialiased flex flex-col min-h-screen">
+
+    <!-- Global Navigation -->
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img src="images/dfwin_logo_dark.jpg" alt="DFWIN Logo" class="w-32 h-16 rounded-[50%] mix-blend-screen object-cover shadow-[0_0_15px_rgba(34,211,238,0.2)]">
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide">Home</a>
+                    <a href="catalog.html" class="text-white border-b-2 border-cyan-400 pb-1 text-sm font-semibold tracking-wide">Product Catalog</a>
+                    <a href="about.html" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide">About Us</a>
+                    <a href="solution-portal.html?action=consult" class="bg-cyan-500 hover:bg-cyan-400 text-dark px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.3)] text-sm">Consult an Expert</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Interactive Data-Driven Product Catalog -->
+    <main class="flex-grow pt-32 pb-24 relative overflow-hidden" 
+             x-data="{ 
+                filter: 'all',
+                products: [
+                    // TECHNOLOGY
+                    { id: 'tech-safe', category: 'technology', name: 'Electronic Hotel Safe', desc: 'High-security digital keypad safes. ADA compliant options available for global hotel chains.', image: 'images/placeholder_tech_safe.png', isPlaceholder: true },
+                    { id: 'tech-kettle', category: 'technology', name: 'Stainless Steel Kettle', desc: '0.8L - 1.2L capacity, 304 stainless steel. Concealed heating element with double-wall anti-scald body.', image: 'images/placeholder_tech_kettle.png', isPlaceholder: true },
+                    { id: 'tech-hairdryer', category: 'technology', name: 'Premium Hair Dryers', desc: 'Low-noise motor with advanced overheating protection. Wall-mounted and drawer models available.', image: 'images/placeholder_tech_hairdryer.png', isPlaceholder: true },
+                    { id: 'tech-rfid-card', category: 'technology', name: 'RFID Key Cards', desc: 'Secure PVC/PETG cards optimized for access control and cashless payment integration.', image: 'images/placeholder_tech_rfid.png', isPlaceholder: true },
+                    { id: 'tech-rfid-fob', category: 'technology', name: 'RFID Keyfobs', desc: 'Durable ABS construction for high-traffic secure access points.', image: 'images/placeholder_tech_rfid.png', isPlaceholder: true },
+                    { id: 'tech-rfid-wrist', category: 'technology', name: 'RFID Wristbands', desc: 'Waterproof silicone wristbands perfect for pool, spa, and resort access.', image: 'images/placeholder_tech_rfid.png', isPlaceholder: true },
+                    { id: 'tech-led', category: 'technology', name: 'Professional LED Lamps', desc: 'Energy-saving GU10 LED bulbs designed specifically for hospitality lighting standards.', image: 'images/placeholder_tech_lamp.png', isPlaceholder: true },
+                    { id: 'tech-stanchion', category: 'technology', name: 'Retractable Belt Stanchions', desc: 'Heavy-duty queue management posts with slow-retract safety belts.', image: 'images/placeholder_tech_stanchion.png', isPlaceholder: true },
+                    
+                    // MARINE
+                    { id: 'marine-laundry', category: 'marine', name: 'Industrial Laundry Cages', desc: 'Heavy-duty 304 stainless steel carts. Designed for high-volume commercial laundry and marine environments.', image: 'images/placeholder_marine_laundry.png', isPlaceholder: true },
+                    { id: 'marine-galley', category: 'marine', name: 'Galley Trolleys', desc: '2-tier and 3-tier models featuring marine-edge spill prevention construction.', image: 'images/placeholder_marine_trolley.png', isPlaceholder: true },
+                    { id: 'marine-platform', category: 'marine', name: 'Platform Trucks', desc: 'Industrial 304 stainless steel trucks equipped with non-marking marine bumpers.', image: 'images/placeholder_marine_truck.png', isPlaceholder: true },
+                    { id: 'marine-speedrack', category: 'marine', name: 'Cooks Speed Racks', desc: '3-shelf and 7-shelf highly durable 316 stainless steel racks for harsh galley conditions.', image: 'images/placeholder_marine_speedrack.png', isPlaceholder: true },
+                    { id: 'marine-linen', category: 'marine', name: 'Foldable Linen Carts', desc: 'Space-saving stackable designs perfect for tight marine corridors.', image: 'images/placeholder_marine_laundry.png', isPlaceholder: true },
+                    
+                    // HOSPITALITY
+                    { id: 'hosp-minibar', category: 'hospitality', name: 'Minibar Fridge (30L-65L)', desc: 'Compressor, thermoelectric, and absorption models. Silent operation with glass or solid doors.', image: 'images/placeholder_hosp_minibar.png', isPlaceholder: true },
+                    { id: 'hosp-melamine', category: 'hospitality', name: 'Premium Melamine Tableware', desc: 'A5 grade 100% melamine. Scratch-resistant, highly durable plates and bowls.', image: 'images/placeholder_hosp_melamine.png', isPlaceholder: true },
+                    { id: 'hosp-housekeeping', category: 'hospitality', name: 'Housekeeping Carts', desc: 'Lightweight aluminum frames with ergonomic handles and heavy-duty casters.', image: 'images/placeholder_hosp_cart.png', isPlaceholder: true },
+                    { id: 'hosp-bellman', category: 'hospitality', name: 'Bellman / Luggage Carts', desc: 'Premium stainless steel construction available in luxury Gold or Silver finishes.', image: 'images/placeholder_hosp_cart.png', isPlaceholder: true },
+                    { id: 'hosp-trash', category: 'hospitality', name: 'Soft-Close Trash Cans', desc: 'Dual-compartment options with integrated wipe dispensers for public areas.', image: 'images/placeholder_hosp_trash.png', isPlaceholder: true },
+                    { id: 'hosp-textile', category: 'hospitality', name: 'Luxury Hotel Textiles', desc: '600 GSM Turkish cotton bath towels and premium Jacquard woven pool towels.', image: 'images/placeholder_hosp_textile.png', isPlaceholder: true },
+                    { id: 'hosp-china', category: 'hospitality', name: 'Fine Chinaware & 304 Flatware', desc: 'Elegant dining sets engineered for commercial dishwasher durability.', image: 'images/placeholder_hosp_melamine.png', isPlaceholder: true }
+                ]
+             }">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
+                <div class="max-w-2xl mb-6 md:mb-0">
+                    <h1 class="text-4xl md:text-5xl font-display font-bold mb-4 text-white">Our Complete Catalog</h1>
+                    <p class="text-gray-400">Our meticulously sourced and engineered catalog. Browse the categories to instantly send an order or request an engineering consultation.</p>
+                </div>
+                
+                <!-- Alpine.js Filter Tabs -->
+                <div class="flex flex-wrap gap-2 p-1.5 glass-card rounded-xl bg-panel/30">
+                    <button @click="filter = 'all'" :class="filter === 'all' ? 'bg-cyan-500 text-dark shadow-md' : 'text-gray-400 hover:text-white'" class="px-5 py-2 rounded-lg text-sm font-bold transition-all">All</button>
+                    <button @click="filter = 'technology'" :class="filter === 'technology' ? 'bg-cyan-500 text-dark shadow-md' : 'text-gray-400 hover:text-white'" class="px-5 py-2 rounded-lg text-sm font-bold transition-all">Technology</button>
+                    <button @click="filter = 'marine'" :class="filter === 'marine' ? 'bg-cyan-500 text-dark shadow-md' : 'text-gray-400 hover:text-white'" class="px-5 py-2 rounded-lg text-sm font-bold transition-all">Marine</button>
+                    <button @click="filter = 'hospitality'" :class="filter === 'hospitality' ? 'bg-cyan-500 text-dark shadow-md' : 'text-gray-400 hover:text-white'" class="px-5 py-2 rounded-lg text-sm font-bold transition-all">Hospitality</button>
+                </div>
+            </div>
+            
+            <!-- Dynamic Grid Rendered via Alpine.js -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                
+                <template x-for="product in products" :key="product.id">
+                    <div x-show="filter === 'all' || filter === product.category" 
+                         x-transition:enter="transition ease-out duration-300"
+                         x-transition:enter-start="opacity-0 transform scale-95"
+                         x-transition:enter-end="opacity-100 transform scale-100"
+                         class="glass-card rounded-2xl overflow-hidden flex flex-col h-full bg-panel/20">
+                         
+                        <!-- Image Container -->
+                        <div class="catalog-img w-full h-56 p-4 flex items-center justify-center relative overflow-hidden group">
+                            <!-- Image -->
+                            <img :src="product.image" :alt="product.name" class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700 opacity-90">
+                            
+                            <!-- CSS text overlay for placeholders -->
+                            <template x-if="product.isPlaceholder">
+                                <div class="placeholder-overlay">
+                                    <div class="placeholder-text">Placeholder for DFWIN original product image</div>
+                                </div>
+                            </template>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="p-5 flex flex-col flex-grow bg-panel/50">
+                            <span class="text-cyan-400 text-[10px] font-bold uppercase tracking-widest mb-1" x-text="product.category"></span>
+                            <h3 class="text-lg font-bold mb-2 text-white leading-tight" x-text="product.name"></h3>
+                            <p class="text-gray-400 text-xs mb-6 flex-grow leading-relaxed" x-text="product.desc"></p>
+                            
+                            <div class="grid grid-cols-2 gap-2 mt-auto">
+                                <a :href="`solution-portal.html?product=${product.id}&action=order`" class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white py-2 rounded-lg text-center text-xs font-bold transition-all shadow-lg">Order</a>
+                                <a :href="`solution-portal.html?product=${product.id}&action=consult`" class="border border-white/10 hover:border-white/30 text-gray-300 hover:text-white py-2 rounded-lg text-center text-xs font-bold transition-all bg-white/5">Consult</a>
+                            </div>
+                        </div>
+                    </div>
+                </template>
+
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-12 glass border-t border-white/10 text-center relative z-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-gray-400 mb-6 font-medium tracking-wide">&copy; 2026 DFWIN International. We develop the most effective global supply chain.</p>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a href="catalog.html" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Order Products</a>
+                <a href="solution-portal.html?action=engineering" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Engineer New Product</a>
+                <a href="solution-portal.html?action=consult" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Request Consultation</a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
