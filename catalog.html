@@ -28,7 +28,6 @@
                         accent: '#06b6d4',
                         primary: '#3b82f6'
                     },
-
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Outfit', 'sans-serif']
@@ -53,7 +52,6 @@
 
         .mesh-bg {
             background-color: #020b18;
-
             background-image:
                 radial-gradient(
                     at 0% 0%,
@@ -65,7 +63,6 @@
                     rgba(59, 130, 246, 0.15) 0px,
                     transparent 50%
                 );
-
             background-attachment: fixed;
         }
 
@@ -79,20 +76,14 @@
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-
-            transition:
-                all 0.4s
-                cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
         .glass-card:hover {
             transform: translateY(-8px);
             background: rgba(255, 255, 255, 0.05);
             border-color: rgba(34, 211, 238, 0.4);
-
-            box-shadow:
-                0 15px 35px -10px
-                rgba(6, 182, 212, 0.25);
+            box-shadow: 0 15px 35px -10px rgba(6, 182, 212, 0.25);
         }
 
         .catalog-img {
@@ -102,51 +93,34 @@
         .placeholder-overlay {
             position: absolute;
             inset: 0;
-
             display: flex;
             align-items: center;
             justify-content: center;
-
             background: rgba(255, 255, 255, 0.6);
-
             padding: 1rem;
             text-align: center;
-
-            opacity: 1;
             pointer-events: none;
         }
 
         .placeholder-text {
             background: rgba(4, 21, 45, 0.9);
             color: #22d3ee;
-
             padding: 0.5rem 1rem;
-
             border-radius: 0.5rem;
-
             font-weight: 800;
             font-size: 0.75rem;
-
             text-transform: uppercase;
             letter-spacing: 0.05em;
-
             border: 1px solid rgba(34, 211, 238, 0.5);
-
-            box-shadow:
-                0 4px 15px
-                rgba(0, 0, 0, 0.3);
-
+            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
             max-width: 90%;
         }
     </style>
 </head>
 
-
 <body class="mesh-bg antialiased flex flex-col min-h-screen">
 
-
     <!-- Global Navigation -->
-
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -154,57 +128,43 @@
             <div class="flex justify-between items-center h-20">
 
                 <div class="flex-shrink-0 flex items-center gap-3">
-
                     <img
                         src="images/dfwin_logo_dark.jpg"
                         alt="DFWIN Logo"
                         class="w-32 h-16 rounded-[50%] mix-blend-screen object-cover shadow-[0_0_15px_rgba(34,211,238,0.2)]"
                     >
-
                 </div>
-
 
                 <div class="hidden md:flex space-x-8 items-center">
 
                     <a
                         href="index.html"
-                        class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide"
-                    >
+                        class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide">
                         Home
                     </a>
 
-
                     <a
                         href="catalog.html"
-                        class="text-white border-b-2 border-cyan-400 pb-1 text-sm font-semibold tracking-wide"
-                    >
+                        class="text-white border-b-2 border-cyan-400 pb-1 text-sm font-semibold tracking-wide">
                         Product Catalog
                     </a>
 
-
                     <a
                         href="about.html"
-                        class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide"
-                    >
+                        class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide">
                         About Us
                     </a>
 
-
                     <a
                         href="solution-portal.html?action=consult"
-                        class="bg-cyan-500 hover:bg-cyan-400 text-dark px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.3)] text-sm"
-                    >
+                        class="bg-cyan-500 hover:bg-cyan-400 text-dark px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.3)] text-sm">
                         Consult an Expert
                     </a>
 
                 </div>
-
             </div>
-
         </div>
-
     </nav>
-
 
 
     <!-- Interactive Data-Driven Product Catalog -->
@@ -249,8 +209,7 @@
                     category: 'technology',
                     name: 'RFID Key Cards',
                     desc: 'Secure PVC/PETG cards optimized for access control and cashless payment integration.',
-                    image: 'images/placeholder_tech_rfid.png',
-                    isPlaceholder: true
+                    image: 'images/RFID Key Cards.png'
                 },
 
                 {
@@ -258,8 +217,7 @@
                     category: 'technology',
                     name: 'RFID Keyfobs',
                     desc: 'Durable ABS construction for high-traffic secure access points.',
-                    image: 'images/placeholder_tech_rfid.png',
-                    isPlaceholder: true
+                    image: 'images/RFID Key FOBS.png'
                 },
 
                 {
@@ -267,8 +225,7 @@
                     category: 'technology',
                     name: 'RFID Wristbands',
                     desc: 'Waterproof silicone wristbands ideal for pool, spa, resort and cruise access.',
-                    image: 'images/placeholder_tech_rfid.png',
-                    isPlaceholder: true
+                    image: 'images/RFID Wrist Bands.jpg'
                 },
 
                 {
@@ -426,8 +383,7 @@
                     category: 'hospitality',
                     name: 'Luxury Hotel Textiles',
                     desc: 'Premium towels, linens and woven textiles designed for hotels, resorts and cruise hospitality.',
-                    image: 'images/placeholder_hosp_textile.png',
-                    isPlaceholder: true
+                    image: 'images/Luxuary Hotel Textiles.jpg'
                 },
 
                 {
@@ -458,12 +414,9 @@
         }"
     >
 
-
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-
             <div class="flex flex-col md:flex-row justify-between items-end mb-12">
-
 
                 <div class="max-w-2xl mb-6 md:mb-0">
 
@@ -480,7 +433,6 @@
                 </div>
 
 
-
                 <!-- Alpine.js Filter Tabs -->
 
                 <div class="flex flex-wrap gap-2 p-1.5 glass-card rounded-xl bg-panel/30">
@@ -490,82 +442,64 @@
                         :class="filter === 'all'
                             ? 'bg-cyan-500 text-dark shadow-md'
                             : 'text-gray-400 hover:text-white'"
-                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
-                    >
+                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all">
                         All
                     </button>
-
 
                     <button
                         @click="filter = 'technology'"
                         :class="filter === 'technology'
                             ? 'bg-cyan-500 text-dark shadow-md'
                             : 'text-gray-400 hover:text-white'"
-                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
-                    >
+                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all">
                         Technology
                     </button>
-
 
                     <button
                         @click="filter = 'marine'"
                         :class="filter === 'marine'
                             ? 'bg-cyan-500 text-dark shadow-md'
                             : 'text-gray-400 hover:text-white'"
-                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
-                    >
+                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all">
                         Marine
                     </button>
-
 
                     <button
                         @click="filter = 'hospitality'"
                         :class="filter === 'hospitality'
                             ? 'bg-cyan-500 text-dark shadow-md'
                             : 'text-gray-400 hover:text-white'"
-                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
-                    >
+                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all">
                         Hospitality
                     </button>
 
                 </div>
-
             </div>
 
 
-
-            <!-- Dynamic Grid Rendered via Alpine.js -->
+            <!-- Dynamic Product Grid -->
 
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
 
-
                 <template x-for="product in products" :key="product.id">
-
 
                     <div
                         x-show="filter === 'all' || filter === product.category"
-
                         x-transition:enter="transition ease-out duration-300"
                         x-transition:enter-start="opacity-0 transform scale-95"
                         x-transition:enter-end="opacity-100 transform scale-100"
-
                         class="glass-card rounded-2xl overflow-hidden flex flex-col h-full bg-panel/20"
                     >
 
-
-                        <!-- Image Container -->
+                        <!-- Image -->
 
                         <div class="catalog-img w-full h-56 p-4 flex items-center justify-center relative overflow-hidden group">
-
 
                             <img
                                 :src="product.image"
                                 :alt="product.name"
                                 class="max-w-full max-h-full object-contain group-hover:scale-105 transition-transform duration-700 opacity-90"
                             >
-
-
-                            <!-- Placeholder Overlay -->
 
                             <template x-if="product.isPlaceholder">
 
@@ -582,23 +516,19 @@
                         </div>
 
 
-
-                        <!-- Product Content -->
+                        <!-- Product Information -->
 
                         <div class="p-5 flex flex-col flex-grow bg-panel/50">
-
 
                             <span
                                 class="text-cyan-400 text-[10px] font-bold uppercase tracking-widest mb-1"
                                 x-text="product.category">
                             </span>
 
-
                             <h3
                                 class="text-lg font-bold mb-2 text-white leading-tight"
                                 x-text="product.name">
                             </h3>
-
 
                             <p
                                 class="text-gray-400 text-xs mb-6 flex-grow leading-relaxed"
@@ -606,90 +536,69 @@
                             </p>
 
 
-
                             <div class="grid grid-cols-2 gap-2 mt-auto">
-
 
                                 <a
                                     :href="`solution-portal.html?product=${product.id}&action=order`"
-                                    class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white py-2 rounded-lg text-center text-xs font-bold transition-all shadow-lg"
-                                >
+                                    class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white py-2 rounded-lg text-center text-xs font-bold transition-all shadow-lg">
                                     Order
                                 </a>
 
-
                                 <a
                                     :href="`solution-portal.html?product=${product.id}&action=consult`"
-                                    class="border border-white/10 hover:border-white/30 text-gray-300 hover:text-white py-2 rounded-lg text-center text-xs font-bold transition-all bg-white/5"
-                                >
+                                    class="border border-white/10 hover:border-white/30 text-gray-300 hover:text-white py-2 rounded-lg text-center text-xs font-bold transition-all bg-white/5">
                                     Consult
                                 </a>
 
-
                             </div>
-
                         </div>
 
                     </div>
 
                 </template>
 
-
             </div>
 
         </div>
-
     </main>
-
 
 
     <!-- Footer -->
 
     <footer class="py-12 glass border-t border-white/10 text-center relative z-10 mt-auto">
 
-
         <div class="max-w-7xl mx-auto px-4">
-
 
             <p class="text-gray-400 mb-6 font-medium tracking-wide">
                 &copy; 2026 DFWIN International.
                 We develop the most effective global supply chain.
             </p>
 
-
             <div class="flex flex-wrap justify-center gap-8">
-
 
                 <a
                     href="catalog.html"
-                    class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
-                >
+                    class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">
                     Order Products
                 </a>
 
-
                 <a
                     href="solution-portal.html?action=engineering"
-                    class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
-                >
+                    class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">
                     Engineer New Product
                 </a>
 
-
                 <a
                     href="solution-portal.html?action=consult"
-                    class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
-                >
+                    class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">
                     Request Consultation
                 </a>
-
 
             </div>
 
         </div>
 
     </footer>
-
 
 </body>
 </html>
