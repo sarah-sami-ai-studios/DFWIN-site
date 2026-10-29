@@ -77,30 +77,27 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .filter-box {
+        .filter-shell {
             background: rgba(255, 255, 255, 0.03);
-            backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
         }
 
         /*
         ==========================================================
-        PRODUCT IMAGE CARD
+        PRODUCT CARD
         ==========================================================
         */
 
         .catalog-card {
             background: #ffffff;
             border-radius: 16px;
-            min-height: 310px;
-            height: 310px;
+            overflow: hidden;
 
             display: flex;
-            align-items: center;
-            justify-content: center;
+            flex-direction: column;
 
             position: relative;
-            overflow: hidden;
 
             border: 1px solid rgba(255, 255, 255, 0.12);
 
@@ -113,8 +110,7 @@
         }
 
         /*
-        IMPORTANT:
-        The card itself DOES NOT move upward.
+        Card itself stays stationary.
         */
 
         .catalog-card:hover {
@@ -125,12 +121,24 @@
         }
 
         /*
-        IMAGE
+        IMAGE AREA
         */
+
+        .catalog-image-area {
+            background: #ffffff;
+            height: 300px;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+            overflow: hidden;
+        }
 
         .catalog-image {
             width: 100%;
-            height: 100%;
+            height: 300px;
 
             object-fit: contain;
 
@@ -143,7 +151,7 @@
         }
 
         /*
-        Only the image enlarges.
+        Only image enlarges.
         */
 
         .catalog-card:hover .catalog-image {
@@ -151,8 +159,50 @@
         }
 
         /*
-        If an image has not yet been uploaded or the filename
-        does not exactly match, show a small diagnostic message.
+        PRODUCT DESCRIPTION
+        */
+
+        .product-description {
+            background: #04152d;
+
+            color: #ffffff;
+
+            min-height: 72px;
+
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            padding: 14px 12px;
+
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .product-name {
+            font-family: 'Outfit', sans-serif;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.25;
+            color: #ffffff;
+        }
+
+        .product-category {
+            font-size: 10px;
+            font-weight: 700;
+
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+
+            color: #22d3ee;
+
+            margin-top: 6px;
+        }
+
+        /*
+        Missing image diagnostic
         */
 
         .missing-image {
@@ -250,11 +300,11 @@
          ====================================================== -->
 
     <main
-        class="flex-grow pt-32 pb-24 relative"
+        class="flex-grow pt-32 pb-24 relative overflow-hidden"
         x-data="catalogApp()"
     >
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
 
             <!-- PAGE TITLE + CATEGORY BUTTONS -->
@@ -281,59 +331,32 @@
                 <!-- CATEGORY FILTERS -->
 
                 <div
-                    class="flex flex-wrap gap-2 p-1.5 filter-box rounded-xl"
+                    class="flex flex-wrap gap-2 p-1.5 filter-shell rounded-xl"
                 >
 
-                    <button
-                        @click="filter = 'all'"
-                        :class="
-                            filter === 'all'
-                            ? 'bg-cyan-500 text-dark shadow-md'
-                            : 'text-gray-400 hover:text-white'
-                        "
-                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
+                    <template
+                        x-for="item in filters"
+                        :key="item.value"
                     >
-                        All Products
-                    </button>
 
+                        <button
+                            type="button"
 
-                    <button
-                        @click="filter = 'technology'"
-                        :class="
-                            filter === 'technology'
-                            ? 'bg-cyan-500 text-dark shadow-md'
-                            : 'text-gray-400 hover:text-white'
-                        "
-                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
-                    >
-                        Technology
-                    </button>
+                            @click="filter = item.value"
 
+                            :class="
+                                filter === item.value
+                                ? 'bg-cyan-500 text-dark shadow-md'
+                                : 'text-gray-400 hover:text-white'
+                            "
 
-                    <button
-                        @click="filter = 'hospitality'"
-                        :class="
-                            filter === 'hospitality'
-                            ? 'bg-cyan-500 text-dark shadow-md'
-                            : 'text-gray-400 hover:text-white'
-                        "
-                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
-                    >
-                        Hospitality
-                    </button>
+                            class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
 
+                            x-text="item.label"
+                        >
+                        </button>
 
-                    <button
-                        @click="filter = 'marine'"
-                        :class="
-                            filter === 'marine'
-                            ? 'bg-cyan-500 text-dark shadow-md'
-                            : 'text-gray-400 hover:text-white'
-                        "
-                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
-                    >
-                        Marine
-                    </button>
+                    </template>
 
                 </div>
 
@@ -342,7 +365,7 @@
 
 
             <!-- ==================================================
-                 IMAGE-ONLY PRODUCT GRID
+                 PRODUCT GRID
                  ================================================== -->
 
             <div
@@ -357,24 +380,59 @@
 
                     <div class="catalog-card">
 
-                        <img
-                            class="catalog-image"
-                            :src="'images/' + product.filename"
-                            :alt="product.name"
-                            :title="product.name"
-                            loading="lazy"
 
-                            @error="
-                                $el.style.display = 'none';
-                                $el.nextElementSibling.style.display = 'flex';
-                            "
-                        >
+                        <!-- PRODUCT IMAGE -->
 
-                        <div
-                            class="missing-image"
-                            x-text="'Image filename not found: ' + product.filename"
-                        >
+                        <div class="catalog-image-area">
+
+                            <img
+                                class="catalog-image"
+
+                                :src="product.image"
+
+                                :alt="product.name"
+
+                                :title="product.name"
+
+                                loading="lazy"
+
+                                @error="
+                                    $el.style.display = 'none';
+                                    $el.nextElementSibling.style.display = 'flex';
+                                "
+                            >
+
+                            <div
+                                class="missing-image"
+
+                                x-text="
+                                    'Image filename not found: ' +
+                                    product.filename
+                                "
+                            >
+                            </div>
+
                         </div>
+
+
+                        <!-- PRODUCT DESCRIPTION -->
+
+                        <div class="product-description">
+
+                            <div
+                                class="product-name"
+                                x-text="product.name"
+                            >
+                            </div>
+
+                            <div
+                                class="product-category"
+                                x-text="product.category"
+                            >
+                            </div>
+
+                        </div>
+
 
                     </div>
 
@@ -393,7 +451,7 @@
          ====================================================== -->
 
     <footer
-        class="py-12 border-t border-white/10 text-center mt-auto"
+        class="py-12 border-t border-white/10 text-center relative z-10 mt-auto"
     >
 
         <div class="max-w-7xl mx-auto px-4">
@@ -449,697 +507,560 @@
 
         function catalogApp() {
 
-            const products = [];
+            const filenames = [
 
+                /*
+                ==================================================
+                TECHNOLOGY
+                ==================================================
+                */
 
-            /*
-            ------------------------------------------------------
-            Helper functions
-            ------------------------------------------------------
-            */
+                "Technology__RFID Wrist Bands 1.png",
+                "Technology__RFID Wrist Bands 2.png",
 
-            function add(category, name, extension = 'png') {
+                "Technology__Hotel Key Card.png",
 
-                products.push({
+                "Technology__RFID Key Fob 1.png",
+                "Technology__RFID Key Fob 2.png",
 
-                    category: category.toLowerCase(),
 
-                    name: name,
+                /*
+                ==================================================
+                MARINE
+                ==================================================
+                */
 
-                    filename:
-                        category +
-                        '__' +
-                        name +
-                        '.' +
-                        extension
+                "Marine__Mooring Rope JIUMAX.png",
 
-                });
+                "Marine__Life Jackets 1.png",
+                "Marine__Life Jackets 2.png",
 
-            }
+                "Marine__Mooring Rope Flex.png",
 
+                "Marine__Mooring Rope - KARAT MAXI.png",
 
-            function series(
-                category,
-                name,
-                count,
-                extension = 'png',
-                separator = ' '
-            ) {
+                "Marine__LED Lights 1.png",
+                "Marine__LED Lights 2.png",
+                "Marine__LED Lights 3.png",
 
-                for (let number = 1; number <= count; number++) {
+                "Marine__Mooring Rope Super Line.png",
 
-                    products.push({
+                "Marine__Life Jacket Light 1.png",
+                "Marine__Life Jacket Light 2.png",
 
-                        category: category.toLowerCase(),
 
-                        name: name,
+                /*
+                ==================================================
+                HOSPITALITY
+                ==================================================
+                */
 
-                        filename:
-                            category +
-                            '__' +
-                            name +
-                            separator +
-                            number +
-                            '.' +
-                            extension
+                "Hospitality__Laundry Cage 1.png",
+                "Hospitality__Laundry Cage 2.png",
 
-                    });
 
-                }
+                /*
+                Melamine Green Edge Series 1
+                */
 
-            }
+                "Hospitality__Melamine Green Edge Series 1 - 1.png",
+                "Hospitality__Melamine Green Edge Series 1 - 2.png",
+                "Hospitality__Melamine Green Edge Series 1 - 3.png",
+                "Hospitality__Melamine Green Edge Series 1 - 4.png",
+                "Hospitality__Melamine Green Edge Series 1 - 5.png",
+                "Hospitality__Melamine Green Edge Series 1 - 6.png",
+                "Hospitality__Melamine Green Edge Series 1 - 7.png",
+                "Hospitality__Melamine Green Edge Series 1 - 8.png",
+                "Hospitality__Melamine Green Edge Series 1 - 9.png",
+                "Hospitality__Melamine Green Edge Series 1 - 10.png",
+                "Hospitality__Melamine Green Edge Series 1 - 11.png",
+                "Hospitality__Melamine Green Edge Series 1 - 12.png",
+                "Hospitality__Melamine Green Edge Series 1 - 13.png",
+                "Hospitality__Melamine Green Edge Series 1 - 14.png",
+                "Hospitality__Melamine Green Edge Series 1 - 15.png",
+                "Hospitality__Melamine Green Edge Series 1 - 16.png",
+                "Hospitality__Melamine Green Edge Series 1 - 17.png",
 
 
-            function dashSeries(
-                category,
-                name,
-                count,
-                extension = 'png'
-            ) {
+                /*
+                Trash Bins
+                */
 
-                series(
-                    category,
-                    name,
-                    count,
-                    extension,
-                    ' - '
-                );
+                "Hospitality__Trash Bins Series 1 1.png",
+                "Hospitality__Trash Bins Series 1 2.png",
+                "Hospitality__Trash Bins Series 1 3.png",
+                "Hospitality__Trash Bins Series 1 4.png",
 
-            }
+                "Hospitality__Trash Bins Series 2 - 1.png",
+                "Hospitality__Trash Bins Series 2 - 2.png",
+                "Hospitality__Trash Bins Series 2 - 3.png",
+                "Hospitality__Trash Bins Series 2 - 4.png",
+                "Hospitality__Trash Bins Series 2 - 5.png",
 
 
+                /*
+                Drinkware
+                */
 
-            /*
-            ======================================================
-            TECHNOLOGY
-            ======================================================
-            */
+                "Hospitality__Color Changing Plastic Mugs 1.png",
+                "Hospitality__Color Changing Plastic Mugs 2.png",
 
-            series(
-                'Technology',
-                'RFID Wrist Bands',
-                2
-            );
 
-            add(
-                'Technology',
-                'Hotel Key Card'
-            );
+                /*
+                Housekeeping
+                */
 
-            series(
-                'Technology',
-                'RFID Key Fob',
-                2
-            );
+                "Hospitality__Compact Housekeeping Carts 1.png",
+                "Hospitality__Compact Housekeeping Carts 2.png",
+                "Hospitality__Compact Housekeeping Carts 3.png",
 
+                "Hospitality__Luggage Cages Series 2 - 1.png",
+                "Hospitality__Luggage Cages Series 2 - 2.png",
+                "Hospitality__Luggage Cages Series 2 - 3.png",
 
 
-            /*
-            ======================================================
-            MARINE
-            ======================================================
-            */
+                /*
+                Trolleys
+                */
 
-            add(
-                'Marine',
-                'Mooring Rope JIUMAX'
-            );
+                "Hospitality__Two Tier Trolley 1.png",
+                "Hospitality__Two Tier Trolley 2.png",
+                "Hospitality__Two Tier Trolley 3.png",
 
-            series(
-                'Marine',
-                'Life Jackets',
-                2
-            );
-
-            add(
-                'Marine',
-                'Mooring Rope Flex'
-            );
+                "Hospitality__Three Shelf Trolley.png",
 
-            add(
-                'Marine',
-                'Mooring Rope - KARAT MAXI'
-            );
 
-            series(
-                'Marine',
-                'LED Lights',
-                3
-            );
-
-            add(
-                'Marine',
-                'Mooring Rope Super Line'
-            );
+                /*
+                Towels
+                */
 
-            series(
-                'Marine',
-                'Life Jacket Light',
-                2
-            );
+                "Hospitality__Plush Bath Towels.png",
 
+                "Hospitality__Plush Bath Towels Series 2 - 1.png",
+                "Hospitality__Plush Bath Towels Series 2 - 2.png",
 
+                "Hospitality__Plush Bath Towels Series 3.png",
 
-            /*
-            ======================================================
-            HOSPITALITY
-            ======================================================
-            */
 
-
-            /* Laundry */
+                /*
+                Bellman Carts
+                */
 
-            series(
-                'Hospitality',
-                'Laundry Cage',
-                2
-            );
+                "Hospitality__Bellman Carts 1.png",
+                "Hospitality__Bellman Carts 2.png",
+                "Hospitality__Bellman Carts 3.png",
+                "Hospitality__Bellman Carts 4.png",
 
 
-            /*
-            First Melamine Green Edge collection
-            */
+                /*
+                Flat Trucks
+                */
 
-            series(
-                'Hospitality',
-                'Melamine Green Edge',
-                17
-            );
+                "Hospitality__Flat Truck 1.png",
+                "Hospitality__Flat Truck 2.png",
+                "Hospitality__Flat Truck 3.png",
 
 
-            /*
-            Trash Bins
-            */
+                /*
+                Barricade
+                */
 
-            series(
-                'Hospitality',
-                'Trash Bins',
-                4
-            );
+                "Hospitality__Barricade.png",
 
-            dashSeries(
-                'Hospitality',
-                'Trash Bins Series 2',
-                5
-            );
 
+                /*
+                Hotel Safes
+                */
 
-            /*
-            Drinkware
-            */
+                "Hospitality__Hotel Safe 1.png",
+                "Hospitality__Hotel Safe 2.png",
+                "Hospitality__Hotel Safe 3.png",
+                "Hospitality__Hotel Safe 4.png",
+                "Hospitality__Hotel Safe 5.png",
 
-            series(
-                'Hospitality',
-                'Color Changing Plastic Mugs',
-                2
-            );
 
+                /*
+                LED Lights
+                */
 
-            /*
-            Housekeeping carts
-            */
+                "Hospitality__LED Lights 1.png",
+                "Hospitality__LED Lights 2.png",
+                "Hospitality__LED Lights 3.png",
 
-            series(
-                'Hospitality',
-                'Compact Housekeeping Carts',
-                3
-            );
 
-            dashSeries(
-                'Hospitality',
-                'Luggage Cages Series 2',
-                3
-            );
+                /*
+                Light Up Glass
+                */
 
+                "Hospitality__Light Up Glass 1.jpg",
+                "Hospitality__Light Up Glass 2.jpg",
+                "Hospitality__Light Up Glass 3.jpg",
 
-            /*
-            Trolleys
-            */
 
-            series(
-                'Hospitality',
-                'Two Tier Trolley',
-                3
-            );
+                /*
+                Chinaware - Yuanfeng 01
+                */
 
-            add(
-                'Hospitality',
-                'Three Shelf Trolley'
-            );
+                "Hospitality__Chinaware - Yuanfeng 01 - 1.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 2.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 3.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 4.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 5.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 6.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 7.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 8.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 9.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 10.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 11.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 12.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 13.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 14.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 15.png",
+                "Hospitality__Chinaware - Yuanfeng 01 - 16.png",
 
 
-            /*
-            Towels
-            */
+                /*
+                Linen Cart
+                */
 
-            add(
-                'Hospitality',
-                'Plush Bath Towels'
-            );
+                "Hospitality__Linen Cart 1.png",
+                "Hospitality__Linen Cart 2.png",
+                "Hospitality__Linen Cart 3.png",
 
-            dashSeries(
-                'Hospitality',
-                'Plush Bath Towels Series 2',
-                2
-            );
 
-            add(
-                'Hospitality',
-                'Plush Bath Towels Series 3'
-            );
+                /*
+                Speed Rack
+                */
 
+                "Hospitality__Speed Rack 7 Shelves.png",
 
-            /*
-            Bellman carts
-            */
 
-            series(
-                'Hospitality',
-                'Bellman Carts',
-                4
-            );
+                /*
+                Plush Towels
+                */
 
+                "Hospitality__Plush Towels Series 3.png",
 
-            /*
-            Flat Trucks
-            */
 
-            series(
-                'Hospitality',
-                'Flat Truck',
-                3
-            );
+                /*
+                Trash Bins Series 1A
+                */
 
+                "Hospitality__Trash Bins Series 1A - 1.png",
+                "Hospitality__Trash Bins Series 1A - 2.png",
+                "Hospitality__Trash Bins Series 1A - 3.png",
+                "Hospitality__Trash Bins Series 1A - 4.png",
 
-            /*
-            Barricade
-            */
 
-            add(
-                'Hospitality',
-                'Barricade'
-            );
+                /*
+                Plush Towels
+                */
 
+                "Hospitality__Plush Towels Series 4.png",
+                "Hospitality__Plush Towels Series 5.png",
 
-            /*
-            Hotel Safes
-            */
 
-            series(
-                'Hospitality',
-                'Hotel Safe',
-                5
-            );
+                /*
+                Chinaware - yuanhui 02
+                */
 
+                "Hospitality__Chinaware - yuanhui 02 - 1.png",
+                "Hospitality__Chinaware - yuanhui 02 - 2.png",
+                "Hospitality__Chinaware - yuanhui 02 - 3.png",
+                "Hospitality__Chinaware - yuanhui 02 - 4.png",
 
-            /*
-            LED Lights
-            */
 
-            series(
-                'Hospitality',
-                'LED Lights',
-                3
-            );
+                /*
+                Linen Cart 2a
+                */
 
+                "Hospitality__Linen Cart 2a - 1.png",
+                "Hospitality__Linen Cart 2a - 2.png",
+                "Hospitality__Linen Cart 2a - 3.png",
 
-            /*
-            Light Up Glass
-            */
 
-            add(
-                'Hospitality',
-                'Light Up Glass',
-                'jpg'
-            );
+                /*
+                Plush Towels 5
+                */
 
-            add(
-                'Hospitality',
-                'Light Up Glass 2',
-                'jpg'
-            );
+                "Hospitality__Plush Towels 5.png",
 
-            add(
-                'Hospitality',
-                'Light Up Glass 3',
-                'jpg'
-            );
 
+                /*
+                Melamine White 1
+                */
 
-            /*
-            Chinaware - Yuanfeng 01
-            */
+                "Hospitality__Melamine White 1 - 1.png",
+                "Hospitality__Melamine White 1 - 2.png",
+                "Hospitality__Melamine White 1 - 3.png",
+                "Hospitality__Melamine White 1 - 4.png",
+                "Hospitality__Melamine White 1 - 5.png",
+                "Hospitality__Melamine White 1 - 6.png",
+                "Hospitality__Melamine White 1 - 7.png",
+                "Hospitality__Melamine White 1 - 8.png",
+                "Hospitality__Melamine White 1 - 9.png",
+                "Hospitality__Melamine White 1 - 10.png",
+                "Hospitality__Melamine White 1 - 11.png",
+                "Hospitality__Melamine White 1 - 12.png",
+                "Hospitality__Melamine White 1 - 13.png",
+                "Hospitality__Melamine White 1 - 14.png",
+                "Hospitality__Melamine White 1 - 15.png",
+                "Hospitality__Melamine White 1 - 16.png",
 
-            dashSeries(
-                'Hospitality',
-                'Chinaware - Yuanfeng 01',
-                16
-            );
 
+                /*
+                Pool Towels
+                */
 
-            /*
-            Linen carts
-            */
+                "Hospitality__Pool Towel 1 1.png",
+                "Hospitality__Pool Towel 1 2.png",
 
-            series(
-                'Hospitality',
-                'Linen Cart',
-                3
-            );
 
+                /*
+                Slim Housekeeping
+                */
 
-            /*
-            Speed rack
-            */
+                "Hospitality__Slim Housekeeping Cart 1 1.png",
+                "Hospitality__Slim Housekeeping Cart 1 2.png",
+                "Hospitality__Slim Housekeeping Cart 1 3.png",
 
-            add(
-                'Hospitality',
-                'Speed Rack 7 Shelves'
-            );
 
+                /*
+                Flatware
+                */
 
-            /*
-            Plush towels
-            */
+                "Hospitality__Flatware 1.png",
 
-            add(
-                'Hospitality',
-                'Plush Towels Series 3'
-            );
 
+                /*
+                Stanchions
+                */
 
-            /*
-            Trash Bins Series 1A
-            */
+                "Hospitality__Fold up Stanchion 1.png",
+                "Hospitality__Fold up Stanchion 2.png",
 
-            dashSeries(
-                'Hospitality',
-                'Trash Bins Series 1A',
-                4
-            );
 
+                /*
+                Hair Dryers
+                */
 
-            /*
-            More Plush Towels
-            */
+                "Hospitality__Hair Dryer 1.png",
+                "Hospitality__Hair Dryer 2.png",
 
-            add(
-                'Hospitality',
-                'Plush Towels Series 4'
-            );
 
-            add(
-                'Hospitality',
-                'Plush Towels Series 5'
-            );
+                /*
+                Portable Utility Cart
+                */
 
+                "Hospitality__Portable Utility Cart 2 1.png",
+                "Hospitality__Portable Utility Cart 2 2.png",
 
-            /*
-            Chinaware - yuanhui 02
-            */
 
-            dashSeries(
-                'Hospitality',
-                'Chinaware - yuanhui 02',
-                4
-            );
+                /*
+                Hand Towels
+                */
 
+                "Hospitality__Plush Hand Towels.png",
 
-            /*
-            Butler trolley
-            */
 
-            add(
-                'Hospitality',
-                'Butler Trolley 1',
-                'jpg'
-            );
+                /*
+                Three Tier Cart
+                */
 
+                "Hospitality__Three Tier Cart 1.png",
+                "Hospitality__Three Tier Cart 2.png",
+                "Hospitality__Three Tier Cart 3.png",
 
-            /*
-            Linen Cart 2a
-            */
 
-            dashSeries(
-                'Hospitality',
-                'Linen Cart 2a',
-                3
-            );
+                /*
+                Wash Cloth
+                */
 
+                "Hospitality__Plush Wash Cloth.png",
 
-            /*
-            Plush Towels 5
-            */
 
-            add(
-                'Hospitality',
-                'Plush Towels 5'
-            );
+                /*
+                Melamine White Series 2
+                */
 
+                "Hospitality__Melamine White Series 2 - 1.png",
+                "Hospitality__Melamine White Series 2 - 2.png",
+                "Hospitality__Melamine White Series 2 - 3.png",
+                "Hospitality__Melamine White Series 2 - 4.png",
+                "Hospitality__Melamine White Series 2 - 5.png",
+                "Hospitality__Melamine White Series 2 - 6.png",
+                "Hospitality__Melamine White Series 2 - 7.png",
+                "Hospitality__Melamine White Series 2 - 8.png",
+                "Hospitality__Melamine White Series 2 - 9.png",
+                "Hospitality__Melamine White Series 2 - 10.png",
+                "Hospitality__Melamine White Series 2 - 11.png",
+                "Hospitality__Melamine White Series 2 - 12.png",
+                "Hospitality__Melamine White Series 2 - 13.png",
+                "Hospitality__Melamine White Series 2 - 14.png",
+                "Hospitality__Melamine White Series 2 - 15.png",
+                "Hospitality__Melamine White Series 2 - 16.png",
 
-            /*
-            Melamine White 1
-            */
 
-            dashSeries(
-                'Hospitality',
-                'Melamine White 1',
-                16
-            );
+                /*
+                Melamine
+                */
 
+                "Hospitality__Melamine 1.png",
+                "Hospitality__Melamine 2.png",
+                "Hospitality__Melamine 3.png",
+                "Hospitality__Melamine 4.png",
+                "Hospitality__Melamine 5.png",
+                "Hospitality__Melamine 6.png",
+                "Hospitality__Melamine 7.png",
 
-            /*
-            Pool Towels
-            */
 
-            dashSeries(
-                'Hospitality',
-                'Pool Towel 1',
-                2
-            );
+                /*
+                Mini Bar Fridge
+                */
 
+                "Hospitality__Mini Bar Fridge 1.png",
+                "Hospitality__Mini Bar Fridge 2.png",
 
-            /*
-            Slim Housekeeping Cart
-            */
 
-            dashSeries(
-                'Hospitality',
-                'Slim Housekeeping Cart 1',
-                3
-            );
+                /*
+                Plush Towels Sets
+                */
 
+                "Hospitality__Plush Towels 6 piece set.png",
 
-            /*
-            Flatware
-            */
+                "Hospitality__Plush Towel Set 3 x 2.png",
 
-            add(
-                'Hospitality',
-                'Flatware 1',
-                'jpg'
-            );
 
+                /*
+                Chinaware - yuanhua 02
+                */
 
-            /*
-            Fold-up Stanchions
-            */
+                "Hospitality__Chinaware - yuanhua 02 - 1.png",
+                "Hospitality__Chinaware - yuanhua 02 - 2.png",
+                "Hospitality__Chinaware - yuanhua 02 - 3.png",
+                "Hospitality__Chinaware - yuanhua 02 - 4.png",
+                "Hospitality__Chinaware - yuanhua 02 - 5.png",
+                "Hospitality__Chinaware - yuanhua 02 - 6.png",
+                "Hospitality__Chinaware - yuanhua 02 - 7.png",
+                "Hospitality__Chinaware - yuanhua 02 - 8.png",
+                "Hospitality__Chinaware - yuanhua 02 - 9.png",
+                "Hospitality__Chinaware - yuanhua 02 - 10.png",
+                "Hospitality__Chinaware - yuanhua 02 - 11.png",
+                "Hospitality__Chinaware - yuanhua 02 - 12.png",
+                "Hospitality__Chinaware - yuanhua 02 - 13.png",
+                "Hospitality__Chinaware - yuanhua 02 - 14.png",
+                "Hospitality__Chinaware - yuanhua 02 - 15.png",
+                "Hospitality__Chinaware - yuanhua 02 - 16.png",
+                "Hospitality__Chinaware - yuanhua 02 - 17.png",
+                "Hospitality__Chinaware - yuanhua 02 - 18.png",
+                "Hospitality__Chinaware - yuanhua 02 - 19.png",
 
-            series(
-                'Hospitality',
-                'Fold up Stanchion',
-                2
-            );
 
+                /*
+                Light Changing Glass
+                */
 
-            /*
-            Hair Dryers
-            */
+                "Hospitality__Light Changing Glass 1.png",
+                "Hospitality__Light Changing Glass 2.png",
 
-            series(
-                'Hospitality',
-                'Hair Dryer',
-                2
-            );
 
+                /*
+                Light Changing Cups
+                */
 
-            /*
-            SECOND GREEN EDGE COLLECTION
-            This is separate from the first Green Edge group.
-            */
+                "Hospitality__Light Changing Cups 1.png",
+                "Hospitality__Light Changing Cups 2.png",
 
-            dashSeries(
-                'Hospitality',
-                'Melamine Green Edge Series 1',
-                17
-            );
 
+                /*
+                Bus Trolley
+                */
 
-            /*
-            Portable Utility Carts
-            */
+                "Hospitality__Bus Trolley 1.png",
+                "Hospitality__Bus Trolley 2.png",
 
-            dashSeries(
-                'Hospitality',
-                'Portable Utility Cart 2',
-                2
-            );
 
+                /*
+                Speed Rack
+                */
 
-            /*
-            Hand Towels
-            */
+                "Hospitality__Speed Rack 3 Shelves.png",
 
-            add(
-                'Hospitality',
-                'Plush Hand Towels'
-            );
 
+                /*
+                Plush Towels
+                */
 
-            /*
-            Three Tier Carts
-            */
+                "Hospitality__Plush Towels Double Stack x 6.png",
 
-            series(
-                'Hospitality',
-                'Three Tier Cart',
-                3
-            );
 
+                /*
+                Butler Trolley
+                */
 
-            /*
-            Wash Cloth
-            */
+                "Hospitality__Butler Trolley 1.jpg"
 
-            add(
-                'Hospitality',
-                'Plush Wash Cloth'
-            );
-
-
-            /*
-            Melamine White Series 2
-            Total = 23 images
-            */
-
-            dashSeries(
-                'Hospitality',
-                'Melamine White Series 2',
-                23
-            );
-
-
-            /*
-            Melamine collection
-            */
-
-            series(
-                'Hospitality',
-                'Melamine',
-                7
-            );
-
-
-            /*
-            Mini Bar Fridges
-            */
-
-            series(
-                'Hospitality',
-                'Mini Bar Fridge',
-                2
-            );
-
-
-            /*
-            Plush Towels 6-piece set
-            */
-
-            add(
-                'Hospitality',
-                'Plush Towels 6 piece set'
-            );
-
-
-            /*
-            Plush Towel Set 3 x 2
-            */
-
-            add(
-                'Hospitality',
-                'Plush Towel Set 3 x 2'
-            );
-
-
-            /*
-            Chinaware - yuanhua 02
-            */
-
-            dashSeries(
-                'Hospitality',
-                'Chinaware - yuanhua 02',
-                19
-            );
-
-
-            /*
-            Light Changing Class
-            Name retained exactly as supplied.
-            */
-
-            series(
-                'Hospitality',
-                'Light Changing Class',
-                2
-            );
-
-
-            /*
-            Light Changing Cups
-            */
-
-            series(
-                'Hospitality',
-                'Light Changing Cups',
-                2
-            );
-
-
-            /*
-            Bus Trolleys
-            */
-
-            series(
-                'Hospitality',
-                'Bus Trolley',
-                2
-            );
-
-
-            /*
-            Speed Rack
-            */
-
-            add(
-                'Hospitality',
-                'Speed Rack 3 Shelves'
-            );
-
-
-            /*
-            Double Stack Towels
-            */
-
-            add(
-                'Hospitality',
-                'Plush Towels Double Stack x 6'
-            );
+            ];
 
 
 
             /*
             ======================================================
-            RETURN DATA TO ALPINE
+            BUILD PRODUCT INFORMATION FROM FILENAMES
+            ======================================================
+            */
+
+            const products = filenames.map(filename => {
+
+                const withoutExt =
+                    filename.replace(/\.[^.]+$/, '');
+
+                const parts =
+                    withoutExt.split('__');
+
+                const category =
+                    parts[0];
+
+                const rawName =
+                    parts.slice(1).join('__');
+
+
+                /*
+                Remove trailing image numbers from description.
+                Example:
+                Bus Trolley 1
+                becomes:
+                Bus Trolley
+                */
+
+                const displayName =
+                    rawName
+                        .replace(/\s+-\s+\d+$/, '')
+                        .replace(/\s+\d+$/, '');
+
+
+                return {
+
+                    filename: filename,
+
+                    category:
+                        category.toLowerCase(),
+
+                    name:
+                        displayName,
+
+                    image:
+                        'images/' + filename
+
+                };
+
+            });
+
+
+
+            /*
+            ======================================================
+            ALPINE DATA
             ======================================================
             */
 
@@ -1147,7 +1068,32 @@
 
                 filter: 'all',
 
+                filters: [
+
+                    {
+                        value: 'all',
+                        label: 'All Products'
+                    },
+
+                    {
+                        value: 'technology',
+                        label: 'Technology'
+                    },
+
+                    {
+                        value: 'hospitality',
+                        label: 'Hospitality'
+                    },
+
+                    {
+                        value: 'marine',
+                        label: 'Marine'
+                    }
+
+                ],
+
                 products: products,
+
 
                 get filteredProducts() {
 
@@ -1158,8 +1104,10 @@
                     }
 
                     return this.products.filter(
+
                         product =>
                             product.category === this.filter
+
                     );
 
                 }
@@ -1172,4 +1120,5 @@
 
 
 </body>
+
 </html>
