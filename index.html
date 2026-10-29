@@ -140,11 +140,6 @@
             transform: translateY(0);
         }
 
-
-        /* =====================================
-           LOGO + TAGLINE
-           ===================================== */
-
         .dfwin-brand {
             display: flex;
             flex-direction: column;
@@ -155,35 +150,22 @@
         .dfwin-brand-tagline {
             margin-top: -2px;
             padding-left: 5px;
-
             color: rgba(207, 250, 254, 0.82);
-
             font-family: 'Inter', sans-serif;
             font-size: 11px;
             font-style: italic;
             font-weight: 400;
-
             letter-spacing: 0.035em;
-
             white-space: nowrap;
         }
 
-
-        /* =====================================
-           HERO / CURRENT NEWS
-           ===================================== */
-
         .dfwin-hero-grid {
             display: grid;
-
             grid-template-columns:
                 minmax(0, 1.35fr)
                 minmax(400px, 1.05fr);
-
             gap: 3.25rem;
-
             align-items: center;
-
             width: 100%;
         }
 
@@ -192,27 +174,14 @@
         }
 
         .dfwin-news-panel {
-            background:
-                rgba(4, 21, 45, 0.84);
+            background: rgba(4, 21, 45, 0.84);
+            border: 1px solid rgba(34, 211, 238, 0.35);
+            border-radius: 1.25rem;
+            padding: 1.75rem;
+            backdrop-filter: blur(14px);
 
-            border:
-                1px solid rgba(34, 211, 238, 0.35);
-
-            border-radius:
-                1.25rem;
-
-            padding:
-                1.75rem;
-
-            backdrop-filter:
-                blur(14px);
-
-            /*
-             * Keep existing downward position.
-             * Push slightly farther right.
-             */
-            transform:
-                translate(48px, 52px);
+            /* NEWS BOX: farther right + slightly higher */
+            transform: translate(72px, 28px);
 
             box-shadow:
                 0 18px 45px rgba(0, 0, 0, 0.30);
@@ -220,104 +189,53 @@
 
         .dfwin-news-kicker {
             color: #22d3ee;
-
-            font-size:
-                0.75rem;
-
-            font-weight:
-                800;
-
-            letter-spacing:
-                0.15em;
-
-            text-transform:
-                uppercase;
-
-            margin-bottom:
-                0.35rem;
+            font-size: 0.75rem;
+            font-weight: 800;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            margin-bottom: 0.35rem;
         }
 
         .dfwin-news-title {
             color: #ffffff;
-
-            font-family:
-                'Outfit',
-                sans-serif;
-
-            font-size:
-                1.7rem;
-
-            font-weight:
-                800;
-
-            margin-bottom:
-                1rem;
+            font-family: 'Outfit', sans-serif;
+            font-size: 1.7rem;
+            font-weight: 800;
+            margin-bottom: 1rem;
         }
 
         .dfwin-news-item {
-            padding:
-                1rem 0;
-
-            border-top:
-                1px solid rgba(255, 255, 255, 0.10);
+            padding: 1rem 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.10);
         }
 
         .dfwin-news-item:first-of-type {
-            border-top:
-                none;
-
-            padding-top:
-                0.25rem;
+            border-top: none;
+            padding-top: 0.25rem;
         }
 
         .dfwin-news-date {
-            color:
-                #67e8f9;
-
-            font-size:
-                0.72rem;
-
-            font-weight:
-                700;
-
-            text-transform:
-                uppercase;
-
-            letter-spacing:
-                0.06em;
-
-            margin-bottom:
-                0.25rem;
+            color: #67e8f9;
+            font-size: 0.72rem;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.25rem;
         }
 
         .dfwin-news-headline {
-            color:
-                #f8fafc;
-
-            font-size:
-                1rem;
-
-            font-weight:
-                700;
-
-            line-height:
-                1.35;
+            color: #f8fafc;
+            font-size: 1rem;
+            font-weight: 700;
+            line-height: 1.35;
         }
 
         .dfwin-news-placeholder {
-            color:
-                #94a3b8;
-
-            font-size:
-                0.9rem;
-
-            line-height:
-                1.5;
-
-            margin-top:
-                0.5rem;
+            color: #94a3b8;
+            font-size: 0.9rem;
+            line-height: 1.5;
+            margin-top: 0.5rem;
         }
-
 
         @media (max-width: 1023px) {
 
@@ -337,7 +255,6 @@
             }
         }
 
-
         @media (max-width: 640px) {
 
             .dfwin-brand-tagline {
@@ -352,22 +269,15 @@
     </style>
 </head>
 
-
 <body class="mesh-bg antialiased">
 
-
-    <!-- =====================================
-         GLOBAL NAVIGATION
-         ===================================== -->
+    <!-- Global Navigation -->
 
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="flex justify-between items-center h-24">
-
-
-                <!-- Logo + Tagline -->
 
                 <div class="dfwin-brand">
 
@@ -382,9 +292,6 @@
                     </div>
 
                 </div>
-
-
-                <!-- Navigation Links -->
 
                 <div class="hidden md:flex space-x-8 items-center">
 
@@ -424,11 +331,7 @@
 
     </nav>
 
-
-
-    <!-- =====================================
-         HERO SECTION
-         ===================================== -->
+    <!-- Hero Section -->
 
     <section
         class="relative min-h-screen flex flex-col justify-center items-center hero-bg pt-28 pb-20"
@@ -438,16 +341,9 @@
             class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full"
         >
 
-
             <div class="dfwin-hero-grid">
 
-
-                <!-- HERO COPY -->
-
                 <div class="dfwin-hero-copy">
-
-
-                    <!-- Headline -->
 
                     <h1
                         class="text-4xl md:text-5xl xl:text-5xl font-display font-extrabold leading-tight mb-8 text-white max-w-4xl"
@@ -463,9 +359,6 @@
 
                     </h1>
 
-
-                    <!-- Sub-headline -->
-
                     <p
                         class="text-xl text-gray-400 max-w-3xl leading-relaxed font-light"
                     >
@@ -477,14 +370,9 @@
                         product needs.
                     </p>
 
-
                 </div>
 
-
-
-                <!-- =====================================
-                     CURRENT NEWS
-                     ===================================== -->
+                <!-- Current News -->
 
                 <aside class="dfwin-news-panel">
 
@@ -495,7 +383,6 @@
                     <div class="dfwin-news-title">
                         Current News
                     </div>
-
 
                     <div class="dfwin-news-item">
 
@@ -516,21 +403,13 @@
 
                 </aside>
 
-
             </div>
 
-
-
-            <!-- =====================================
-                 PATHFINDER CARDS
-                 ===================================== -->
+            <!-- Pathfinder Cards -->
 
             <div
                 class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full mt-16 mx-auto"
             >
-
-
-                <!-- Engineer -->
 
                 <a
                     href="solution-portal.html?action=engineering"
@@ -540,7 +419,6 @@
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     ></div>
-
 
                     <div>
 
@@ -554,29 +432,21 @@
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
                             >
-
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
                                     d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
                                 ></path>
-
                             </svg>
 
                         </div>
 
-
-                        <h3
-                            class="text-xl font-display font-bold text-white mb-3"
-                        >
+                        <h3 class="text-xl font-display font-bold text-white mb-3">
                             Engineer a New Product
                         </h3>
 
-
-                        <p
-                            class="text-sm text-gray-400 mb-6 group-hover:text-gray-300 transition-colors leading-relaxed"
-                        >
+                        <p class="text-sm text-gray-400 mb-6 group-hover:text-gray-300 transition-colors leading-relaxed">
                             Work with our NPI experts to specify,
                             design, and manufacture a custom product
                             tailored to your exact needs.
@@ -584,10 +454,7 @@
 
                     </div>
 
-
-                    <div
-                        class="flex items-center text-blue-400 font-semibold text-sm group-hover:translate-x-2 transition-transform mt-4"
-                    >
+                    <div class="flex items-center text-blue-400 font-semibold text-sm group-hover:translate-x-2 transition-transform mt-4">
 
                         Start NPI Process
 
@@ -597,23 +464,17 @@
                             stroke="currentColor"
                             viewBox="0 0 24 24"
                         >
-
                             <path
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                                 d="M17 8l4 4m0 0l-4 4m4-4H3"
                             ></path>
-
                         </svg>
 
                     </div>
 
                 </a>
-
-
-
-                <!-- Order -->
 
                 <a
                     href="catalog.html"
@@ -623,7 +484,6 @@
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     ></div>
-
 
                     <div>
 
@@ -637,29 +497,21 @@
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
                             >
-
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
                                     d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4"
                                 ></path>
-
                             </svg>
 
                         </div>
 
-
-                        <h3
-                            class="text-xl font-display font-bold text-white mb-3"
-                        >
+                        <h3 class="text-xl font-display font-bold text-white mb-3">
                             Order Existing Product
                         </h3>
 
-
-                        <p
-                            class="text-sm text-gray-400 mb-6 group-hover:text-gray-300 transition-colors leading-relaxed"
-                        >
+                        <p class="text-sm text-gray-400 mb-6 group-hover:text-gray-300 transition-colors leading-relaxed">
                             Instantly leverage our highly optimized
                             catalog of standard Technology, Marine,
                             and Hospitality products.
@@ -667,10 +519,7 @@
 
                     </div>
 
-
-                    <div
-                        class="flex items-center text-cyan-400 font-semibold text-sm group-hover:translate-x-2 transition-transform mt-4"
-                    >
+                    <div class="flex items-center text-cyan-400 font-semibold text-sm group-hover:translate-x-2 transition-transform mt-4">
 
                         View Complete Catalog
 
@@ -680,23 +529,17 @@
                             stroke="currentColor"
                             viewBox="0 0 24 24"
                         >
-
                             <path
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                                 d="M19 9l-7 7-7-7"
                             ></path>
-
                         </svg>
 
                     </div>
 
                 </a>
-
-
-
-                <!-- Consult -->
 
                 <a
                     href="solution-portal.html?action=consult"
@@ -706,7 +549,6 @@
                     <div
                         class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                     ></div>
-
 
                     <div>
 
@@ -720,29 +562,21 @@
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
                             >
-
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
                                     d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                 ></path>
-
                             </svg>
 
                         </div>
 
-
-                        <h3
-                            class="text-xl font-display font-bold text-white mb-3"
-                        >
+                        <h3 class="text-xl font-display font-bold text-white mb-3">
                             Supply Chain Consultation
                         </h3>
 
-
-                        <p
-                            class="text-sm text-gray-400 mb-6 group-hover:text-gray-300 transition-colors leading-relaxed"
-                        >
+                        <p class="text-sm text-gray-400 mb-6 group-hover:text-gray-300 transition-colors leading-relaxed">
                             Request a consultation for supply chain
                             optimization, global logistics, and
                             capability assessments.
@@ -750,10 +584,7 @@
 
                     </div>
 
-
-                    <div
-                        class="flex items-center text-purple-400 font-semibold text-sm group-hover:translate-x-2 transition-transform mt-4"
-                    >
+                    <div class="flex items-center text-purple-400 font-semibold text-sm group-hover:translate-x-2 transition-transform mt-4">
 
                         Consult an Expert
 
@@ -763,20 +594,17 @@
                             stroke="currentColor"
                             viewBox="0 0 24 24"
                         >
-
                             <path
                                 stroke-linecap="round"
                                 stroke-linejoin="round"
                                 stroke-width="2"
                                 d="M17 8l4 4m0 0l-4 4m4-4H3"
                             ></path>
-
                         </svg>
 
                     </div>
 
                 </a>
-
 
             </div>
 
@@ -784,26 +612,15 @@
 
     </section>
 
+    <!-- Social Proof -->
 
+    <section class="py-16 border-b border-white/5 bg-panel/30">
 
-    <!-- =====================================
-         SOCIAL PROOF
-         ===================================== -->
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
 
-    <section
-        class="py-16 border-b border-white/5 bg-panel/30"
-    >
-
-        <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal"
-        >
-
-            <p
-                class="text-center text-sm font-semibold text-gray-500 uppercase tracking-widest mb-10"
-            >
+            <p class="text-center text-sm font-semibold text-gray-500 uppercase tracking-widest mb-10">
                 TRUSTED BY THE LEADERS IN GLOBAL OPERATIONS
             </p>
-
 
             <div class="flex justify-center w-full">
 
@@ -820,40 +637,23 @@
 
     </section>
 
+    <!-- Capabilities -->
 
-
-    <!-- =====================================
-         CAPABILITIES
-         ===================================== -->
-
-    <section
-        class="py-24 relative overflow-hidden bg-panel/10"
-    >
+    <section class="py-24 relative overflow-hidden bg-panel/10">
 
         <div
             class="absolute top-0 right-0 w-[800px] h-[800px] bg-cyan-900/10 blur-[120px] rounded-full mix-blend-screen -translate-y-1/2 translate-x-1/3 pointer-events-none"
         ></div>
 
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
 
-        <div
-            class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10"
-        >
+            <div class="text-center max-w-3xl mx-auto mb-20 reveal">
 
-
-            <div
-                class="text-center max-w-3xl mx-auto mb-20 reveal"
-            >
-
-                <h2
-                    class="text-4xl md:text-5xl font-display font-bold mb-6 text-white"
-                >
+                <h2 class="text-4xl md:text-5xl font-display font-bold mb-6 text-white">
                     The Heart & Soul of Our Operations
                 </h2>
 
-
-                <p
-                    class="text-lg text-gray-400 font-light leading-relaxed"
-                >
+                <p class="text-lg text-gray-400 font-light leading-relaxed">
                     We offer specialized access to the world's largest
                     supply chain. We are engineers, logistics architects,
                     and QA directors executing at the highest level of
@@ -862,24 +662,13 @@
 
             </div>
 
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
-
-            <div
-                class="grid grid-cols-1 md:grid-cols-3 gap-8"
-            >
-
-
-                <!-- Card 1 -->
-
-                <div
-                    class="glass-card p-8 rounded-2xl overflow-hidden flex flex-col justify-between text-left"
-                >
+                <div class="glass-card p-8 rounded-2xl overflow-hidden flex flex-col justify-between text-left">
 
                     <div>
 
-                        <div
-                            class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6"
-                        >
+                        <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6">
 
                             <svg
                                 class="w-6 h-6 text-blue-400"
@@ -887,29 +676,21 @@
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
                             >
-
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
                                     d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"
                                 ></path>
-
                             </svg>
 
                         </div>
 
-
-                        <h3
-                            class="text-xl font-bold mb-3 text-white"
-                        >
+                        <h3 class="text-xl font-bold mb-3 text-white">
                             Engineering New Products
                         </h3>
 
-
-                        <p
-                            class="text-gray-400 text-sm leading-relaxed font-light"
-                        >
+                        <p class="text-gray-400 text-sm leading-relaxed font-light">
                             Our primary strength. If you have a specific
                             need, our NPI experts will engineer the product
                             specification and source the perfect factory
@@ -920,19 +701,11 @@
 
                 </div>
 
-
-
-                <!-- Card 2 -->
-
-                <div
-                    class="glass-card p-8 rounded-2xl overflow-hidden flex flex-col justify-between text-left"
-                >
+                <div class="glass-card p-8 rounded-2xl overflow-hidden flex flex-col justify-between text-left">
 
                     <div>
 
-                        <div
-                            class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6"
-                        >
+                        <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
 
                             <svg
                                 class="w-6 h-6 text-cyan-400"
@@ -940,29 +713,21 @@
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
                             >
-
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
                                     d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"
                                 ></path>
-
                             </svg>
 
                         </div>
 
-
-                        <h3
-                            class="text-xl font-bold mb-3 text-white"
-                        >
+                        <h3 class="text-xl font-bold mb-3 text-white">
                             Uncompromising QA
                         </h3>
 
-
-                        <p
-                            class="text-gray-400 text-sm leading-relaxed font-light"
-                        >
+                        <p class="text-gray-400 text-sm leading-relaxed font-light">
                             We provide absolute peace of mind. Our experts
                             enforce strict quality assurance management
                             protocols on the factory floor before anything
@@ -973,19 +738,11 @@
 
                 </div>
 
-
-
-                <!-- Card 3 -->
-
-                <div
-                    class="glass-card p-8 rounded-2xl overflow-hidden flex flex-col justify-between text-left"
-                >
+                <div class="glass-card p-8 rounded-2xl overflow-hidden flex flex-col justify-between text-left">
 
                     <div>
 
-                        <div
-                            class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6"
-                        >
+                        <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6">
 
                             <svg
                                 class="w-6 h-6 text-purple-400"
@@ -993,29 +750,21 @@
                                 stroke="currentColor"
                                 viewBox="0 0 24 24"
                             >
-
                                 <path
                                     stroke-linecap="round"
                                     stroke-linejoin="round"
                                     stroke-width="2"
                                     d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                                 ></path>
-
                             </svg>
 
                         </div>
 
-
-                        <h3
-                            class="text-xl font-bold mb-3 text-white"
-                        >
+                        <h3 class="text-xl font-bold mb-3 text-white">
                             Logistics Expertise
                         </h3>
 
-
-                        <p
-                            class="text-gray-400 text-sm leading-relaxed font-light"
-                        >
+                        <p class="text-gray-400 text-sm leading-relaxed font-light">
                             We control the largest global supply chain.
                             Our logistics experts accommodate flawless
                             delivery, routing complex marine and freight
@@ -1026,14 +775,9 @@
 
                 </div>
 
-
             </div>
 
-
-
-            <div
-                class="mt-16 text-center reveal"
-            >
+            <div class="mt-16 text-center reveal">
 
                 <a
                     href="capabilities.html"
@@ -1048,50 +792,34 @@
                         stroke="currentColor"
                         viewBox="0 0 24 24"
                     >
-
                         <path
                             stroke-linecap="round"
                             stroke-linejoin="round"
                             stroke-width="2"
                             d="M17 8l4 4m0 0l-4 4m4-4H3"
                         ></path>
-
                     </svg>
 
                 </a>
 
             </div>
 
-
         </div>
 
     </section>
 
+    <!-- Footer -->
 
+    <footer class="py-12 glass border-t border-white/10 text-center relative z-10">
 
-    <!-- =====================================
-         FOOTER
-         ===================================== -->
+        <div class="max-w-7xl mx-auto px-4">
 
-    <footer
-        class="py-12 glass border-t border-white/10 text-center relative z-10"
-    >
-
-        <div
-            class="max-w-7xl mx-auto px-4"
-        >
-
-            <p
-                class="text-gray-400 mb-6 font-medium tracking-wide"
-            >
+            <p class="text-gray-400 mb-6 font-medium tracking-wide">
                 &copy; 2026 DFWIN International.
                 We develop the most effective global supply chain.
             </p>
 
-
-            <div
-                class="flex flex-wrap justify-center gap-8"
-            >
+            <div class="flex flex-wrap justify-center gap-8">
 
                 <a
                     href="catalog.html"
@@ -1100,14 +828,12 @@
                     ORDER PRODUCTS
                 </a>
 
-
                 <a
                     href="solution-portal.html?action=engineering"
                     class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
                 >
                     ENGINEER NEW PRODUCT
                 </a>
-
 
                 <a
                     href="solution-portal.html?action=consult"
@@ -1121,10 +847,6 @@
         </div>
 
     </footer>
-
-
-
-    <!-- Reveal Animation -->
 
     <script>
 
@@ -1158,7 +880,6 @@
                         }
                     );
 
-
                 document
                     .querySelectorAll('.reveal')
                     .forEach(
@@ -1173,7 +894,6 @@
         );
 
     </script>
-
 
 </body>
 </html>
