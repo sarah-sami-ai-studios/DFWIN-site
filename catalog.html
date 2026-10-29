@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Exhaustive Product Catalog | DFWIN International</title>
+    <title>Product Catalog | DFWIN International</title>
 
     <meta
         name="description"
-        content="Browse our meticulously sourced catalog of Technology, Marine, and Hospitality products, ready for immediate global logistics routing."
+        content="Browse DFWIN International Technology, Hospitality and Marine products."
     >
 
     <script src="https://cdn.tailwindcss.com"></script>
@@ -28,6 +29,7 @@
                         accent: '#06b6d4',
                         primary: '#3b82f6'
                     },
+
                     fontFamily: {
                         sans: ['Inter', 'sans-serif'],
                         display: ['Outfit', 'sans-serif']
@@ -43,6 +45,7 @@
     >
 
     <style>
+
         body {
             background-color: #020b18;
             color: #f8fafc;
@@ -52,6 +55,7 @@
 
         .mesh-bg {
             background-color: #020b18;
+
             background-image:
                 radial-gradient(
                     at 0% 0%,
@@ -63,6 +67,7 @@
                     rgba(59, 130, 246, 0.15) 0px,
                     transparent 50%
                 );
+
             background-attachment: fixed;
         }
 
@@ -72,68 +77,137 @@
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
 
-        .glass-card {
-            background: rgba(255, 255, 255, 0.02);
+        .filter-box {
+            background: rgba(255, 255, 255, 0.03);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
 
-        .glass-card:hover {
-            transform: translateY(-8px);
-            background: rgba(255, 255, 255, 0.05);
-            border-color: rgba(34, 211, 238, 0.4);
-            box-shadow: 0 15px 35px -10px rgba(6, 182, 212, 0.25);
-        }
+        /*
+        ==========================================================
+        PRODUCT IMAGE CARD
+        ==========================================================
+        */
 
-        .catalog-img {
-            background-color: white;
-        }
+        .catalog-card {
+            background: #ffffff;
+            border-radius: 16px;
+            min-height: 310px;
+            height: 310px;
 
-        .placeholder-overlay {
-            position: absolute;
-            inset: 0;
             display: flex;
             align-items: center;
             justify-content: center;
-            background: rgba(255, 255, 255, 0.6);
-            padding: 1rem;
-            text-align: center;
-            pointer-events: none;
+
+            position: relative;
+            overflow: hidden;
+
+            border: 1px solid rgba(255, 255, 255, 0.12);
+
+            box-shadow:
+                0 10px 30px rgba(0, 0, 0, 0.22);
+
+            transition:
+                border-color 0.25s ease,
+                box-shadow 0.25s ease;
         }
 
-        .placeholder-text {
-            background: rgba(4, 21, 45, 0.9);
-            color: #22d3ee;
-            padding: 0.5rem 1rem;
-            border-radius: 0.5rem;
-            font-weight: 800;
-            font-size: 0.75rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            border: 1px solid rgba(34, 211, 238, 0.5);
-            box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-            max-width: 90%;
+        /*
+        IMPORTANT:
+        The card itself DOES NOT move upward.
+        */
+
+        .catalog-card:hover {
+            border-color: rgba(34, 211, 238, 0.65);
+
+            box-shadow:
+                0 15px 35px rgba(6, 182, 212, 0.20);
         }
+
+        /*
+        IMAGE
+        */
+
+        .catalog-image {
+            width: 100%;
+            height: 100%;
+
+            object-fit: contain;
+
+            padding: 18px;
+
+            transition:
+                transform 0.45s ease;
+
+            transform-origin: center center;
+        }
+
+        /*
+        Only the image enlarges.
+        */
+
+        .catalog-card:hover .catalog-image {
+            transform: scale(1.22);
+        }
+
+        /*
+        If an image has not yet been uploaded or the filename
+        does not exactly match, show a small diagnostic message.
+        */
+
+        .missing-image {
+            display: none;
+
+            position: absolute;
+            inset: 0;
+
+            align-items: center;
+            justify-content: center;
+
+            text-align: center;
+
+            background: #ffffff;
+            color: #334155;
+
+            padding: 25px;
+
+            font-size: 12px;
+            font-weight: 700;
+
+            word-break: break-word;
+        }
+
+        [x-cloak] {
+            display: none !important;
+        }
+
     </style>
 </head>
 
+
 <body class="mesh-bg antialiased flex flex-col min-h-screen">
 
-    <!-- Global Navigation -->
-    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+
+    <!-- ======================================================
+         GLOBAL NAVIGATION
+         ====================================================== -->
+
+    <nav class="fixed w-full z-50 glass-nav">
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
             <div class="flex justify-between items-center h-20">
 
                 <div class="flex-shrink-0 flex items-center gap-3">
+
                     <img
                         src="images/dfwin_logo_dark.jpg"
                         alt="DFWIN Logo"
                         class="w-32 h-16 rounded-[50%] mix-blend-screen object-cover shadow-[0_0_15px_rgba(34,211,238,0.2)]"
                     >
+
                 </div>
+
 
                 <div class="hidden md:flex space-x-8 items-center">
 
@@ -162,395 +236,144 @@
                     </a>
 
                 </div>
+
             </div>
+
         </div>
+
     </nav>
 
 
-    <!-- Interactive Data-Driven Product Catalog -->
+
+    <!-- ======================================================
+         PRODUCT CATALOG
+         ====================================================== -->
 
     <main
-        class="flex-grow pt-32 pb-24 relative overflow-hidden"
-
-        x-data="{
-            filter: 'all',
-
-            products: [
-
-                // TECHNOLOGY
-
-                {
-                    id: 'tech-safe',
-                    category: 'technology',
-                    name: 'Electronic Hotel Safe',
-                    desc: 'High-security digital keypad safes. ADA compliant options available for global hotel chains.',
-                    image: 'images/Hotel Safe.jpg'
-                },
-
-                {
-                    id: 'tech-kettle',
-                    category: 'technology',
-                    name: 'Stainless Steel Kettle',
-                    desc: '0.8L - 1.2L capacity, 304 stainless steel. Concealed heating element with double-wall anti-scald body.',
-                    image: 'images/enhanced_kettle_1777583868999.png'
-                },
-
-                {
-                    id: 'tech-hairdryer',
-                    category: 'technology',
-                    name: 'Premium Hair Dryers',
-                    desc: 'Low-noise motor with advanced overheating protection. Wall-mounted and drawer models available.',
-                    image: 'images/placeholder_tech_hairdryer.png',
-                    isPlaceholder: true
-                },
-
-                {
-                    id: 'tech-rfid-card',
-                    category: 'technology',
-                    name: 'RFID Key Cards',
-                    desc: 'Secure PVC/PETG cards optimized for access control and cashless payment integration.',
-                    image: 'images/RFID Key Cards.png'
-                },
-
-                {
-                    id: 'tech-rfid-fob',
-                    category: 'technology',
-                    name: 'RFID Keyfobs',
-                    desc: 'Durable ABS construction for high-traffic secure access points.',
-                    image: 'images/RFID Key FOBS.png'
-                },
-
-                {
-                    id: 'tech-rfid-wrist',
-                    category: 'technology',
-                    name: 'RFID Wristbands',
-                    desc: 'Waterproof silicone wristbands ideal for pool, spa, resort and cruise access.',
-                    image: 'images/RFID Wrist Bands.jpg'
-                },
-
-                {
-                    id: 'tech-led',
-                    category: 'technology',
-                    name: 'Professional LED Lamps',
-                    desc: 'Energy-saving LED lighting designed for hospitality, marine and commercial environments.',
-                    image: 'images/LED LAMP.jpg'
-                },
-
-                {
-                    id: 'tech-stanchion',
-                    category: 'technology',
-                    name: 'Retractable Belt Stanchions',
-                    desc: 'Heavy-duty queue management barriers for terminals, hotels, cruise facilities and public spaces.',
-                    image: 'images/barricade.jpg'
-                },
-
-                {
-                    id: 'tech-color-cups',
-                    category: 'technology',
-                    name: 'Color-Changing Cups',
-                    desc: 'Interactive drinkware featuring color-changing materials for branded hospitality and promotional programs.',
-                    image: 'images/Color changing cups.jpg'
-                },
-
-                {
-                    id: 'tech-light-glass',
-                    category: 'technology',
-                    name: 'Light-Up Glassware',
-                    desc: 'Illuminated specialty glassware designed for entertainment venues, resorts and cruise operations.',
-                    image: 'images/Light-up glass 3.jpg'
-                },
-
-
-                // MARINE
-
-                {
-                    id: 'marine-laundry',
-                    category: 'marine',
-                    name: 'Industrial Laundry Cages',
-                    desc: 'Heavy-duty stainless steel carts designed for high-volume commercial laundry and marine environments.',
-                    image: 'images/Laundry cage.jpg'
-                },
-
-                {
-                    id: 'marine-galley',
-                    category: 'marine',
-                    name: 'Galley Trolleys',
-                    desc: '2-tier and 3-tier models featuring durable marine-grade construction and spill-prevention edges.',
-                    image: 'images/2 tier trolley.jpg'
-                },
-
-                {
-                    id: 'marine-platform',
-                    category: 'marine',
-                    name: 'Platform Trucks',
-                    desc: 'Industrial stainless steel platform trucks equipped with non-marking marine bumpers and heavy-duty casters.',
-                    image: 'images/Platform truck.jpg'
-                },
-
-                {
-                    id: 'marine-speedrack',
-                    category: 'marine',
-                    name: 'Cooks Speed Racks',
-                    desc: 'Highly durable stainless steel speed racks designed for demanding commercial and marine galleys.',
-                    image: 'images/speed rack 3 shelves.jpg'
-                },
-
-                {
-                    id: 'marine-linen',
-                    category: 'marine',
-                    name: 'Foldable Linen & Utility Cages',
-                    desc: 'Space-saving mobile cages suitable for linen handling, provisioning and shipboard logistics.',
-                    image: 'images/Luggage cage.jpg'
-                },
-
-                {
-                    id: 'marine-lifejacket',
-                    category: 'marine',
-                    name: 'Marine Life Jackets',
-                    desc: 'Commercial-grade personal flotation equipment for passenger vessels and marine operations.',
-                    image: 'images/LIFE JACKET.jpg'
-                },
-
-                {
-                    id: 'marine-lifejacket-light',
-                    category: 'marine',
-                    name: 'Life Jacket Safety Lights',
-                    desc: 'Compact emergency illumination designed for integration with marine life jackets and safety equipment.',
-                    image: 'images/Life jacket light.jpg'
-                },
-
-                {
-                    id: 'marine-mooring',
-                    category: 'marine',
-                    name: 'Marine Mooring Rope',
-                    desc: 'Heavy-duty synthetic mooring lines engineered for vessel berthing and demanding marine environments.',
-                    image: 'images/MOORING ROPE - JIUMAX.jpg'
-                },
-
-
-                // HOSPITALITY
-
-                {
-                    id: 'hosp-minibar',
-                    category: 'hospitality',
-                    name: 'Minibar Fridge (30L-65L)',
-                    desc: 'Compressor, thermoelectric and absorption models. Silent operation with glass or solid doors.',
-                    image: 'images/Minibar Fridge.jpg'
-                },
-
-                {
-                    id: 'hosp-melamine',
-                    category: 'hospitality',
-                    name: 'Premium Melamine Tableware',
-                    desc: 'Commercial-grade melamine tableware designed for durability, presentation and high-volume food service.',
-                    image: 'images/Melamine- green Edge Series 01.jpg'
-                },
-
-                {
-                    id: 'hosp-housekeeping',
-                    category: 'hospitality',
-                    name: 'Compact Housekeeping Carts',
-                    desc: 'Efficient housekeeping carts with durable frames, storage capacity and commercial-grade casters.',
-                    image: 'images/Compact Housekeeping cart.jpg'
-                },
-
-                {
-                    id: 'hosp-housekeeping-slim',
-                    category: 'hospitality',
-                    name: 'Slim Housekeeping Carts',
-                    desc: 'Narrow-profile housekeeping carts designed for corridors, guestrooms and space-constrained hospitality environments.',
-                    image: 'images/Slim housekeeping cart.jpg'
-                },
-
-                {
-                    id: 'hosp-bellman',
-                    category: 'hospitality',
-                    name: 'Bellman / Luggage Carts',
-                    desc: 'Premium luggage carts designed for hotels, resorts and passenger hospitality operations.',
-                    image: 'images/Bellman cart.jpg'
-                },
-
-                {
-                    id: 'hosp-trash',
-                    category: 'hospitality',
-                    name: 'Soft-Close Trash Cans',
-                    desc: 'Premium waste receptacles for guestrooms, public spaces and hospitality facilities.',
-                    image: 'images/Trash bin part 1.jpg'
-                },
-
-                {
-                    id: 'hosp-textile',
-                    category: 'hospitality',
-                    name: 'Luxury Hotel Textiles',
-                    desc: 'Premium towels, linens and woven textiles designed for hotels, resorts and cruise hospitality.',
-                    image: 'images/Luxuary Hotel Textiles.jpg'
-                },
-
-                {
-                    id: 'hosp-china',
-                    category: 'hospitality',
-                    name: 'Fine Chinaware',
-                    desc: 'Elegant commercial chinaware engineered for high-volume hospitality and food-service operations.',
-                    image: 'images/Chinaware- Yuanfeng 01.jpg'
-                },
-
-                {
-                    id: 'hosp-flatware',
-                    category: 'hospitality',
-                    name: 'Commercial 304 Flatware',
-                    desc: 'Durable stainless steel flatware designed for restaurants, hotels, resorts and cruise dining operations.',
-                    image: 'images/Flatware.png'
-                },
-
-                {
-                    id: 'hosp-butler',
-                    category: 'hospitality',
-                    name: 'Butler Service Trolleys',
-                    desc: 'Premium service trolleys designed for room service, banquet operations and luxury hospitality environments.',
-                    image: 'images/Butler trolley 1.JPG'
-                }
-
-            ]
-        }"
+        class="flex-grow pt-32 pb-24 relative"
+        x-data="catalogApp()"
     >
 
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-            <div class="flex flex-col md:flex-row justify-between items-end mb-12">
 
-                <div class="max-w-2xl mb-6 md:mb-0">
+            <!-- PAGE TITLE + CATEGORY BUTTONS -->
 
-                    <h1 class="text-4xl md:text-5xl font-display font-bold mb-4 text-white">
+            <div
+                class="flex flex-col md:flex-row justify-between items-end mb-10 gap-6"
+            >
+
+                <div class="max-w-2xl">
+
+                    <h1
+                        class="text-4xl md:text-5xl font-display font-bold mb-4 text-white"
+                    >
                         Our Complete Catalog
                     </h1>
 
                     <p class="text-gray-400">
-                        Our meticulously sourced and engineered catalog.
-                        Browse the categories to instantly send an order
-                        or request an engineering consultation.
+                        Browse our Technology, Hospitality and Marine product collections.
                     </p>
 
                 </div>
 
 
-                <!-- Alpine.js Filter Tabs -->
+                <!-- CATEGORY FILTERS -->
 
-                <div class="flex flex-wrap gap-2 p-1.5 glass-card rounded-xl bg-panel/30">
+                <div
+                    class="flex flex-wrap gap-2 p-1.5 filter-box rounded-xl"
+                >
 
                     <button
                         @click="filter = 'all'"
-                        :class="filter === 'all'
+                        :class="
+                            filter === 'all'
                             ? 'bg-cyan-500 text-dark shadow-md'
-                            : 'text-gray-400 hover:text-white'"
-                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all">
-                        All
+                            : 'text-gray-400 hover:text-white'
+                        "
+                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
+                    >
+                        All Products
                     </button>
+
 
                     <button
                         @click="filter = 'technology'"
-                        :class="filter === 'technology'
+                        :class="
+                            filter === 'technology'
                             ? 'bg-cyan-500 text-dark shadow-md'
-                            : 'text-gray-400 hover:text-white'"
-                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all">
+                            : 'text-gray-400 hover:text-white'
+                        "
+                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
+                    >
                         Technology
                     </button>
 
-                    <button
-                        @click="filter = 'marine'"
-                        :class="filter === 'marine'
-                            ? 'bg-cyan-500 text-dark shadow-md'
-                            : 'text-gray-400 hover:text-white'"
-                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all">
-                        Marine
-                    </button>
 
                     <button
                         @click="filter = 'hospitality'"
-                        :class="filter === 'hospitality'
+                        :class="
+                            filter === 'hospitality'
                             ? 'bg-cyan-500 text-dark shadow-md'
-                            : 'text-gray-400 hover:text-white'"
-                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all">
+                            : 'text-gray-400 hover:text-white'
+                        "
+                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
+                    >
                         Hospitality
                     </button>
 
+
+                    <button
+                        @click="filter = 'marine'"
+                        :class="
+                            filter === 'marine'
+                            ? 'bg-cyan-500 text-dark shadow-md'
+                            : 'text-gray-400 hover:text-white'
+                        "
+                        class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
+                    >
+                        Marine
+                    </button>
+
                 </div>
+
             </div>
 
 
-            <!-- Dynamic Product Grid -->
 
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+            <!-- ==================================================
+                 IMAGE-ONLY PRODUCT GRID
+                 ================================================== -->
 
-                <template x-for="product in products" :key="product.id">
+            <div
+                x-cloak
+                class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6"
+            >
 
-                    <div
-                        x-show="filter === 'all' || filter === product.category"
-                        x-transition:enter="transition ease-out duration-300"
-                        x-transition:enter-start="opacity-0 transform scale-95"
-                        x-transition:enter-end="opacity-100 transform scale-100"
-                        class="glass-card rounded-2xl overflow-hidden flex flex-col h-full bg-panel/20"
-                    >
+                <template
+                    x-for="product in filteredProducts"
+                    :key="product.filename"
+                >
 
-                        <!-- Image -->
+                    <div class="catalog-card">
 
-                        <div class="catalog-img w-full h-60 p-4 flex items-center justify-center relative overflow-hidden group">
+                        <img
+                            class="catalog-image"
+                            :src="'images/' + product.filename"
+                            :alt="product.name"
+                            :title="product.name"
+                            loading="lazy"
 
-                            <img
-                                :src="product.image"
-                                :alt="product.name"
-                                class="max-w-full max-h-full object-contain group-hover:scale-190 transition-transform duration-500 opacity-90"
-                            >
+                            @error="
+                                $el.style.display = 'none';
+                                $el.nextElementSibling.style.display = 'flex';
+                            "
+                        >
 
-                            <template x-if="product.isPlaceholder">
-
-                                <div class="placeholder-overlay">
-
-                                    <div class="placeholder-text">
-                                        Placeholder for DFWIN original product image
-                                    </div>
-
-                                </div>
-
-                            </template>
-
-                        </div>
-
-
-                        <!-- Product Information -->
-
-                        <div class="p-5 flex flex-col flex-grow bg-panel/50">
-
-                            <span
-                                class="text-cyan-400 text-[10px] font-bold uppercase tracking-widest mb-1"
-                                x-text="product.category">
-                            </span>
-
-                            <h3
-                                class="text-lg font-bold mb-2 text-white leading-tight"
-                                x-text="product.name">
-                            </h3>
-
-                            <p
-                                class="text-gray-400 text-xs mb-6 flex-grow leading-relaxed"
-                                x-text="product.desc">
-                            </p>
-
-
-                            <div class="grid grid-cols-2 gap-2 mt-auto">
-
-                                <a
-                                    :href="`solution-portal.html?product=${product.id}&action=order`"
-                                    class="bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-400 hover:to-blue-500 text-white py-2 rounded-lg text-center text-xs font-bold transition-all shadow-lg">
-                                    Order
-                                </a>
-
-                                <a
-                                    :href="`solution-portal.html?product=${product.id}&action=consult`"
-                                    class="border border-white/10 hover:border-white/30 text-gray-300 hover:text-white py-2 rounded-lg text-center text-xs font-bold transition-all bg-white/5">
-                                    Consult
-                                </a>
-
-                            </div>
+                        <div
+                            class="missing-image"
+                            x-text="'Image filename not found: ' + product.filename"
+                        >
                         </div>
 
                     </div>
@@ -560,37 +383,53 @@
             </div>
 
         </div>
+
     </main>
 
 
-    <!-- Footer -->
 
-    <footer class="py-12 glass border-t border-white/10 text-center relative z-10 mt-auto">
+    <!-- ======================================================
+         FOOTER
+         ====================================================== -->
+
+    <footer
+        class="py-12 border-t border-white/10 text-center mt-auto"
+    >
 
         <div class="max-w-7xl mx-auto px-4">
 
-            <p class="text-gray-400 mb-6 font-medium tracking-wide">
+            <p
+                class="text-gray-400 mb-6 font-medium tracking-wide"
+            >
                 &copy; 2026 DFWIN International.
                 We develop the most effective global supply chain.
             </p>
 
-            <div class="flex flex-wrap justify-center gap-8">
+
+            <div
+                class="flex flex-wrap justify-center gap-8"
+            >
 
                 <a
                     href="catalog.html"
-                    class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">
-                    Order Products
+                    class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
+                >
+                    Products
                 </a>
+
 
                 <a
                     href="solution-portal.html?action=engineering"
-                    class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">
+                    class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
+                >
                     Engineer New Product
                 </a>
 
+
                 <a
                     href="solution-portal.html?action=consult"
-                    class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">
+                    class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest"
+                >
                     Request Consultation
                 </a>
 
@@ -599,6 +438,738 @@
         </div>
 
     </footer>
+
+
+
+    <!-- ======================================================
+         CATALOG DATA
+         ====================================================== -->
+
+    <script>
+
+        function catalogApp() {
+
+            const products = [];
+
+
+            /*
+            ------------------------------------------------------
+            Helper functions
+            ------------------------------------------------------
+            */
+
+            function add(category, name, extension = 'png') {
+
+                products.push({
+
+                    category: category.toLowerCase(),
+
+                    name: name,
+
+                    filename:
+                        category +
+                        '__' +
+                        name +
+                        '.' +
+                        extension
+
+                });
+
+            }
+
+
+            function series(
+                category,
+                name,
+                count,
+                extension = 'png',
+                separator = ' '
+            ) {
+
+                for (let number = 1; number <= count; number++) {
+
+                    products.push({
+
+                        category: category.toLowerCase(),
+
+                        name: name,
+
+                        filename:
+                            category +
+                            '__' +
+                            name +
+                            separator +
+                            number +
+                            '.' +
+                            extension
+
+                    });
+
+                }
+
+            }
+
+
+            function dashSeries(
+                category,
+                name,
+                count,
+                extension = 'png'
+            ) {
+
+                series(
+                    category,
+                    name,
+                    count,
+                    extension,
+                    ' - '
+                );
+
+            }
+
+
+
+            /*
+            ======================================================
+            TECHNOLOGY
+            ======================================================
+            */
+
+            series(
+                'Technology',
+                'RFID Wrist Bands',
+                2
+            );
+
+            add(
+                'Technology',
+                'Hotel Key Card'
+            );
+
+            series(
+                'Technology',
+                'RFID Key Fob',
+                2
+            );
+
+
+
+            /*
+            ======================================================
+            MARINE
+            ======================================================
+            */
+
+            add(
+                'Marine',
+                'Mooring Rope JIUMAX'
+            );
+
+            series(
+                'Marine',
+                'Life Jackets',
+                2
+            );
+
+            add(
+                'Marine',
+                'Mooring Rope Flex'
+            );
+
+            add(
+                'Marine',
+                'Mooring Rope - KARAT MAXI'
+            );
+
+            series(
+                'Marine',
+                'LED Lights',
+                3
+            );
+
+            add(
+                'Marine',
+                'Mooring Rope Super Line'
+            );
+
+            series(
+                'Marine',
+                'Life Jacket Light',
+                2
+            );
+
+
+
+            /*
+            ======================================================
+            HOSPITALITY
+            ======================================================
+            */
+
+
+            /* Laundry */
+
+            series(
+                'Hospitality',
+                'Laundry Cage',
+                2
+            );
+
+
+            /*
+            First Melamine Green Edge collection
+            */
+
+            series(
+                'Hospitality',
+                'Melamine Green Edge',
+                17
+            );
+
+
+            /*
+            Trash Bins
+            */
+
+            series(
+                'Hospitality',
+                'Trash Bins',
+                4
+            );
+
+            dashSeries(
+                'Hospitality',
+                'Trash Bins Series 2',
+                5
+            );
+
+
+            /*
+            Drinkware
+            */
+
+            series(
+                'Hospitality',
+                'Color Changing Plastic Mugs',
+                2
+            );
+
+
+            /*
+            Housekeeping carts
+            */
+
+            series(
+                'Hospitality',
+                'Compact Housekeeping Carts',
+                3
+            );
+
+            dashSeries(
+                'Hospitality',
+                'Luggage Cages Series 2',
+                3
+            );
+
+
+            /*
+            Trolleys
+            */
+
+            series(
+                'Hospitality',
+                'Two Tier Trolley',
+                3
+            );
+
+            add(
+                'Hospitality',
+                'Three Shelf Trolley'
+            );
+
+
+            /*
+            Towels
+            */
+
+            add(
+                'Hospitality',
+                'Plush Bath Towels'
+            );
+
+            dashSeries(
+                'Hospitality',
+                'Plush Bath Towels Series 2',
+                2
+            );
+
+            add(
+                'Hospitality',
+                'Plush Bath Towels Series 3'
+            );
+
+
+            /*
+            Bellman carts
+            */
+
+            series(
+                'Hospitality',
+                'Bellman Carts',
+                4
+            );
+
+
+            /*
+            Flat Trucks
+            */
+
+            series(
+                'Hospitality',
+                'Flat Truck',
+                3
+            );
+
+
+            /*
+            Barricade
+            */
+
+            add(
+                'Hospitality',
+                'Barricade'
+            );
+
+
+            /*
+            Hotel Safes
+            */
+
+            series(
+                'Hospitality',
+                'Hotel Safe',
+                5
+            );
+
+
+            /*
+            LED Lights
+            */
+
+            series(
+                'Hospitality',
+                'LED Lights',
+                3
+            );
+
+
+            /*
+            Light Up Glass
+            */
+
+            add(
+                'Hospitality',
+                'Light Up Glass',
+                'jpg'
+            );
+
+            add(
+                'Hospitality',
+                'Light Up Glass 2',
+                'jpg'
+            );
+
+            add(
+                'Hospitality',
+                'Light Up Glass 3',
+                'jpg'
+            );
+
+
+            /*
+            Chinaware - Yuanfeng 01
+            */
+
+            dashSeries(
+                'Hospitality',
+                'Chinaware - Yuanfeng 01',
+                16
+            );
+
+
+            /*
+            Linen carts
+            */
+
+            series(
+                'Hospitality',
+                'Linen Cart',
+                3
+            );
+
+
+            /*
+            Speed rack
+            */
+
+            add(
+                'Hospitality',
+                'Speed Rack 7 Shelves'
+            );
+
+
+            /*
+            Plush towels
+            */
+
+            add(
+                'Hospitality',
+                'Plush Towels Series 3'
+            );
+
+
+            /*
+            Trash Bins Series 1A
+            */
+
+            dashSeries(
+                'Hospitality',
+                'Trash Bins Series 1A',
+                4
+            );
+
+
+            /*
+            More Plush Towels
+            */
+
+            add(
+                'Hospitality',
+                'Plush Towels Series 4'
+            );
+
+            add(
+                'Hospitality',
+                'Plush Towels Series 5'
+            );
+
+
+            /*
+            Chinaware - yuanhui 02
+            */
+
+            dashSeries(
+                'Hospitality',
+                'Chinaware - yuanhui 02',
+                4
+            );
+
+
+            /*
+            Butler trolley
+            */
+
+            add(
+                'Hospitality',
+                'Butler Trolley 1',
+                'jpg'
+            );
+
+
+            /*
+            Linen Cart 2a
+            */
+
+            dashSeries(
+                'Hospitality',
+                'Linen Cart 2a',
+                3
+            );
+
+
+            /*
+            Plush Towels 5
+            */
+
+            add(
+                'Hospitality',
+                'Plush Towels 5'
+            );
+
+
+            /*
+            Melamine White 1
+            */
+
+            dashSeries(
+                'Hospitality',
+                'Melamine White 1',
+                16
+            );
+
+
+            /*
+            Pool Towels
+            */
+
+            dashSeries(
+                'Hospitality',
+                'Pool Towel 1',
+                2
+            );
+
+
+            /*
+            Slim Housekeeping Cart
+            */
+
+            dashSeries(
+                'Hospitality',
+                'Slim Housekeeping Cart 1',
+                3
+            );
+
+
+            /*
+            Flatware
+            */
+
+            add(
+                'Hospitality',
+                'Flatware 1',
+                'jpg'
+            );
+
+
+            /*
+            Fold-up Stanchions
+            */
+
+            series(
+                'Hospitality',
+                'Fold up Stanchion',
+                2
+            );
+
+
+            /*
+            Hair Dryers
+            */
+
+            series(
+                'Hospitality',
+                'Hair Dryer',
+                2
+            );
+
+
+            /*
+            SECOND GREEN EDGE COLLECTION
+            This is separate from the first Green Edge group.
+            */
+
+            dashSeries(
+                'Hospitality',
+                'Melamine Green Edge Series 1',
+                17
+            );
+
+
+            /*
+            Portable Utility Carts
+            */
+
+            dashSeries(
+                'Hospitality',
+                'Portable Utility Cart 2',
+                2
+            );
+
+
+            /*
+            Hand Towels
+            */
+
+            add(
+                'Hospitality',
+                'Plush Hand Towels'
+            );
+
+
+            /*
+            Three Tier Carts
+            */
+
+            series(
+                'Hospitality',
+                'Three Tier Cart',
+                3
+            );
+
+
+            /*
+            Wash Cloth
+            */
+
+            add(
+                'Hospitality',
+                'Plush Wash Cloth'
+            );
+
+
+            /*
+            Melamine White Series 2
+            Total = 23 images
+            */
+
+            dashSeries(
+                'Hospitality',
+                'Melamine White Series 2',
+                23
+            );
+
+
+            /*
+            Melamine collection
+            */
+
+            series(
+                'Hospitality',
+                'Melamine',
+                7
+            );
+
+
+            /*
+            Mini Bar Fridges
+            */
+
+            series(
+                'Hospitality',
+                'Mini Bar Fridge',
+                2
+            );
+
+
+            /*
+            Plush Towels 6-piece set
+            */
+
+            add(
+                'Hospitality',
+                'Plush Towels 6 piece set'
+            );
+
+
+            /*
+            Plush Towel Set 3 x 2
+            */
+
+            add(
+                'Hospitality',
+                'Plush Towel Set 3 x 2'
+            );
+
+
+            /*
+            Chinaware - yuanhua 02
+            */
+
+            dashSeries(
+                'Hospitality',
+                'Chinaware - yuanhua 02',
+                19
+            );
+
+
+            /*
+            Light Changing Class
+            Name retained exactly as supplied.
+            */
+
+            series(
+                'Hospitality',
+                'Light Changing Class',
+                2
+            );
+
+
+            /*
+            Light Changing Cups
+            */
+
+            series(
+                'Hospitality',
+                'Light Changing Cups',
+                2
+            );
+
+
+            /*
+            Bus Trolleys
+            */
+
+            series(
+                'Hospitality',
+                'Bus Trolley',
+                2
+            );
+
+
+            /*
+            Speed Rack
+            */
+
+            add(
+                'Hospitality',
+                'Speed Rack 3 Shelves'
+            );
+
+
+            /*
+            Double Stack Towels
+            */
+
+            add(
+                'Hospitality',
+                'Plush Towels Double Stack x 6'
+            );
+
+
+
+            /*
+            ======================================================
+            RETURN DATA TO ALPINE
+            ======================================================
+            */
+
+            return {
+
+                filter: 'all',
+
+                products: products,
+
+                get filteredProducts() {
+
+                    if (this.filter === 'all') {
+
+                        return this.products;
+
+                    }
+
+                    return this.products.filter(
+                        product =>
+                            product.category === this.filter
+                    );
+
+                }
+
+            };
+
+        }
+
+    </script>
+
 
 </body>
 </html>
