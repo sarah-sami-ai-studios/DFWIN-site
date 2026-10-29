@@ -7,6 +7,7 @@
     <meta name="description" content="Secure your supply chain. Eliminate procurement risks. Discover our vetted, top-tier global manufacturing network for marine, hospitality, and commercial operations.">
     <script src="https://cdn.tailwindcss.com"></script>
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
     <script>
         tailwind.config = {
             theme: {
@@ -39,7 +40,9 @@
             }
         }
     </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+
     <style>
         body {
             background-color: #020b18;
@@ -47,46 +50,56 @@
             overflow-x: hidden;
             font-family: 'Inter', sans-serif;
         }
+
         .mesh-bg {
             background-color: #020b18;
-            background-image: 
+            background-image:
                 radial-gradient(at 0% 0%, rgba(34, 211, 238, 0.15) 0px, transparent 50%),
                 radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
             background-attachment: fixed;
         }
+
         .glass-nav {
             background: rgba(4, 21, 45, 0.6);
             backdrop-filter: blur(16px);
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
         }
+
         .glass-card {
             background: rgba(255, 255, 255, 0.02);
             backdrop-filter: blur(12px);
             border: 1px solid rgba(255, 255, 255, 0.08);
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
+
         .glass-card:hover {
             transform: translateY(-8px);
             background: rgba(255, 255, 255, 0.05);
             border-color: rgba(34, 211, 238, 0.4);
             box-shadow: 0 15px 35px -10px rgba(6, 182, 212, 0.25);
         }
+
         .text-gradient {
             background: linear-gradient(to right, #22d3ee, #3b82f6);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
         }
+
         .hero-bg {
-            background-image: linear-gradient(rgba(2, 11, 24, 0.7), rgba(2, 11, 24, 0.95)), url('https://images.unsplash.com/photo-1548574505-5e239809ee19?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+            background-image:
+                linear-gradient(rgba(2, 11, 24, 0.7), rgba(2, 11, 24, 0.95)),
+                url('https://images.unsplash.com/photo-1548574505-5e239809ee19?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
         }
+
         .reveal {
             opacity: 0;
             transform: translateY(20px);
             transition: all 0.8s ease-out;
         }
+
         .reveal.active {
             opacity: 1;
             transform: translateY(0);
@@ -95,22 +108,25 @@
         /* Current News panel */
         .dfwin-hero-grid {
             display: grid;
-            grid-template-columns: minmax(0, 1.6fr) minmax(320px, 0.95fr);
-            gap: 3rem;
+            grid-template-columns: minmax(0, 1.35fr) minmax(380px, 1.05fr);
+            gap: 2.5rem;
             align-items: center;
             width: 100%;
         }
+
         .dfwin-hero-copy {
             text-align: left;
         }
+
         .dfwin-news-panel {
             background: rgba(4, 21, 45, 0.84);
             border: 1px solid rgba(34, 211, 238, 0.35);
             border-radius: 1.25rem;
-            padding: 1.5rem;
+            padding: 1.75rem;
             backdrop-filter: blur(14px);
             box-shadow: 0 18px 45px rgba(0, 0, 0, 0.30);
         }
+
         .dfwin-news-kicker {
             color: #22d3ee;
             font-size: 0.75rem;
@@ -119,21 +135,25 @@
             text-transform: uppercase;
             margin-bottom: 0.35rem;
         }
+
         .dfwin-news-title {
             color: #ffffff;
             font-family: 'Outfit', sans-serif;
-            font-size: 1.6rem;
+            font-size: 1.7rem;
             font-weight: 800;
             margin-bottom: 1rem;
         }
+
         .dfwin-news-item {
             padding: 1rem 0;
             border-top: 1px solid rgba(255, 255, 255, 0.10);
         }
+
         .dfwin-news-item:first-of-type {
             border-top: none;
             padding-top: 0.25rem;
         }
+
         .dfwin-news-date {
             color: #67e8f9;
             font-size: 0.72rem;
@@ -142,28 +162,33 @@
             letter-spacing: 0.06em;
             margin-bottom: 0.25rem;
         }
+
         .dfwin-news-headline {
             color: #f8fafc;
             font-size: 1rem;
             font-weight: 700;
             line-height: 1.35;
         }
+
         .dfwin-news-placeholder {
             color: #94a3b8;
             font-size: 0.9rem;
             line-height: 1.5;
             margin-top: 0.5rem;
         }
+
         @media (max-width: 1023px) {
             .dfwin-hero-grid {
                 grid-template-columns: 1fr;
                 gap: 2rem;
             }
+
             .dfwin-news-panel {
-                max-width: 680px;
+                max-width: 700px;
                 width: 100%;
             }
         }
+
         @media (max-width: 640px) {
             .dfwin-hero-copy {
                 text-align: center;
@@ -178,6 +203,7 @@
     <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
+
                 <div class="flex-shrink-0 flex items-center gap-3">
                     <img src="images/dfwin_logo_dark.jpg" alt="DFWIN Logo" class="w-32 h-16 rounded-[50%] mix-blend-screen object-cover shadow-[0_0_15px_rgba(34,211,238,0.2)]">
                 </div>
@@ -188,12 +214,14 @@
                     <a href="about.html" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide">About Us</a>
                     <a href="solution-portal.html?action=consult" class="bg-cyan-500 hover:bg-cyan-400 text-dark px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.3)] text-sm">Consult an Expert</a>
                 </div>
+
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
     <section class="relative min-h-screen flex flex-col justify-center items-center hero-bg pt-32 pb-20">
+
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 w-full">
 
             <div class="dfwin-hero-grid">
@@ -207,7 +235,7 @@
                     </div>
 
                     <!-- Headline -->
-                    <h1 class="text-5xl md:text-6xl xl:text-7xl font-display font-extrabold leading-tight mb-8 text-white max-w-4xl">
+                    <h1 class="text-4xl md:text-5xl xl:text-6xl font-display font-extrabold leading-tight mb-8 text-white max-w-3xl">
                         Focus On Your Product Vision.<br>
                         <span class="text-gradient">We'll Build The Supply Chain.</span>
                     </h1>
@@ -221,26 +249,40 @@
 
                 <!-- Current News -->
                 <aside class="dfwin-news-panel">
-                    <div class="dfwin-news-kicker">DFWIN Updates</div>
-                    <div class="dfwin-news-title">Current News</div>
+
+                    <div class="dfwin-news-kicker">
+                        DFWIN Updates
+                    </div>
+
+                    <div class="dfwin-news-title">
+                        Current News
+                    </div>
 
                     <div class="dfwin-news-item">
-                        <div class="dfwin-news-date">Latest Updates</div>
-                        <div class="dfwin-news-headline">DFWIN International News & Product Updates</div>
+                        <div class="dfwin-news-date">
+                            Latest Updates
+                        </div>
+
+                        <div class="dfwin-news-headline">
+                            DFWIN International News & Product Updates
+                        </div>
+
                         <p class="dfwin-news-placeholder">
                             Current company news, product announcements and supply-chain updates will appear here.
                         </p>
                     </div>
+
                 </aside>
 
             </div>
 
             <!-- Pathfinder Cards Grid -->
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl w-full mt-16 mx-auto">
-                
+
                 <!-- Engineer -->
                 <a href="solution-portal.html?action=engineering" class="glass-card rounded-2xl p-8 group relative overflow-hidden flex flex-col justify-between text-left">
                     <div class="absolute inset-0 bg-gradient-to-br from-blue-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                             <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -248,9 +290,7 @@
                             </svg>
                         </div>
 
-                        <h3 class="text-xl font-display font-bold text-white mb-3">
-                            Engineer a New Product
-                        </h3>
+                        <h3 class="text-xl font-display font-bold text-white mb-3">Engineer a New Product</h3>
 
                         <p class="text-sm text-gray-400 mb-6 group-hover:text-gray-300 transition-colors leading-relaxed">
                             Work with our NPI experts to specify, design, and manufacture a custom product tailored to your exact needs.
@@ -268,6 +308,7 @@
                 <!-- Order -->
                 <a href="catalog.html" class="glass-card rounded-2xl p-8 group relative overflow-hidden border-cyan-500/40 shadow-[0_0_20px_rgba(6,182,212,0.15)] flex flex-col justify-between text-left">
                     <div class="absolute inset-0 bg-gradient-to-br from-cyan-500/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                             <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -275,9 +316,7 @@
                             </svg>
                         </div>
 
-                        <h3 class="text-xl font-display font-bold text-white mb-3">
-                            Order Existing Product
-                        </h3>
+                        <h3 class="text-xl font-display font-bold text-white mb-3">Order Existing Product</h3>
 
                         <p class="text-sm text-gray-400 mb-6 group-hover:text-gray-300 transition-colors leading-relaxed">
                             Instantly leverage our highly optimized catalog of standard Technology, Marine, and Hospitality products.
@@ -295,6 +334,7 @@
                 <!-- Consult -->
                 <a href="solution-portal.html?action=consult" class="glass-card rounded-2xl p-8 group relative overflow-hidden flex flex-col justify-between text-left">
                     <div class="absolute inset-0 bg-gradient-to-br from-purple-600/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+
                     <div>
                         <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-500">
                             <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -302,9 +342,7 @@
                             </svg>
                         </div>
 
-                        <h3 class="text-xl font-display font-bold text-white mb-3">
-                            Supply Chain Consultation
-                        </h3>
+                        <h3 class="text-xl font-display font-bold text-white mb-3">Supply Chain Consultation</h3>
 
                         <p class="text-sm text-gray-400 mb-6 group-hover:text-gray-300 transition-colors leading-relaxed">
                             Request a consultation for supply chain optimization, global logistics, and capability assessments.
@@ -327,6 +365,7 @@
     <!-- Social Proof Section -->
     <section class="py-16 border-b border-white/5 bg-panel/30">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+
             <p class="text-center text-sm font-semibold text-gray-500 uppercase tracking-widest mb-10">
                 TRUSTED BY THE LEADERS IN GLOBAL OPERATIONS
             </p>
@@ -334,11 +373,13 @@
             <div class="flex justify-center w-full">
                 <img src="images/trusted_partners_dark.jpg" alt="Trusted Partners" class="w-full max-w-5xl opacity-80 hover:opacity-100 transition-all duration-500 mix-blend-screen" onerror="this.src='images/trusted_partners.jpg'">
             </div>
+
         </div>
     </section>
 
     <!-- Capabilities / Trust Modules Section -->
     <section class="py-24 relative overflow-hidden bg-panel/10">
+
         <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-cyan-900/10 blur-[120px] rounded-full mix-blend-screen -translate-y-1/2 translate-x-1/3 pointer-events-none"></div>
 
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -352,12 +393,13 @@
                     We offer specialized access to the world's largest supply chain. We are engineers, logistics architects, and QA directors executing at the highest level of global trade.
                 </p>
             </div>
-            
+
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
 
                 <!-- Card 1 -->
                 <div class="glass-card p-8 rounded-2xl overflow-hidden flex flex-col justify-between text-left">
                     <div>
+
                         <div class="w-12 h-12 rounded-xl bg-blue-500/10 flex items-center justify-center mb-6">
                             <svg class="w-6 h-6 text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
@@ -371,12 +413,14 @@
                         <p class="text-gray-400 text-sm leading-relaxed font-light">
                             Our primary strength. If you have a specific need, our NPI experts will engineer the product specification and source the perfect factory to bring it to life.
                         </p>
+
                     </div>
                 </div>
-                
+
                 <!-- Card 2 -->
                 <div class="glass-card p-8 rounded-2xl overflow-hidden flex flex-col justify-between text-left">
                     <div>
+
                         <div class="w-12 h-12 rounded-xl bg-cyan-500/10 flex items-center justify-center mb-6">
                             <svg class="w-6 h-6 text-cyan-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
@@ -390,12 +434,14 @@
                         <p class="text-gray-400 text-sm leading-relaxed font-light">
                             We provide absolute peace of mind. Our experts enforce strict quality assurance management protocols on the factory floor before anything ships.
                         </p>
+
                     </div>
                 </div>
-                
+
                 <!-- Card 3 -->
                 <div class="glass-card p-8 rounded-2xl overflow-hidden flex flex-col justify-between text-left">
                     <div>
+
                         <div class="w-12 h-12 rounded-xl bg-purple-500/10 flex items-center justify-center mb-6">
                             <svg class="w-6 h-6 text-purple-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path>
@@ -409,12 +455,14 @@
                         <p class="text-gray-400 text-sm leading-relaxed font-light">
                             We control the largest global supply chain. Our logistics experts accommodate flawless delivery, routing complex marine and freight operations.
                         </p>
+
                     </div>
                 </div>
 
             </div>
-            
+
             <div class="mt-16 text-center reveal">
+
                 <a href="capabilities.html" class="inline-flex items-center text-cyan-400 font-bold hover:text-cyan-300 transition-colors">
                     Learn more about our Global Footprint and Success Stories
 
@@ -422,6 +470,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
                     </svg>
                 </a>
+
             </div>
 
         </div>
@@ -436,6 +485,7 @@
             </p>
 
             <div class="flex flex-wrap justify-center gap-8">
+
                 <a href="catalog.html" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">
                     ORDER PRODUCTS
                 </a>
@@ -447,6 +497,7 @@
                 <a href="solution-portal.html?action=consult" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">
                     REQUEST CONSULTATION
                 </a>
+
             </div>
 
         </div>
@@ -456,11 +507,15 @@
         document.addEventListener("DOMContentLoaded", function() {
 
             const observer = new IntersectionObserver((entries) => {
+
                 entries.forEach(entry => {
+
                     if (entry.isIntersecting) {
                         entry.target.classList.add('active');
                     }
+
                 });
+
             }, { threshold: 0.1 });
 
             document.querySelectorAll('.reveal').forEach((el) => {
