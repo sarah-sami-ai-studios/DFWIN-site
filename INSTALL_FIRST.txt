@@ -1,0 +1,31 @@
+DFWIN V2 — CONSOLIDATED NAVIGATION TEST (November 4, 2026)
+
+WHY THIS PACKAGE:
+Previous updates were uploaded piecemeal. That can leave an older page or navigation route in GitHub, sending users back to live catalog.html, index.html, about.html or solution-portal.html.
+
+UPLOAD ALL SIX FILES TOGETHER INTO THE ROOT OF:
+sarah-sami-ai-studios / DFWIN-site (branch main)
+  index_V2.html
+  catalog_NEW.html
+  product.html
+  about_V2.html
+  solution-portal_V2.html
+  rfq-config.js
+
+DO NOT DELETE OR REPLACE:
+  index.html, catalog.html, about.html, solution-portal.html, products.json
+
+TEST:
+https://sarah-sami-ai-studios.github.io/DFWIN-site/index_V2.html
+Force reload Ctrl+Shift+R; test Home -> Catalog -> product -> Back to Results -> About Us -> Home -> Consultation -> Catalog -> RFQ basket -> external RFQ form.
+
+WHY SOME FEATURES STILL DIFFER:
+This package replaces V2 test pages, not the live files. If you click an old bookmarked live URL, that remains the legacy site by design. Use index_V2.html to start testing.
+
+PUBLICATION STATUS:
+This is a publicly reachable TEST version, not a restricted internal preview. Avoid disclosing unverified data. The RFQ form is live and can send emails when submitted. Only send a clearly labeled test inquiry with permission.
+
+LIMITATIONS:
+Existing news feed integration depends on the separate Google Apps Script being reachable.
+The separate consultation form currently drafts an email in the visitor's email app; it is not yet an authenticated database write.
+The RFQ end-to-end transaction requires separate validation of Google Script + Sheets + email delivery.
