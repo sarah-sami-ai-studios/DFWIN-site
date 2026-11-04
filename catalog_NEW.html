@@ -201,7 +201,7 @@
             <p x-show="error" x-text="error" class="text-red-300 mb-6" role="alert"></p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" x-cloak>
                 <template x-for="product in filteredProducts" :key="product.product_id">
-                    <a class="catalog-card group" :href="product.href" :aria-label="'View specifications for '+product.name">
+                    <a class="catalog-card group" :href="detailHref(product)" :aria-label="'View specifications for '+product.name">
                         <div class="catalog-image">
                             <img :src="product.image" :alt="product.name" :title="product.name" loading="lazy"
                                 @error="$el.style.display='none'; $el.nextElementSibling.style.display='flex';">
@@ -248,7 +248,23 @@
                     { value: 'hospitality', label: 'Hospitality' },
                     { value: 'marine', label: 'Marine' }
                 ],
+                detailHref(product) {
+                    const state = new URLSearchParams();
+                    if (this.filter !== 'all') state.set('category', this.filter);
+                    if (this.subcategory !== 'all') state.set('subcategory', this.subcategory);
+                    if (this.searchQuery.trim()) state.set('search', this.searchQuery.trim());
+                    if (window.scrollY > 0) state.set('scroll', String(Math.round(window.scrollY)));
+                    const catalogName = location.pathname.split('/').pop() || 'catalog_NEW.html';
+                    const returnUrl = catalogName + (state.toString() ? '?' + state.toString() : '');
+                    return 'product.html?' + new URLSearchParams({product: product.slug, return: returnUrl}).toString();
+                },
                 async init() {
+                    const prior = new URLSearchParams(location.search);
+                    const category = prior.get('category');
+                    this.filter = ['all','technology','hospitality','marine'].includes(category) ? category : 'all';
+                    this.searchQuery = prior.get('search') || '';
+                    const priorSubcategory = prior.get('subcategory') || 'all';
+                    const scroll = Number(prior.get('scroll'));
                     try {
                         const response = await fetch('products.json', {cache: 'no-store'});
                         if (!response.ok) throw new Error('Product catalog could not be loaded.');
@@ -262,11 +278,19 @@
                             subcategory: p.subcategory || 'Other',
                             href: 'product.html?product=' + encodeURIComponent(p.slug)
                         }));
+                        if (priorSubcategory === 'all' || this.availableSubcategories.includes(priorSubcategory)) {
+                            this.subcategory = priorSubcategory;
+                        }
                     } catch (e) {
                         this.error = 'Product catalog is temporarily unavailable. Please try again later.';
                         console.error(e);
                     } finally {
                         this.loading = false;
+                        if (Number.isFinite(scroll) && scroll > 0) {
+                            this.$nextTick(() => requestAnimationFrame(() => {
+                                requestAnimationFrame(() => window.scrollTo(0, scroll));
+                            }));
+                        }
                     }
                 },
                 get availableSubcategories() {

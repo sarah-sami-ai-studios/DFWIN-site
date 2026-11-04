@@ -13,12 +13,27 @@
 </head>
 <body>
   <main class="max-w-5xl mx-auto px-5 py-10">
-    <a href="catalog_NEW.html" class="text-cyan-400 text-sm">&larr; Back to catalog</a>
+    <a id="back-to-catalog" href="catalog_NEW.html" class="text-cyan-400 text-sm">&larr; Back to results</a>
     <section id="product" class="glass rounded-2xl p-6 md:p-8 mt-5"></section>
   </main>
 
 <script>
 const DATA_URL = 'products.json';
+
+// Restore the exact search, category, subcategory and scroll position used to open this product.
+// Only allow a local catalog page as the return target (never arbitrary external URLs).
+const returnTarget = new URLSearchParams(location.search).get('return');
+if (returnTarget) {
+  try {
+    const parsed = new URL(returnTarget, location.href);
+    const filename = parsed.pathname.split('/').pop();
+    if (parsed.origin === location.origin &&
+        ['catalog_NEW.html', 'catalog.html'].includes(filename) &&
+        parsed.pathname.replace(/[^/]+$/, '') === location.pathname.replace(/[^/]+$/, '')) {
+      document.getElementById('back-to-catalog').href = parsed.pathname + parsed.search;
+    }
+  } catch (_) { /* Fall back to the test catalog. */ }
+}
 
 function esc(v) {
   return String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
