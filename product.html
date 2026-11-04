@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>DFWIN Product</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { background:#07111f; color:#e5e7eb; }
+    .glass { background:rgba(15,23,42,.78); border:1px solid rgba(255,255,255,.10); }
+    .spec-row { border-bottom:1px solid rgba(255,255,255,.08); }
+  </style>
+</head>
+<body>
+  <main class="max-w-5xl mx-auto px-5 py-10">
+    <a href="catalog.html" class="text-cyan-400 text-sm">&larr; Back to catalog</a>
+    <section id="product" class="glass rounded-2xl p-6 md:p-8 mt-5"></section>
+  </main>
+
+<script>
+const DATA_URL = 'products.json';
+
+function esc(v) {
+  return String(v ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+}
+
+async function init() {
+  const params = new URLSearchParams(location.search);
+  const slug = params.get('product');
+  const data = await fetch(DATA_URL, {cache:'no-store'}).then(r => r.json());
+  const product = data.products.find(p => p.slug === slug && p.status === 'Active');
+  const root = document.getElementById('product');
+
+  if (!product) {
+    root.innerHTML = '<h1 class="text-2xl font-bold">Product not found</h1>';
+    return;
+  }
+
+  const specs = data.specifications
+    .filter(s => s.product_id === product.product_id && s.public)
+    .sort((a,b) => a.display_order - b.display_order);
+
+  document.title = `${product.name} | DFWIN International`;
+
+  root.innerHTML = `
+    <div class="grid md:grid-cols-[240px_1fr] gap-8 items-start">
+      <div class="bg-white rounded-xl p-4">
+        <img src="images/${esc(product.primary_image)}" alt="${esc(product.name)}" class="w-full h-auto object-contain">
+      </div>
+      <div>
+        <div class="text-cyan-400 text-sm font-semibold uppercase tracking-wider">${esc(product.category)}</div>
+        <h1 class="text-3xl md:text-4xl font-bold mt-2">${esc(product.name)}</h1>
+        <p class="text-gray-300 mt-4 leading-relaxed">${esc(product.short_description)}</p>
+        <h2 class="text-xl font-bold mt-8 mb-3">Specifications</h2>
+        <div>
+          ${specs.length ? specs.map(s => `
+            <div class="spec-row grid grid-cols-[1fr_1fr] gap-4 py-3">
+              <div class="text-gray-400">${esc(s.specification)}</div>
+              <div class="font-semibold">${esc(s.value)}${s.unit ? ' ' + esc(s.unit) : ''}</div>
+            </div>`).join('') : '<p class="text-gray-400">Detailed specifications are being prepared. Please request product information below.</p>'}
+        </div>
+        <a href="${esc(product.request_quote_url)}"
+           class="inline-block mt-8 bg-cyan-500 text-slate-950 font-bold rounded-full px-6 py-3">
+           Request Quote
+        </a>
+      </div>
+    </div>`;
+
+  // Machine-readable Product schema for search/procurement agents.
+  const schema = {
+    "@context":"https://schema.org",
+    "@type":"Product",
+    "sku":product.product_id,
+    "name":product.name,
+    "category":product.category,
+    "description":product.short_description,
+    "image":new URL(`images/${product.primary_image}`, location.href).href,
+    "manufacturer":{"@type":"Organization","name":"DFWIN International"}
+  };
+  const ld = document.createElement('script');
+  ld.type = 'application/ld+json';
+  ld.textContent = JSON.stringify(schema);
+  document.head.appendChild(ld);
+}
+init().catch(() => {
+  document.getElementById('product').innerHTML =
+    '<h1 class="text-2xl font-bold">Product information is temporarily unavailable.</h1>';
+});
+</script>
+</body>
+</html>

@@ -1,0 +1,1024 @@
+{
+  "products": [
+    {
+      "product_id": "TECH-0001",
+      "name": "RFID Wrist Bands",
+      "category": "Technology",
+      "slug": "technology-rfid-wrist-bands",
+      "primary_image": "Technology__RFID Wrist Bands 1.png",
+      "additional_images": [
+        "Technology__RFID Wrist Bands 2.png"
+      ],
+      "short_description": "RFID wristbands for commercial hospitality and access-control applications. Product specifications require supplier confirmation.",
+      "status": "Active",
+      "applications": [
+        "Hospitality",
+        "Access Control"
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "TECH-0002",
+      "name": "Hotel Key Card",
+      "category": "Technology",
+      "slug": "technology-hotel-key-card",
+      "primary_image": "Technology__Hotel Key Card.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "TECH-0003",
+      "name": "RFID Key Fob",
+      "category": "Technology",
+      "slug": "technology-rfid-key-fob",
+      "primary_image": "Technology__RFID Key Fob 1.png",
+      "additional_images": [
+        "Technology__RFID Key Fob 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "MARI-0004",
+      "name": "Mooring Rope JIUMAX",
+      "category": "Marine",
+      "slug": "marine-mooring-rope-jiumax",
+      "primary_image": "Marine__Mooring Rope JIUMAX.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "MARI-0005",
+      "name": "Life Jackets",
+      "category": "Marine",
+      "slug": "marine-life-jackets",
+      "primary_image": "Marine__Life Jackets 1.png",
+      "additional_images": [
+        "Marine__Life Jackets 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "MARI-0006",
+      "name": "Mooring Rope Flex",
+      "category": "Marine",
+      "slug": "marine-mooring-rope-flex",
+      "primary_image": "Marine__Mooring Rope Flex.png",
+      "additional_images": [],
+      "short_description": "Marine mooring rope product. Product specifications require supplier confirmation.",
+      "status": "Active",
+      "applications": [
+        "Marine",
+        "Mooring"
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "MARI-0007",
+      "name": "Mooring Rope - KARAT MAXI",
+      "category": "Marine",
+      "slug": "marine-mooring-rope-karat-maxi",
+      "primary_image": "Marine__Mooring Rope - KARAT MAXI.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "MARI-0008",
+      "name": "LED Lights",
+      "category": "Marine",
+      "slug": "marine-led-lights",
+      "primary_image": "Marine__LED Lights 1.png",
+      "additional_images": [
+        "Marine__LED Lights 2.png",
+        "Marine__LED Lights 3.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "MARI-0009",
+      "name": "Mooring Rope Super Line",
+      "category": "Marine",
+      "slug": "marine-mooring-rope-super-line",
+      "primary_image": "Marine__Mooring Rope Super Line.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "MARI-0010",
+      "name": "Life Jacket Light",
+      "category": "Marine",
+      "slug": "marine-life-jacket-light",
+      "primary_image": "Marine__Life Jacket Light 1.png",
+      "additional_images": [
+        "Marine__Life Jacket Light 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0011",
+      "name": "Laundry Cage",
+      "category": "Hospitality",
+      "slug": "hospitality-laundry-cage",
+      "primary_image": "Hospitality__Laundry Cage 1.png",
+      "additional_images": [
+        "Hospitality__Laundry Cage 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0012",
+      "name": "Melamine Green Edge Series 1",
+      "category": "Hospitality",
+      "slug": "hospitality-melamine-green-edge-series-1",
+      "primary_image": "Hospitality__Melamine Green Edge Series 1 - 1.png",
+      "additional_images": [
+        "Hospitality__Melamine Green Edge Series 1 - 2.png",
+        "Hospitality__Melamine Green Edge Series 1 - 3.png",
+        "Hospitality__Melamine Green Edge Series 1 - 4.png",
+        "Hospitality__Melamine Green Edge Series 1 - 5.png",
+        "Hospitality__Melamine Green Edge Series 1 - 6.png",
+        "Hospitality__Melamine Green Edge Series 1 - 7.png",
+        "Hospitality__Melamine Green Edge Series 1 - 8.png",
+        "Hospitality__Melamine Green Edge Series 1 - 9.png",
+        "Hospitality__Melamine Green Edge Series 1 - 10.png",
+        "Hospitality__Melamine Green Edge Series 1 - 11.png",
+        "Hospitality__Melamine Green Edge Series 1 - 12.png",
+        "Hospitality__Melamine Green Edge Series 1 - 13.png",
+        "Hospitality__Melamine Green Edge Series 1 - 14.png",
+        "Hospitality__Melamine Green Edge Series 1 - 15.png",
+        "Hospitality__Melamine Green Edge Series 1 - 16.png",
+        "Hospitality__Melamine Green Edge Series 1 - 17.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0013",
+      "name": "Trash Bins Series 1",
+      "category": "Hospitality",
+      "slug": "hospitality-trash-bins-series-1",
+      "primary_image": "Hospitality__Trash Bins Series 1 1.png",
+      "additional_images": [
+        "Hospitality__Trash Bins Series 1 2.png",
+        "Hospitality__Trash Bins Series 1 3.png",
+        "Hospitality__Trash Bins Series 1 4.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0014",
+      "name": "Trash Bins Series 2",
+      "category": "Hospitality",
+      "slug": "hospitality-trash-bins-series-2",
+      "primary_image": "Hospitality__Trash Bins Series 2 - 1.png",
+      "additional_images": [
+        "Hospitality__Trash Bins Series 2 - 2.png",
+        "Hospitality__Trash Bins Series 2 - 3.png",
+        "Hospitality__Trash Bins Series 2 - 4.png",
+        "Hospitality__Trash Bins Series 2 - 5.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0015",
+      "name": "Color Changing Plastic Mugs",
+      "category": "Hospitality",
+      "slug": "hospitality-color-changing-plastic-mugs",
+      "primary_image": "Hospitality__Color Changing Plastic Mugs 1.png",
+      "additional_images": [
+        "Hospitality__Color Changing Plastic Mugs 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0016",
+      "name": "Compact Housekeeping Carts",
+      "category": "Hospitality",
+      "slug": "hospitality-compact-housekeeping-carts",
+      "primary_image": "Hospitality__Compact Housekeeping Carts 1.png",
+      "additional_images": [
+        "Hospitality__Compact Housekeeping Carts 2.png",
+        "Hospitality__Compact Housekeeping Carts 3.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0017",
+      "name": "Luggage Cages Series 2",
+      "category": "Hospitality",
+      "slug": "hospitality-luggage-cages-series-2",
+      "primary_image": "Hospitality__Luggage Cages Series 2 - 1.png",
+      "additional_images": [
+        "Hospitality__Luggage Cages Series 2 - 2.png",
+        "Hospitality__Luggage Cages Series 2 - 3.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0018",
+      "name": "Two Tier Trolley",
+      "category": "Hospitality",
+      "slug": "hospitality-two-tier-trolley",
+      "primary_image": "Hospitality__Two Tier Trolley 1.png",
+      "additional_images": [
+        "Hospitality__Two Tier Trolley 2.png",
+        "Hospitality__Two Tier Trolley 3.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0019",
+      "name": "Three Shelf Trolley",
+      "category": "Hospitality",
+      "slug": "hospitality-three-shelf-trolley",
+      "primary_image": "Hospitality__Three Shelf Trolley.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0020",
+      "name": "Plush Bath Towels",
+      "category": "Hospitality",
+      "slug": "hospitality-plush-bath-towels",
+      "primary_image": "Hospitality__Plush Bath Towels.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0021",
+      "name": "Plush Bath Towels Series 2",
+      "category": "Hospitality",
+      "slug": "hospitality-plush-bath-towels-series-2",
+      "primary_image": "Hospitality__Plush Bath Towels Series 2 - 1.png",
+      "additional_images": [
+        "Hospitality__Plush Bath Towels Series 2 - 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0022",
+      "name": "Plush Bath Towels Series",
+      "category": "Hospitality",
+      "slug": "hospitality-plush-bath-towels-series",
+      "primary_image": "Hospitality__Plush Bath Towels Series 3.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0023",
+      "name": "Bellman Carts",
+      "category": "Hospitality",
+      "slug": "hospitality-bellman-carts",
+      "primary_image": "Hospitality__Bellman Carts 1.png",
+      "additional_images": [
+        "Hospitality__Bellman Carts 2.png",
+        "Hospitality__Bellman Carts 3.png",
+        "Hospitality__Bellman Carts 4.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0024",
+      "name": "Flat Truck",
+      "category": "Hospitality",
+      "slug": "hospitality-flat-truck",
+      "primary_image": "Hospitality__Flat Truck 1.png",
+      "additional_images": [
+        "Hospitality__Flat Truck 2.png",
+        "Hospitality__Flat Truck 3.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0025",
+      "name": "Barricade",
+      "category": "Hospitality",
+      "slug": "hospitality-barricade",
+      "primary_image": "Hospitality__Barricade.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0026",
+      "name": "Hotel Safe",
+      "category": "Hospitality",
+      "slug": "hospitality-hotel-safe",
+      "primary_image": "Hospitality__Hotel Safe 1.png",
+      "additional_images": [
+        "Hospitality__Hotel Safe 2.png",
+        "Hospitality__Hotel Safe 3.png",
+        "Hospitality__Hotel Safe 4.png",
+        "Hospitality__Hotel Safe 5.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0027",
+      "name": "LED Lights",
+      "category": "Hospitality",
+      "slug": "hospitality-led-lights",
+      "primary_image": "Hospitality__LED Lights 1.png",
+      "additional_images": [
+        "Hospitality__LED Lights 2.png",
+        "Hospitality__LED Lights 3.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0028",
+      "name": "Light Up Glass",
+      "category": "Hospitality",
+      "slug": "hospitality-light-up-glass",
+      "primary_image": "Hospitality__Light Up Glass 1.jpg",
+      "additional_images": [
+        "Hospitality__Light Up Glass 2.jpg",
+        "Hospitality__Light Up Glass 3.jpg"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0029",
+      "name": "Chinaware - Yuanfeng 01",
+      "category": "Hospitality",
+      "slug": "hospitality-chinaware-yuanfeng-01",
+      "primary_image": "Hospitality__Chinaware - Yuanfeng 01 - 1.png",
+      "additional_images": [
+        "Hospitality__Chinaware - Yuanfeng 01 - 2.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 3.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 4.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 5.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 6.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 7.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 8.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 9.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 10.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 11.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 12.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 13.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 14.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 15.png",
+        "Hospitality__Chinaware - Yuanfeng 01 - 16.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0030",
+      "name": "Linen Cart",
+      "category": "Hospitality",
+      "slug": "hospitality-linen-cart",
+      "primary_image": "Hospitality__Linen Cart 1.png",
+      "additional_images": [
+        "Hospitality__Linen Cart 2.png",
+        "Hospitality__Linen Cart 3.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0031",
+      "name": "Speed Rack 7 Shelves",
+      "category": "Hospitality",
+      "slug": "hospitality-speed-rack-7-shelves",
+      "primary_image": "Hospitality__Speed Rack 7 Shelves.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0032",
+      "name": "Plush Towels Series",
+      "category": "Hospitality",
+      "slug": "hospitality-plush-towels-series",
+      "primary_image": "Hospitality__Plush Towels Series 3.png",
+      "additional_images": [
+        "Hospitality__Plush Towels Series 4.png",
+        "Hospitality__Plush Towels Series 5.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0033",
+      "name": "Trash Bins Series 1A",
+      "category": "Hospitality",
+      "slug": "hospitality-trash-bins-series-1a",
+      "primary_image": "Hospitality__Trash Bins Series 1A - 1.png",
+      "additional_images": [
+        "Hospitality__Trash Bins Series 1A - 2.png",
+        "Hospitality__Trash Bins Series 1A - 3.png",
+        "Hospitality__Trash Bins Series 1A - 4.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0034",
+      "name": "Chinaware - yuanhui 02",
+      "category": "Hospitality",
+      "slug": "hospitality-chinaware-yuanhui-02",
+      "primary_image": "Hospitality__Chinaware - yuanhui 02 - 1.png",
+      "additional_images": [
+        "Hospitality__Chinaware - yuanhui 02 - 2.png",
+        "Hospitality__Chinaware - yuanhui 02 - 3.png",
+        "Hospitality__Chinaware - yuanhui 02 - 4.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0035",
+      "name": "Linen Cart 2a",
+      "category": "Hospitality",
+      "slug": "hospitality-linen-cart-2a",
+      "primary_image": "Hospitality__Linen Cart 2a - 1.png",
+      "additional_images": [
+        "Hospitality__Linen Cart 2a - 2.png",
+        "Hospitality__Linen Cart 2a - 3.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0036",
+      "name": "Plush Towels",
+      "category": "Hospitality",
+      "slug": "hospitality-plush-towels",
+      "primary_image": "Hospitality__Plush Towels 5.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0037",
+      "name": "Melamine White 1",
+      "category": "Hospitality",
+      "slug": "hospitality-melamine-white-1",
+      "primary_image": "Hospitality__Melamine White 1 - 1.png",
+      "additional_images": [
+        "Hospitality__Melamine White 1 - 2.png",
+        "Hospitality__Melamine White 1 - 3.png",
+        "Hospitality__Melamine White 1 - 4.png",
+        "Hospitality__Melamine White 1 - 5.png",
+        "Hospitality__Melamine White 1 - 6.png",
+        "Hospitality__Melamine White 1 - 7.png",
+        "Hospitality__Melamine White 1 - 8.png",
+        "Hospitality__Melamine White 1 - 9.png",
+        "Hospitality__Melamine White 1 - 10.png",
+        "Hospitality__Melamine White 1 - 11.png",
+        "Hospitality__Melamine White 1 - 12.png",
+        "Hospitality__Melamine White 1 - 13.png",
+        "Hospitality__Melamine White 1 - 14.png",
+        "Hospitality__Melamine White 1 - 15.png",
+        "Hospitality__Melamine White 1 - 16.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0038",
+      "name": "Pool Towel 1",
+      "category": "Hospitality",
+      "slug": "hospitality-pool-towel-1",
+      "primary_image": "Hospitality__Pool Towel 1 1.png",
+      "additional_images": [
+        "Hospitality__Pool Towel 1 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0039",
+      "name": "Slim Housekeeping Cart 1",
+      "category": "Hospitality",
+      "slug": "hospitality-slim-housekeeping-cart-1",
+      "primary_image": "Hospitality__Slim Housekeeping Cart 1 1.png",
+      "additional_images": [
+        "Hospitality__Slim Housekeeping Cart 1 2.png",
+        "Hospitality__Slim Housekeeping Cart 1 3.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0040",
+      "name": "Flatware",
+      "category": "Hospitality",
+      "slug": "hospitality-flatware",
+      "primary_image": "Hospitality__Flatware 1.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0041",
+      "name": "Fold up Stanchion",
+      "category": "Hospitality",
+      "slug": "hospitality-fold-up-stanchion",
+      "primary_image": "Hospitality__Fold up Stanchion 1.png",
+      "additional_images": [
+        "Hospitality__Fold up Stanchion 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0042",
+      "name": "Hair Dryer",
+      "category": "Hospitality",
+      "slug": "hospitality-hair-dryer",
+      "primary_image": "Hospitality__Hair Dryer 1.png",
+      "additional_images": [
+        "Hospitality__Hair Dryer 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0043",
+      "name": "Portable Utility Cart 2",
+      "category": "Hospitality",
+      "slug": "hospitality-portable-utility-cart-2",
+      "primary_image": "Hospitality__Portable Utility Cart 2 1.png",
+      "additional_images": [
+        "Hospitality__Portable Utility Cart 2 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0044",
+      "name": "Plush Hand Towels",
+      "category": "Hospitality",
+      "slug": "hospitality-plush-hand-towels",
+      "primary_image": "Hospitality__Plush Hand Towels.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0045",
+      "name": "Three Tier Cart",
+      "category": "Hospitality",
+      "slug": "hospitality-three-tier-cart",
+      "primary_image": "Hospitality__Three Tier Cart 1.png",
+      "additional_images": [
+        "Hospitality__Three Tier Cart 2.png",
+        "Hospitality__Three Tier Cart 3.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0046",
+      "name": "Plush Wash Cloth",
+      "category": "Hospitality",
+      "slug": "hospitality-plush-wash-cloth",
+      "primary_image": "Hospitality__Plush Wash Cloth.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0047",
+      "name": "Melamine White Series 2",
+      "category": "Hospitality",
+      "slug": "hospitality-melamine-white-series-2",
+      "primary_image": "Hospitality__Melamine White Series 2 - 1.png",
+      "additional_images": [
+        "Hospitality__Melamine White Series 2 - 2.png",
+        "Hospitality__Melamine White Series 2 - 3.png",
+        "Hospitality__Melamine White Series 2 - 4.png",
+        "Hospitality__Melamine White Series 2 - 5.png",
+        "Hospitality__Melamine White Series 2 - 6.png",
+        "Hospitality__Melamine White Series 2 - 7.png",
+        "Hospitality__Melamine White Series 2 - 8.png",
+        "Hospitality__Melamine White Series 2 - 9.png",
+        "Hospitality__Melamine White Series 2 - 10.png",
+        "Hospitality__Melamine White Series 2 - 11.png",
+        "Hospitality__Melamine White Series 2 - 12.png",
+        "Hospitality__Melamine White Series 2 - 13.png",
+        "Hospitality__Melamine White Series 2 - 14.png",
+        "Hospitality__Melamine White Series 2 - 15.png",
+        "Hospitality__Melamine White Series 2 - 16.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0048",
+      "name": "Melamine",
+      "category": "Hospitality",
+      "slug": "hospitality-melamine",
+      "primary_image": "Hospitality__Melamine 1.png",
+      "additional_images": [
+        "Hospitality__Melamine 2.png",
+        "Hospitality__Melamine 3.png",
+        "Hospitality__Melamine 4.png",
+        "Hospitality__Melamine 5.png",
+        "Hospitality__Melamine 6.png",
+        "Hospitality__Melamine 7.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0049",
+      "name": "Mini Bar Fridge",
+      "category": "Hospitality",
+      "slug": "hospitality-mini-bar-fridge",
+      "primary_image": "Hospitality__Mini Bar Fridge 1.png",
+      "additional_images": [
+        "Hospitality__Mini Bar Fridge 2.png"
+      ],
+      "short_description": "Mini bar refrigerator for hospitality applications. Product specifications require supplier confirmation.",
+      "status": "Active",
+      "applications": [
+        "Hotels",
+        "Hospitality"
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0050",
+      "name": "Plush Towels 6 piece set",
+      "category": "Hospitality",
+      "slug": "hospitality-plush-towels-6-piece-set",
+      "primary_image": "Hospitality__Plush Towels 6 piece set.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0051",
+      "name": "Plush Towel Set 3 x",
+      "category": "Hospitality",
+      "slug": "hospitality-plush-towel-set-3-x",
+      "primary_image": "Hospitality__Plush Towel Set 3 x 2.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0052",
+      "name": "Chinaware - yuanhua 02",
+      "category": "Hospitality",
+      "slug": "hospitality-chinaware-yuanhua-02",
+      "primary_image": "Hospitality__Chinaware - yuanhua 02 - 1.png",
+      "additional_images": [
+        "Hospitality__Chinaware - yuanhua 02 - 2.png",
+        "Hospitality__Chinaware - yuanhua 02 - 3.png",
+        "Hospitality__Chinaware - yuanhua 02 - 4.png",
+        "Hospitality__Chinaware - yuanhua 02 - 5.png",
+        "Hospitality__Chinaware - yuanhua 02 - 6.png",
+        "Hospitality__Chinaware - yuanhua 02 - 7.png",
+        "Hospitality__Chinaware - yuanhua 02 - 8.png",
+        "Hospitality__Chinaware - yuanhua 02 - 9.png",
+        "Hospitality__Chinaware - yuanhua 02 - 10.png",
+        "Hospitality__Chinaware - yuanhua 02 - 11.png",
+        "Hospitality__Chinaware - yuanhua 02 - 12.png",
+        "Hospitality__Chinaware - yuanhua 02 - 13.png",
+        "Hospitality__Chinaware - yuanhua 02 - 14.png",
+        "Hospitality__Chinaware - yuanhua 02 - 15.png",
+        "Hospitality__Chinaware - yuanhua 02 - 16.png",
+        "Hospitality__Chinaware - yuanhua 02 - 17.png",
+        "Hospitality__Chinaware - yuanhua 02 - 18.png",
+        "Hospitality__Chinaware - yuanhua 02 - 19.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0053",
+      "name": "Light Changing Glass",
+      "category": "Hospitality",
+      "slug": "hospitality-light-changing-glass",
+      "primary_image": "Hospitality__Light Changing Glass 1.png",
+      "additional_images": [
+        "Hospitality__Light Changing Glass 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0054",
+      "name": "Light Changing Cups",
+      "category": "Hospitality",
+      "slug": "hospitality-light-changing-cups",
+      "primary_image": "Hospitality__Light Changing Cups 1.png",
+      "additional_images": [
+        "Hospitality__Light Changing Cups 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0055",
+      "name": "Bus Trolley",
+      "category": "Hospitality",
+      "slug": "hospitality-bus-trolley",
+      "primary_image": "Hospitality__Bus Trolley 1.png",
+      "additional_images": [
+        "Hospitality__Bus Trolley 2.png"
+      ],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0056",
+      "name": "Speed Rack 3 Shelves",
+      "category": "Hospitality",
+      "slug": "hospitality-speed-rack-3-shelves",
+      "primary_image": "Hospitality__Speed Rack 3 Shelves.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0057",
+      "name": "Plush Towels Double Stack x",
+      "category": "Hospitality",
+      "slug": "hospitality-plush-towels-double-stack-x",
+      "primary_image": "Hospitality__Plush Towels Double Stack x 6.png",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    },
+    {
+      "product_id": "HOSP-0058",
+      "name": "Butler Trolley",
+      "category": "Hospitality",
+      "slug": "hospitality-butler-trolley",
+      "primary_image": "Hospitality__Butler Trolley 1.jpg",
+      "additional_images": [],
+      "short_description": "",
+      "status": "Active",
+      "applications": [],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
+    }
+  ],
+  "specifications": [
+    {
+      "product_id": "TECH-0001",
+      "specification": "RFID technology",
+      "value": "TBD",
+      "unit": "",
+      "display_order": 10,
+      "public": true
+    },
+    {
+      "product_id": "TECH-0001",
+      "specification": "Customization",
+      "value": "TBD",
+      "unit": "",
+      "display_order": 20,
+      "public": true
+    },
+    {
+      "product_id": "TECH-0001",
+      "specification": "Minimum Order Quantity",
+      "value": "TBD",
+      "unit": "",
+      "display_order": 30,
+      "public": true
+    },
+    {
+      "product_id": "HOSP-0049",
+      "specification": "Capacity",
+      "value": "TBD",
+      "unit": "",
+      "display_order": 10,
+      "public": true
+    },
+    {
+      "product_id": "HOSP-0049",
+      "specification": "Voltage",
+      "value": "TBD",
+      "unit": "",
+      "display_order": 20,
+      "public": true
+    },
+    {
+      "product_id": "HOSP-0049",
+      "specification": "Dimensions",
+      "value": "TBD",
+      "unit": "",
+      "display_order": 30,
+      "public": true
+    },
+    {
+      "product_id": "MARI-0006",
+      "specification": "Construction",
+      "value": "TBD",
+      "unit": "",
+      "display_order": 10,
+      "public": true
+    },
+    {
+      "product_id": "MARI-0006",
+      "specification": "Diameter range",
+      "value": "TBD",
+      "unit": "",
+      "display_order": 20,
+      "public": true
+    },
+    {
+      "product_id": "MARI-0006",
+      "specification": "Certification / standard",
+      "value": "TBD",
+      "unit": "",
+      "display_order": 30,
+      "public": true
+    }
+  ]
+}

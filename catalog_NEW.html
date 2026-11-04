@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Product Catalog | DFWIN International</title>
+    <meta name="description" content="Browse DFWIN International Technology, Hospitality and Marine products.">
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        dark: '#020b18',
+                        panel: '#04152d',
+                        accent: '#06b6d4',
+                        primary: '#3b82f6'
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                        display: ['Outfit', 'sans-serif']
+                    }
+                }
+            }
+        };
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;600;800&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            background-color: #020b18;
+            color: #f8fafc;
+            overflow-x: hidden;
+            font-family: 'Inter', sans-serif;
+        }
+
+        .mesh-bg {
+            background-color: #020b18;
+            background-image:
+                radial-gradient(at 0% 0%, rgba(34, 211, 238, 0.15) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(59, 130, 246, 0.15) 0px, transparent 50%);
+            background-attachment: fixed;
+        }
+
+        .glass-nav {
+            background: rgba(4, 21, 45, 0.6);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .filter-shell {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(12px);
+        }
+
+        .catalog-card {
+            background: white;
+            border-radius: 1rem;
+            overflow: hidden;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            box-shadow: 0 12px 30px rgba(0,0,0,.18);
+        }
+
+        .catalog-card img {
+            width: 100%;
+            height: 300px;
+            object-fit: contain;
+            padding: 1.25rem;
+            transition: transform .28s ease;
+            transform-origin: center;
+        }
+
+        .catalog-card:hover img {
+            transform: scale(1.12);
+        }
+
+        .missing-image {
+            display: none;
+            position: absolute;
+            inset: 0;
+            align-items: center;
+            justify-content: center;
+            padding: 1.25rem;
+            text-align: center;
+            color: #0f172a;
+            background: #f8fafc;
+            font-size: .75rem;
+            font-weight: 700;
+            word-break: break-word;
+        }
+
+        [x-cloak] {
+            display: none !important;
+        }
+    </style>
+</head>
+
+<body class="mesh-bg antialiased flex flex-col min-h-screen">
+
+    <nav class="fixed w-full z-50 glass-nav transition-all duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center gap-3">
+                    <img
+                        src="images/dfwin_logo_dark.jpg"
+                        alt="DFWIN Logo"
+                        class="w-32 h-16 rounded-[50%] mix-blend-screen object-cover shadow-[0_0_15px_rgba(34,211,238,0.2)]"
+                    >
+                </div>
+
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide">Home</a>
+                    <a href="catalog.html" class="text-white border-b-2 border-cyan-400 pb-1 text-sm font-semibold tracking-wide">Product Catalog</a>
+                    <a href="about.html" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide">About Us</a>
+                    <a href="solution-portal.html?action=consult" class="bg-cyan-500 hover:bg-cyan-400 text-dark px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.3)] text-sm">Consult an Expert</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main class="flex-grow pt-32 pb-24 relative overflow-hidden" x-data="catalogApp()">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+
+            <div class="flex flex-col md:flex-row justify-between items-end mb-10 gap-6">
+                <div class="max-w-2xl">
+                    <h1 class="text-4xl md:text-5xl font-display font-bold mb-4 text-white">Our Complete Catalog</h1>
+                    <p class="text-gray-400">Browse our Technology, Hospitality and Marine product collections.</p>
+                </div>
+
+                <div class="flex flex-wrap gap-2 p-1.5 filter-shell rounded-xl">
+                    <template x-for="item in filters" :key="item.value">
+                        <button
+                            type="button"
+                            @click="filter = item.value"
+                            :class="filter === item.value
+                                ? 'bg-cyan-500 text-dark shadow-md'
+                                : 'text-gray-400 hover:text-white'"
+                            class="px-5 py-2 rounded-lg text-sm font-bold transition-all"
+                            x-text="item.label"
+                        ></button>
+                    </template>
+                </div>
+            </div>
+
+            <p x-show="loading" class="text-gray-300 mb-6" role="status">Loading products…</p>
+            <p x-show="error" x-text="error" class="text-red-300 mb-6" role="alert"></p>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" x-cloak>
+                <template x-for="product in filteredProducts" :key="product.product_id">
+                    <a class="catalog-card group" :href="product.href" :aria-label="'View specifications for '+product.name">
+                        <img
+                            :src="product.image"
+                            :alt="product.name"
+                            :title="product.name"
+                            loading="lazy"
+                            @error="$el.style.display='none'; $el.nextElementSibling.style.display='flex';"
+                        >
+                        <div class="missing-image" x-text="'Missing image: ' + product.filename"></div>
+                    </div>
+                </template>
+            </div>
+
+        </div>
+    </main>
+
+    <footer class="py-12 border-t border-white/10 text-center relative z-10 mt-auto">
+        <div class="max-w-7xl mx-auto px-4">
+            <p class="text-gray-400 mb-6 font-medium tracking-wide">
+                &copy; 2026 DFWIN International. We develop the most effective global supply chain.
+            </p>
+
+            <div class="flex flex-wrap justify-center gap-8">
+                <a href="catalog.html" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Products</a>
+                <a href="solution-portal.html?action=engineering" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Engineer New Product</a>
+                <a href="solution-portal.html?action=consult" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Request Consultation</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function catalogApp() {
+            return {
+                filter: 'all',
+                loading: true,
+                error: '',
+                products: [],
+                filters: [
+                    { value: 'all', label: 'All Products' },
+                    { value: 'technology', label: 'Technology' },
+                    { value: 'hospitality', label: 'Hospitality' },
+                    { value: 'marine', label: 'Marine' }
+                ],
+                async init() {
+                    try {
+                        const response = await fetch('products.json', {cache: 'no-store'});
+                        if (!response.ok) throw new Error('Product catalog could not be loaded.');
+                        const data = await response.json();
+                        if (!Array.isArray(data.products)) throw new Error('Invalid product data.');
+                        this.products = data.products.filter(p => p.status === 'Active').map(p => ({
+                            ...p,
+                            image: 'images/' + p.primary_image,
+                            filename: p.primary_image,
+                            category: p.category.toLowerCase(),
+                            href: 'product.html?product=' + encodeURIComponent(p.slug)
+                        }));
+                    } catch (e) {
+                        this.error = 'Product catalog is temporarily unavailable. Please try again later.';
+                        console.error(e);
+                    } finally {
+                        this.loading = false;
+                    }
+                },
+                get filteredProducts() {
+                    if (this.filter === 'all') return this.products;
+                    return this.products.filter(product => product.category === this.filter);
+                }
+            };
+        }
+    </script>
+
+</body>
+</html>
