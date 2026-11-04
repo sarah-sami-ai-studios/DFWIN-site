@@ -16,7 +16,16 @@
         "Access Control"
       ],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "RFID Wristbands",
+      "search_keywords": [
+        "wristbands",
+        "RFID",
+        "access",
+        "control",
+        "cruise",
+        "wristband"
+      ]
     },
     {
       "product_id": "TECH-0002",
@@ -29,7 +38,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Key Cards",
+      "search_keywords": []
     },
     {
       "product_id": "TECH-0003",
@@ -44,7 +55,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Key Fobs",
+      "search_keywords": []
     },
     {
       "product_id": "MARI-0004",
@@ -57,7 +70,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Mooring Ropes",
+      "search_keywords": [
+        "mooring",
+        "line",
+        "rope",
+        "dock",
+        "line",
+        "marine",
+        "line"
+      ]
     },
     {
       "product_id": "MARI-0005",
@@ -72,7 +95,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Life Jackets & Safety",
+      "search_keywords": []
     },
     {
       "product_id": "MARI-0006",
@@ -88,7 +113,17 @@
         "Mooring"
       ],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Mooring Ropes",
+      "search_keywords": [
+        "mooring",
+        "line",
+        "rope",
+        "dock",
+        "line",
+        "marine",
+        "line"
+      ]
     },
     {
       "product_id": "MARI-0007",
@@ -101,7 +136,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Mooring Ropes",
+      "search_keywords": [
+        "mooring",
+        "line",
+        "rope",
+        "dock",
+        "line",
+        "marine",
+        "line"
+      ]
     },
     {
       "product_id": "MARI-0008",
@@ -117,7 +162,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Marine Lighting",
+      "search_keywords": []
     },
     {
       "product_id": "MARI-0009",
@@ -130,7 +177,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Mooring Ropes",
+      "search_keywords": [
+        "mooring",
+        "line",
+        "rope",
+        "dock",
+        "line",
+        "marine",
+        "line"
+      ]
     },
     {
       "product_id": "MARI-0010",
@@ -145,7 +202,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Life Jackets & Safety",
+      "search_keywords": []
     },
     {
       "product_id": "HOSP-0011",
@@ -160,7 +219,19 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Carts",
+      "search_keywords": [
+        "cart",
+        "carts",
+        "cage",
+        "luggage",
+        "housekeeping",
+        "laundry",
+        "rack",
+        "truck",
+        "utility"
+      ]
     },
     {
       "product_id": "HOSP-0012",
@@ -190,7 +261,15 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Melamine Dinnerware",
+      "search_keywords": [
+        "dinnerware",
+        "dishware",
+        "plates",
+        "bowls",
+        "tableware"
+      ]
     },
     {
       "product_id": "HOSP-0013",
@@ -207,7 +286,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Trash Bins",
+      "search_keywords": []
     },
     {
       "product_id": "HOSP-0014",
@@ -225,7 +306,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Trash Bins",
+      "search_keywords": []
     },
     {
       "product_id": "HOSP-0015",
@@ -240,7 +323,16 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Drinkware",
+      "search_keywords": [
+        "cups",
+        "mugs",
+        "glasses",
+        "beverage",
+        "drinking",
+        "vessels"
+      ]
     },
     {
       "product_id": "HOSP-0016",
@@ -256,7 +348,19 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Carts",
+      "search_keywords": [
+        "cart",
+        "carts",
+        "cage",
+        "luggage",
+        "housekeeping",
+        "laundry",
+        "rack",
+        "truck",
+        "utility"
+      ]
     },
     {
       "product_id": "HOSP-0017",
@@ -272,7 +376,19 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Carts",
+      "search_keywords": [
+        "cart",
+        "carts",
+        "cage",
+        "luggage",
+        "housekeeping",
+        "laundry",
+        "rack",
+        "truck",
+        "utility"
+      ]
     },
     {
       "product_id": "HOSP-0018",
@@ -288,7 +404,16 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Trolleys",
+      "search_keywords": [
+        "trolleys",
+        "trolley",
+        "carts",
+        "service",
+        "wheeled",
+        "cart"
+      ]
     },
     {
       "product_id": "HOSP-0019",
@@ -301,7 +426,16 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Trolleys",
+      "search_keywords": [
+        "trolleys",
+        "trolley",
+        "carts",
+        "service",
+        "wheeled",
+        "cart"
+      ]
     },
     {
       "product_id": "HOSP-0020",
@@ -314,7 +448,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Towels & Linens",
+      "search_keywords": [
+        "towel",
+        "towels",
+        "bath",
+        "washcloth",
+        "linen",
+        "linens",
+        "textile"
+      ]
     },
     {
       "product_id": "HOSP-0021",
@@ -329,7 +473,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Towels & Linens",
+      "search_keywords": [
+        "towel",
+        "towels",
+        "bath",
+        "washcloth",
+        "linen",
+        "linens",
+        "textile"
+      ]
     },
     {
       "product_id": "HOSP-0022",
@@ -342,7 +496,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Towels & Linens",
+      "search_keywords": [
+        "towel",
+        "towels",
+        "bath",
+        "washcloth",
+        "linen",
+        "linens",
+        "textile"
+      ]
     },
     {
       "product_id": "HOSP-0023",
@@ -359,7 +523,19 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Carts",
+      "search_keywords": [
+        "cart",
+        "carts",
+        "cage",
+        "luggage",
+        "housekeeping",
+        "laundry",
+        "rack",
+        "truck",
+        "utility"
+      ]
     },
     {
       "product_id": "HOSP-0024",
@@ -375,7 +551,19 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Carts",
+      "search_keywords": [
+        "cart",
+        "carts",
+        "cage",
+        "luggage",
+        "housekeeping",
+        "laundry",
+        "rack",
+        "truck",
+        "utility"
+      ]
     },
     {
       "product_id": "HOSP-0025",
@@ -388,7 +576,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Stanchions & Barriers",
+      "search_keywords": []
     },
     {
       "product_id": "HOSP-0026",
@@ -406,7 +596,14 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Hotel Safes",
+      "search_keywords": [
+        "safe",
+        "security",
+        "locker",
+        "in-room"
+      ]
     },
     {
       "product_id": "HOSP-0027",
@@ -422,7 +619,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Lighting",
+      "search_keywords": []
     },
     {
       "product_id": "HOSP-0028",
@@ -438,7 +637,16 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Drinkware",
+      "search_keywords": [
+        "cups",
+        "mugs",
+        "glasses",
+        "beverage",
+        "drinking",
+        "vessels"
+      ]
     },
     {
       "product_id": "HOSP-0029",
@@ -467,7 +675,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Chinaware",
+      "search_keywords": [
+        "china",
+        "porcelain",
+        "ceramic",
+        "plates",
+        "bowls",
+        "tableware",
+        "dinnerware"
+      ]
     },
     {
       "product_id": "HOSP-0030",
@@ -483,7 +701,19 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Carts",
+      "search_keywords": [
+        "cart",
+        "carts",
+        "cage",
+        "luggage",
+        "housekeeping",
+        "laundry",
+        "rack",
+        "truck",
+        "utility"
+      ]
     },
     {
       "product_id": "HOSP-0031",
@@ -496,7 +726,19 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Carts",
+      "search_keywords": [
+        "cart",
+        "carts",
+        "cage",
+        "luggage",
+        "housekeeping",
+        "laundry",
+        "rack",
+        "truck",
+        "utility"
+      ]
     },
     {
       "product_id": "HOSP-0032",
@@ -512,7 +754,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Towels & Linens",
+      "search_keywords": [
+        "towel",
+        "towels",
+        "bath",
+        "washcloth",
+        "linen",
+        "linens",
+        "textile"
+      ]
     },
     {
       "product_id": "HOSP-0033",
@@ -529,7 +781,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Trash Bins",
+      "search_keywords": []
     },
     {
       "product_id": "HOSP-0034",
@@ -546,7 +800,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Chinaware",
+      "search_keywords": [
+        "china",
+        "porcelain",
+        "ceramic",
+        "plates",
+        "bowls",
+        "tableware",
+        "dinnerware"
+      ]
     },
     {
       "product_id": "HOSP-0035",
@@ -562,7 +826,19 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Carts",
+      "search_keywords": [
+        "cart",
+        "carts",
+        "cage",
+        "luggage",
+        "housekeeping",
+        "laundry",
+        "rack",
+        "truck",
+        "utility"
+      ]
     },
     {
       "product_id": "HOSP-0036",
@@ -575,7 +851,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Towels & Linens",
+      "search_keywords": [
+        "towel",
+        "towels",
+        "bath",
+        "washcloth",
+        "linen",
+        "linens",
+        "textile"
+      ]
     },
     {
       "product_id": "HOSP-0037",
@@ -604,7 +890,15 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Melamine Dinnerware",
+      "search_keywords": [
+        "dinnerware",
+        "dishware",
+        "plates",
+        "bowls",
+        "tableware"
+      ]
     },
     {
       "product_id": "HOSP-0038",
@@ -619,7 +913,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Towels & Linens",
+      "search_keywords": [
+        "towel",
+        "towels",
+        "bath",
+        "washcloth",
+        "linen",
+        "linens",
+        "textile"
+      ]
     },
     {
       "product_id": "HOSP-0039",
@@ -635,7 +939,19 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Carts",
+      "search_keywords": [
+        "cart",
+        "carts",
+        "cage",
+        "luggage",
+        "housekeeping",
+        "laundry",
+        "rack",
+        "truck",
+        "utility"
+      ]
     },
     {
       "product_id": "HOSP-0040",
@@ -648,7 +964,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Flatware",
+      "search_keywords": []
     },
     {
       "product_id": "HOSP-0041",
@@ -663,7 +981,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Stanchions & Barriers",
+      "search_keywords": []
     },
     {
       "product_id": "HOSP-0042",
@@ -678,7 +998,9 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Hair Dryers",
+      "search_keywords": []
     },
     {
       "product_id": "HOSP-0043",
@@ -693,7 +1015,19 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Carts",
+      "search_keywords": [
+        "cart",
+        "carts",
+        "cage",
+        "luggage",
+        "housekeeping",
+        "laundry",
+        "rack",
+        "truck",
+        "utility"
+      ]
     },
     {
       "product_id": "HOSP-0044",
@@ -706,7 +1040,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Towels & Linens",
+      "search_keywords": [
+        "towel",
+        "towels",
+        "bath",
+        "washcloth",
+        "linen",
+        "linens",
+        "textile"
+      ]
     },
     {
       "product_id": "HOSP-0045",
@@ -722,7 +1066,19 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Carts",
+      "search_keywords": [
+        "cart",
+        "carts",
+        "cage",
+        "luggage",
+        "housekeeping",
+        "laundry",
+        "rack",
+        "truck",
+        "utility"
+      ]
     },
     {
       "product_id": "HOSP-0046",
@@ -735,7 +1091,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Towels & Linens",
+      "search_keywords": [
+        "towel",
+        "towels",
+        "bath",
+        "washcloth",
+        "linen",
+        "linens",
+        "textile"
+      ]
     },
     {
       "product_id": "HOSP-0047",
@@ -764,7 +1130,15 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Melamine Dinnerware",
+      "search_keywords": [
+        "dinnerware",
+        "dishware",
+        "plates",
+        "bowls",
+        "tableware"
+      ]
     },
     {
       "product_id": "HOSP-0048",
@@ -784,7 +1158,15 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Melamine Dinnerware",
+      "search_keywords": [
+        "dinnerware",
+        "dishware",
+        "plates",
+        "bowls",
+        "tableware"
+      ]
     },
     {
       "product_id": "HOSP-0049",
@@ -802,7 +1184,17 @@
         "Hospitality"
       ],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Refrigeration",
+      "search_keywords": [
+        "mini",
+        "bar",
+        "minibar",
+        "mini",
+        "fridge",
+        "refrigerator",
+        "cooler"
+      ]
     },
     {
       "product_id": "HOSP-0050",
@@ -815,7 +1207,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Towels & Linens",
+      "search_keywords": [
+        "towel",
+        "towels",
+        "bath",
+        "washcloth",
+        "linen",
+        "linens",
+        "textile"
+      ]
     },
     {
       "product_id": "HOSP-0051",
@@ -828,7 +1230,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Towels & Linens",
+      "search_keywords": [
+        "towel",
+        "towels",
+        "bath",
+        "washcloth",
+        "linen",
+        "linens",
+        "textile"
+      ]
     },
     {
       "product_id": "HOSP-0052",
@@ -860,7 +1272,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Chinaware",
+      "search_keywords": [
+        "china",
+        "porcelain",
+        "ceramic",
+        "plates",
+        "bowls",
+        "tableware",
+        "dinnerware"
+      ]
     },
     {
       "product_id": "HOSP-0053",
@@ -875,7 +1297,16 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Drinkware",
+      "search_keywords": [
+        "cups",
+        "mugs",
+        "glasses",
+        "beverage",
+        "drinking",
+        "vessels"
+      ]
     },
     {
       "product_id": "HOSP-0054",
@@ -890,7 +1321,16 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Drinkware",
+      "search_keywords": [
+        "cups",
+        "mugs",
+        "glasses",
+        "beverage",
+        "drinking",
+        "vessels"
+      ]
     },
     {
       "product_id": "HOSP-0055",
@@ -905,7 +1345,16 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Trolleys",
+      "search_keywords": [
+        "trolleys",
+        "trolley",
+        "carts",
+        "service",
+        "wheeled",
+        "cart"
+      ]
     },
     {
       "product_id": "HOSP-0056",
@@ -918,7 +1367,19 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Carts",
+      "search_keywords": [
+        "cart",
+        "carts",
+        "cage",
+        "luggage",
+        "housekeeping",
+        "laundry",
+        "rack",
+        "truck",
+        "utility"
+      ]
     },
     {
       "product_id": "HOSP-0057",
@@ -931,7 +1392,17 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Towels & Linens",
+      "search_keywords": [
+        "towel",
+        "towels",
+        "bath",
+        "washcloth",
+        "linen",
+        "linens",
+        "textile"
+      ]
     },
     {
       "product_id": "HOSP-0058",
@@ -944,7 +1415,16 @@
       "status": "Active",
       "applications": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult"
+      "request_quote_url": "solution-portal.html?action=consult",
+      "subcategory": "Trolleys",
+      "search_keywords": [
+        "trolleys",
+        "trolley",
+        "carts",
+        "service",
+        "wheeled",
+        "cart"
+      ]
     }
   ],
   "specifications": [

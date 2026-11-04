@@ -169,7 +169,7 @@
                     <template x-for="item in filters" :key="item.value">
                         <button
                             type="button"
-                            @click="filter = item.value"
+@click="filter = item.value; subcategory = 'all'"
                             :class="filter === item.value
                                 ? 'bg-cyan-500 text-dark shadow-md'
                                 : 'text-gray-400 hover:text-white'"
@@ -180,6 +180,23 @@
                 </div>
             </div>
 
+            <div class="filter-shell rounded-xl px-4 py-4 mb-7 grid gap-4 md:grid-cols-[minmax(0,1fr)_minmax(220px,280px)] items-end">
+                <label class="block">
+                    <span class="block text-sm font-semibold text-gray-200 mb-2">Search products</span>
+                    <input type="search" x-model.debounce.150ms="searchQuery" placeholder="Search china, trolleys, RFID, rope…"
+                      class="w-full bg-slate-950 border border-slate-600 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400"
+                      aria-label="Search catalog by product name, description or keyword">
+                </label>
+                <label class="block">
+                    <span class="block text-sm font-semibold text-gray-200 mb-2">Subcategory</span>
+                    <select x-model="subcategory" class="w-full bg-slate-950 border border-slate-600 text-white rounded-lg px-4 py-3 focus:outline-none focus:ring-2 focus:ring-cyan-400" aria-label="Filter by subcategory">
+                        <option value="all">All subcategories</option>
+                        <template x-for="item in availableSubcategories" :key="item"><option :value="item" x-text="item"></option></template>
+                    </select>
+                </label>
+                <p class="text-sm text-gray-400 md:col-span-2" x-show="!loading" x-text="filteredProducts.length + ' matching product groups'" aria-live="polite"></p>
+            </div>
+            <p x-show="!loading && !error && !filteredProducts.length" class="text-gray-300 mb-6" role="status">No products match those filters. Try another keyword or select All subcategories.</p>
             <p x-show="loading" class="text-gray-300 mb-6" role="status">Loading products…</p>
             <p x-show="error" x-text="error" class="text-red-300 mb-6" role="alert"></p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" x-cloak>
@@ -192,7 +209,7 @@
                         </div>
                         <div class="catalog-label">
                             <strong x-text="product.name"></strong>
-                            <small x-text="product.category"></small>
+                            <small x-text="product.category + ' · ' + product.subcategory"></small>
                             <span>View specifications →</span>
                         </div>
                     </a>
@@ -209,7 +226,7 @@
             </p>
 
             <div class="flex flex-wrap justify-center gap-8">
-                <a href="catalog.html" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Products</a>
+                <a href="catalog_NEW.html" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Products</a>
                 <a href="solution-portal.html?action=engineering" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Engineer New Product</a>
                 <a href="solution-portal.html?action=consult" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Request Consultation</a>
             </div>
@@ -220,6 +237,8 @@
         function catalogApp() {
             return {
                 filter: 'all',
+                subcategory: 'all',
+                searchQuery: '',
                 loading: true,
                 error: '',
                 products: [],
@@ -240,6 +259,7 @@
                             image: 'images/' + p.primary_image,
                             filename: p.primary_image,
                             category: p.category.toLowerCase(),
+                            subcategory: p.subcategory || 'Other',
                             href: 'product.html?product=' + encodeURIComponent(p.slug)
                         }));
                     } catch (e) {
@@ -249,9 +269,20 @@
                         this.loading = false;
                     }
                 },
+                get availableSubcategories() {
+                    const relevant = this.products.filter(p => this.filter === 'all' || p.category === this.filter);
+                    return [...new Set(relevant.map(p => p.subcategory))].sort((a, b) => a.localeCompare(b));
+                },
                 get filteredProducts() {
-                    if (this.filter === 'all') return this.products;
-                    return this.products.filter(product => product.category === this.filter);
+                    const terms = this.searchQuery.trim().toLowerCase().split(/\s+/).filter(Boolean);
+                    return this.products.filter(p => {
+                        if (this.filter !== 'all' && p.category !== this.filter) return false;
+                        if (this.subcategory !== 'all' && p.subcategory !== this.subcategory) return false;
+                        const searchable = [p.name, p.category, p.subcategory, p.short_description,
+                            ...(p.search_keywords || []), ...(p.applications || [])].join(' ').toLowerCase();
+                        return terms.every(term => searchable.includes(term));
+                    }).sort((a,b) => a.category.localeCompare(b.category) ||
+                        a.subcategory.localeCompare(b.subcategory) || a.name.localeCompare(b.name));
                 }
             };
         }
