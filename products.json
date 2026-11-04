@@ -4,6 +4,7 @@
       "product_id": "TECH-0001",
       "name": "RFID Wrist Bands",
       "category": "Technology",
+      "subcategory": "RFID Wristbands",
       "slug": "technology-rfid-wrist-bands",
       "primary_image": "Technology__RFID Wrist Bands 1.png",
       "additional_images": [
@@ -15,9 +16,6 @@
         "Hospitality",
         "Access Control"
       ],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "RFID Wristbands",
       "search_keywords": [
         "wristbands",
         "RFID",
@@ -25,27 +23,30 @@
         "control",
         "cruise",
         "wristband"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "TECH-0002",
       "name": "Hotel Key Card",
       "category": "Technology",
+      "subcategory": "Key Cards",
       "slug": "technology-hotel-key-card",
       "primary_image": "Technology__Hotel Key Card.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Key Cards",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "TECH-0003",
       "name": "RFID Key Fob",
       "category": "Technology",
+      "subcategory": "Key Fobs",
       "slug": "technology-rfid-key-fob",
       "primary_image": "Technology__RFID Key Fob 1.png",
       "additional_images": [
@@ -54,24 +55,21 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Key Fobs",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "MARI-0004",
       "name": "Mooring Rope JIUMAX",
       "category": "Marine",
+      "subcategory": "Mooring Ropes",
       "slug": "marine-mooring-rope-jiumax",
       "primary_image": "Marine__Mooring Rope JIUMAX.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Mooring Ropes",
       "search_keywords": [
         "mooring",
         "line",
@@ -80,12 +78,15 @@
         "line",
         "marine",
         "line"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "MARI-0005",
       "name": "Life Jackets",
       "category": "Marine",
+      "subcategory": "Life Jackets & Safety",
       "slug": "marine-life-jackets",
       "primary_image": "Marine__Life Jackets 1.png",
       "additional_images": [
@@ -94,15 +95,15 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Life Jackets & Safety",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "MARI-0006",
       "name": "Mooring Rope Flex",
       "category": "Marine",
+      "subcategory": "Mooring Ropes",
       "slug": "marine-mooring-rope-flex",
       "primary_image": "Marine__Mooring Rope Flex.png",
       "additional_images": [],
@@ -112,9 +113,6 @@
         "Marine",
         "Mooring"
       ],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Mooring Ropes",
       "search_keywords": [
         "mooring",
         "line",
@@ -123,21 +121,21 @@
         "line",
         "marine",
         "line"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "MARI-0007",
       "name": "Mooring Rope - KARAT MAXI",
       "category": "Marine",
+      "subcategory": "Mooring Ropes",
       "slug": "marine-mooring-rope-karat-maxi",
       "primary_image": "Marine__Mooring Rope - KARAT MAXI.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Mooring Ropes",
       "search_keywords": [
         "mooring",
         "line",
@@ -146,12 +144,15 @@
         "line",
         "marine",
         "line"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "MARI-0008",
       "name": "LED Lights",
       "category": "Marine",
+      "subcategory": "Marine Lighting",
       "slug": "marine-led-lights",
       "primary_image": "Marine__LED Lights 1.png",
       "additional_images": [
@@ -161,24 +162,21 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Marine Lighting",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "MARI-0009",
       "name": "Mooring Rope Super Line",
       "category": "Marine",
+      "subcategory": "Mooring Ropes",
       "slug": "marine-mooring-rope-super-line",
       "primary_image": "Marine__Mooring Rope Super Line.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Mooring Ropes",
       "search_keywords": [
         "mooring",
         "line",
@@ -187,12 +185,15 @@
         "line",
         "marine",
         "line"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "MARI-0010",
       "name": "Life Jacket Light",
       "category": "Marine",
+      "subcategory": "Life Jackets & Safety",
       "slug": "marine-life-jacket-light",
       "primary_image": "Marine__Life Jacket Light 1.png",
       "additional_images": [
@@ -201,15 +202,15 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Life Jackets & Safety",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0011",
       "name": "Laundry Cage",
       "category": "Hospitality",
+      "subcategory": "Carts",
       "slug": "hospitality-laundry-cage",
       "primary_image": "Hospitality__Laundry Cage 1.png",
       "additional_images": [
@@ -218,9 +219,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Carts",
       "search_keywords": [
         "cart",
         "carts",
@@ -231,12 +229,15 @@
         "rack",
         "truck",
         "utility"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0012",
-      "name": "Melamine Green Edge Series 1",
+      "name": "HOSP-0012",
       "category": "Hospitality",
+      "subcategory": "Hospitality",
       "slug": "hospitality-melamine-green-edge-series-1",
       "primary_image": "Hospitality__Melamine Green Edge Series 1 - 1.png",
       "additional_images": [
@@ -260,21 +261,21 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Melamine Dinnerware",
       "search_keywords": [
         "dinnerware",
         "dishware",
         "plates",
         "bowls",
         "tableware"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0013",
       "name": "Trash Bins Series 1",
       "category": "Hospitality",
+      "subcategory": "Trash Bins",
       "slug": "hospitality-trash-bins-series-1",
       "primary_image": "Hospitality__Trash Bins Series 1 1.png",
       "additional_images": [
@@ -285,15 +286,15 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Trash Bins",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0014",
       "name": "Trash Bins Series 2",
       "category": "Hospitality",
+      "subcategory": "Trash Bins",
       "slug": "hospitality-trash-bins-series-2",
       "primary_image": "Hospitality__Trash Bins Series 2 - 1.png",
       "additional_images": [
@@ -305,15 +306,15 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Trash Bins",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0015",
       "name": "Color Changing Plastic Mugs",
       "category": "Hospitality",
+      "subcategory": "Drinkware",
       "slug": "hospitality-color-changing-plastic-mugs",
       "primary_image": "Hospitality__Color Changing Plastic Mugs 1.png",
       "additional_images": [
@@ -322,9 +323,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Drinkware",
       "search_keywords": [
         "cups",
         "mugs",
@@ -332,12 +330,15 @@
         "beverage",
         "drinking",
         "vessels"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0016",
       "name": "Compact Housekeeping Carts",
       "category": "Hospitality",
+      "subcategory": "Carts",
       "slug": "hospitality-compact-housekeeping-carts",
       "primary_image": "Hospitality__Compact Housekeeping Carts 1.png",
       "additional_images": [
@@ -347,9 +348,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Carts",
       "search_keywords": [
         "cart",
         "carts",
@@ -360,12 +358,15 @@
         "rack",
         "truck",
         "utility"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0017",
       "name": "Luggage Cages Series 2",
       "category": "Hospitality",
+      "subcategory": "Carts",
       "slug": "hospitality-luggage-cages-series-2",
       "primary_image": "Hospitality__Luggage Cages Series 2 - 1.png",
       "additional_images": [
@@ -375,9 +376,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Carts",
       "search_keywords": [
         "cart",
         "carts",
@@ -388,12 +386,15 @@
         "rack",
         "truck",
         "utility"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0018",
       "name": "Two Tier Trolley",
       "category": "Hospitality",
+      "subcategory": "Trolleys",
       "slug": "hospitality-two-tier-trolley",
       "primary_image": "Hospitality__Two Tier Trolley 1.png",
       "additional_images": [
@@ -403,9 +404,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Trolleys",
       "search_keywords": [
         "trolleys",
         "trolley",
@@ -413,21 +411,21 @@
         "service",
         "wheeled",
         "cart"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0019",
       "name": "Three Shelf Trolley",
       "category": "Hospitality",
+      "subcategory": "Trolleys",
       "slug": "hospitality-three-shelf-trolley",
       "primary_image": "Hospitality__Three Shelf Trolley.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Trolleys",
       "search_keywords": [
         "trolleys",
         "trolley",
@@ -435,21 +433,21 @@
         "service",
         "wheeled",
         "cart"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0020",
       "name": "Plush Bath Towels",
       "category": "Hospitality",
+      "subcategory": "Towels & Linens",
       "slug": "hospitality-plush-bath-towels",
       "primary_image": "Hospitality__Plush Bath Towels.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Towels & Linens",
       "search_keywords": [
         "towel",
         "towels",
@@ -458,12 +456,15 @@
         "linen",
         "linens",
         "textile"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0021",
       "name": "Plush Bath Towels Series 2",
       "category": "Hospitality",
+      "subcategory": "Towels & Linens",
       "slug": "hospitality-plush-bath-towels-series-2",
       "primary_image": "Hospitality__Plush Bath Towels Series 2 - 1.png",
       "additional_images": [
@@ -472,9 +473,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Towels & Linens",
       "search_keywords": [
         "towel",
         "towels",
@@ -483,21 +481,21 @@
         "linen",
         "linens",
         "textile"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0022",
       "name": "Plush Bath Towels Series",
       "category": "Hospitality",
+      "subcategory": "Towels & Linens",
       "slug": "hospitality-plush-bath-towels-series",
       "primary_image": "Hospitality__Plush Bath Towels Series 3.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Towels & Linens",
       "search_keywords": [
         "towel",
         "towels",
@@ -506,12 +504,15 @@
         "linen",
         "linens",
         "textile"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0023",
       "name": "Bellman Carts",
       "category": "Hospitality",
+      "subcategory": "Carts",
       "slug": "hospitality-bellman-carts",
       "primary_image": "Hospitality__Bellman Carts 1.png",
       "additional_images": [
@@ -522,9 +523,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Carts",
       "search_keywords": [
         "cart",
         "carts",
@@ -535,12 +533,15 @@
         "rack",
         "truck",
         "utility"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0024",
       "name": "Flat Truck",
       "category": "Hospitality",
+      "subcategory": "Carts",
       "slug": "hospitality-flat-truck",
       "primary_image": "Hospitality__Flat Truck 1.png",
       "additional_images": [
@@ -550,9 +551,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Carts",
       "search_keywords": [
         "cart",
         "carts",
@@ -563,27 +561,30 @@
         "rack",
         "truck",
         "utility"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0025",
       "name": "Barricade",
       "category": "Hospitality",
+      "subcategory": "Stanchions & Barriers",
       "slug": "hospitality-barricade",
       "primary_image": "Hospitality__Barricade.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Stanchions & Barriers",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0026",
       "name": "Hotel Safe",
       "category": "Hospitality",
+      "subcategory": "Hotel Safes",
       "slug": "hospitality-hotel-safe",
       "primary_image": "Hospitality__Hotel Safe 1.png",
       "additional_images": [
@@ -595,20 +596,20 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Hotel Safes",
       "search_keywords": [
         "safe",
         "security",
         "locker",
         "in-room"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0027",
       "name": "LED Lights",
       "category": "Hospitality",
+      "subcategory": "Lighting",
       "slug": "hospitality-led-lights",
       "primary_image": "Hospitality__LED Lights 1.png",
       "additional_images": [
@@ -618,15 +619,15 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Lighting",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0028",
       "name": "Light Up Glass",
       "category": "Hospitality",
+      "subcategory": "Drinkware",
       "slug": "hospitality-light-up-glass",
       "primary_image": "Hospitality__Light Up Glass 1.jpg",
       "additional_images": [
@@ -636,9 +637,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Drinkware",
       "search_keywords": [
         "cups",
         "mugs",
@@ -646,12 +644,15 @@
         "beverage",
         "drinking",
         "vessels"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0029",
       "name": "Chinaware - Yuanfeng 01",
       "category": "Hospitality",
+      "subcategory": "Chinaware",
       "slug": "hospitality-chinaware-yuanfeng-01",
       "primary_image": "Hospitality__Chinaware - Yuanfeng 01 - 1.png",
       "additional_images": [
@@ -674,9 +675,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Chinaware",
       "search_keywords": [
         "china",
         "porcelain",
@@ -685,12 +683,15 @@
         "bowls",
         "tableware",
         "dinnerware"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0030",
       "name": "Linen Cart",
       "category": "Hospitality",
+      "subcategory": "Carts",
       "slug": "hospitality-linen-cart",
       "primary_image": "Hospitality__Linen Cart 1.png",
       "additional_images": [
@@ -700,9 +701,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Carts",
       "search_keywords": [
         "cart",
         "carts",
@@ -713,21 +711,21 @@
         "rack",
         "truck",
         "utility"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0031",
       "name": "Speed Rack 7 Shelves",
       "category": "Hospitality",
+      "subcategory": "Carts",
       "slug": "hospitality-speed-rack-7-shelves",
       "primary_image": "Hospitality__Speed Rack 7 Shelves.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Carts",
       "search_keywords": [
         "cart",
         "carts",
@@ -738,12 +736,15 @@
         "rack",
         "truck",
         "utility"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0032",
       "name": "Plush Towels Series",
       "category": "Hospitality",
+      "subcategory": "Towels & Linens",
       "slug": "hospitality-plush-towels-series",
       "primary_image": "Hospitality__Plush Towels Series 3.png",
       "additional_images": [
@@ -753,9 +754,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Towels & Linens",
       "search_keywords": [
         "towel",
         "towels",
@@ -764,12 +762,15 @@
         "linen",
         "linens",
         "textile"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0033",
       "name": "Trash Bins Series 1A",
       "category": "Hospitality",
+      "subcategory": "Trash Bins",
       "slug": "hospitality-trash-bins-series-1a",
       "primary_image": "Hospitality__Trash Bins Series 1A - 1.png",
       "additional_images": [
@@ -780,15 +781,15 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Trash Bins",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0034",
       "name": "Chinaware - yuanhui 02",
       "category": "Hospitality",
+      "subcategory": "Chinaware",
       "slug": "hospitality-chinaware-yuanhui-02",
       "primary_image": "Hospitality__Chinaware - yuanhui 02 - 1.png",
       "additional_images": [
@@ -799,9 +800,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Chinaware",
       "search_keywords": [
         "china",
         "porcelain",
@@ -810,12 +808,15 @@
         "bowls",
         "tableware",
         "dinnerware"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0035",
       "name": "Linen Cart 2a",
       "category": "Hospitality",
+      "subcategory": "Carts",
       "slug": "hospitality-linen-cart-2a",
       "primary_image": "Hospitality__Linen Cart 2a - 1.png",
       "additional_images": [
@@ -825,9 +826,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Carts",
       "search_keywords": [
         "cart",
         "carts",
@@ -838,21 +836,21 @@
         "rack",
         "truck",
         "utility"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0036",
       "name": "Plush Towels",
       "category": "Hospitality",
+      "subcategory": "Towels & Linens",
       "slug": "hospitality-plush-towels",
       "primary_image": "Hospitality__Plush Towels 5.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Towels & Linens",
       "search_keywords": [
         "towel",
         "towels",
@@ -861,12 +859,15 @@
         "linen",
         "linens",
         "textile"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0037",
       "name": "Melamine White 1",
       "category": "Hospitality",
+      "subcategory": "Melamine Dinnerware",
       "slug": "hospitality-melamine-white-1",
       "primary_image": "Hospitality__Melamine White 1 - 1.png",
       "additional_images": [
@@ -889,21 +890,21 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Melamine Dinnerware",
       "search_keywords": [
         "dinnerware",
         "dishware",
         "plates",
         "bowls",
         "tableware"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0038",
       "name": "Pool Towel 1",
       "category": "Hospitality",
+      "subcategory": "Towels & Linens",
       "slug": "hospitality-pool-towel-1",
       "primary_image": "Hospitality__Pool Towel 1 1.png",
       "additional_images": [
@@ -912,9 +913,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Towels & Linens",
       "search_keywords": [
         "towel",
         "towels",
@@ -923,12 +921,15 @@
         "linen",
         "linens",
         "textile"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0039",
       "name": "Slim Housekeeping Cart 1",
       "category": "Hospitality",
+      "subcategory": "Carts",
       "slug": "hospitality-slim-housekeeping-cart-1",
       "primary_image": "Hospitality__Slim Housekeeping Cart 1 1.png",
       "additional_images": [
@@ -938,9 +939,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Carts",
       "search_keywords": [
         "cart",
         "carts",
@@ -951,27 +949,30 @@
         "rack",
         "truck",
         "utility"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0040",
       "name": "Flatware",
       "category": "Hospitality",
+      "subcategory": "Flatware",
       "slug": "hospitality-flatware",
       "primary_image": "Hospitality__Flatware 1.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Flatware",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0041",
       "name": "Fold up Stanchion",
       "category": "Hospitality",
+      "subcategory": "Stanchions & Barriers",
       "slug": "hospitality-fold-up-stanchion",
       "primary_image": "Hospitality__Fold up Stanchion 1.png",
       "additional_images": [
@@ -980,15 +981,15 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Stanchions & Barriers",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0042",
       "name": "Hair Dryer",
       "category": "Hospitality",
+      "subcategory": "Hair Dryers",
       "slug": "hospitality-hair-dryer",
       "primary_image": "Hospitality__Hair Dryer 1.png",
       "additional_images": [
@@ -997,15 +998,15 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
+      "search_keywords": [],
       "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Hair Dryers",
-      "search_keywords": []
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0043",
       "name": "Portable Utility Cart 2",
       "category": "Hospitality",
+      "subcategory": "Carts",
       "slug": "hospitality-portable-utility-cart-2",
       "primary_image": "Hospitality__Portable Utility Cart 2 1.png",
       "additional_images": [
@@ -1014,9 +1015,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Carts",
       "search_keywords": [
         "cart",
         "carts",
@@ -1027,21 +1025,21 @@
         "rack",
         "truck",
         "utility"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0044",
       "name": "Plush Hand Towels",
       "category": "Hospitality",
+      "subcategory": "Towels & Linens",
       "slug": "hospitality-plush-hand-towels",
       "primary_image": "Hospitality__Plush Hand Towels.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Towels & Linens",
       "search_keywords": [
         "towel",
         "towels",
@@ -1050,12 +1048,15 @@
         "linen",
         "linens",
         "textile"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0045",
       "name": "Three Tier Cart",
       "category": "Hospitality",
+      "subcategory": "Carts",
       "slug": "hospitality-three-tier-cart",
       "primary_image": "Hospitality__Three Tier Cart 1.png",
       "additional_images": [
@@ -1065,9 +1066,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Carts",
       "search_keywords": [
         "cart",
         "carts",
@@ -1078,21 +1076,21 @@
         "rack",
         "truck",
         "utility"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0046",
       "name": "Plush Wash Cloth",
       "category": "Hospitality",
+      "subcategory": "Towels & Linens",
       "slug": "hospitality-plush-wash-cloth",
       "primary_image": "Hospitality__Plush Wash Cloth.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Towels & Linens",
       "search_keywords": [
         "towel",
         "towels",
@@ -1101,12 +1099,15 @@
         "linen",
         "linens",
         "textile"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0047",
       "name": "Melamine White Series 2",
       "category": "Hospitality",
+      "subcategory": "Melamine Dinnerware",
       "slug": "hospitality-melamine-white-series-2",
       "primary_image": "Hospitality__Melamine White Series 2 - 1.png",
       "additional_images": [
@@ -1129,21 +1130,21 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Melamine Dinnerware",
       "search_keywords": [
         "dinnerware",
         "dishware",
         "plates",
         "bowls",
         "tableware"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0048",
       "name": "Melamine",
       "category": "Hospitality",
+      "subcategory": "Melamine Dinnerware",
       "slug": "hospitality-melamine",
       "primary_image": "Hospitality__Melamine 1.png",
       "additional_images": [
@@ -1157,21 +1158,21 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Melamine Dinnerware",
       "search_keywords": [
         "dinnerware",
         "dishware",
         "plates",
         "bowls",
         "tableware"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0049",
       "name": "Mini Bar Fridge",
       "category": "Hospitality",
+      "subcategory": "Refrigeration",
       "slug": "hospitality-mini-bar-fridge",
       "primary_image": "Hospitality__Mini Bar Fridge 1.png",
       "additional_images": [
@@ -1183,9 +1184,6 @@
         "Hotels",
         "Hospitality"
       ],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Refrigeration",
       "search_keywords": [
         "mini",
         "bar",
@@ -1194,21 +1192,21 @@
         "fridge",
         "refrigerator",
         "cooler"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0050",
       "name": "Plush Towels 6 piece set",
       "category": "Hospitality",
+      "subcategory": "Towels & Linens",
       "slug": "hospitality-plush-towels-6-piece-set",
       "primary_image": "Hospitality__Plush Towels 6 piece set.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Towels & Linens",
       "search_keywords": [
         "towel",
         "towels",
@@ -1217,21 +1215,21 @@
         "linen",
         "linens",
         "textile"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0051",
       "name": "Plush Towel Set 3 x",
       "category": "Hospitality",
+      "subcategory": "Towels & Linens",
       "slug": "hospitality-plush-towel-set-3-x",
       "primary_image": "Hospitality__Plush Towel Set 3 x 2.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Towels & Linens",
       "search_keywords": [
         "towel",
         "towels",
@@ -1240,12 +1238,15 @@
         "linen",
         "linens",
         "textile"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0052",
       "name": "Chinaware - yuanhua 02",
       "category": "Hospitality",
+      "subcategory": "Chinaware",
       "slug": "hospitality-chinaware-yuanhua-02",
       "primary_image": "Hospitality__Chinaware - yuanhua 02 - 1.png",
       "additional_images": [
@@ -1271,9 +1272,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Chinaware",
       "search_keywords": [
         "china",
         "porcelain",
@@ -1282,12 +1280,15 @@
         "bowls",
         "tableware",
         "dinnerware"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0053",
       "name": "Light Changing Glass",
       "category": "Hospitality",
+      "subcategory": "Drinkware",
       "slug": "hospitality-light-changing-glass",
       "primary_image": "Hospitality__Light Changing Glass 1.png",
       "additional_images": [
@@ -1296,9 +1297,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Drinkware",
       "search_keywords": [
         "cups",
         "mugs",
@@ -1306,12 +1304,15 @@
         "beverage",
         "drinking",
         "vessels"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0054",
       "name": "Light Changing Cups",
       "category": "Hospitality",
+      "subcategory": "Drinkware",
       "slug": "hospitality-light-changing-cups",
       "primary_image": "Hospitality__Light Changing Cups 1.png",
       "additional_images": [
@@ -1320,9 +1321,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Drinkware",
       "search_keywords": [
         "cups",
         "mugs",
@@ -1330,12 +1328,15 @@
         "beverage",
         "drinking",
         "vessels"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0055",
       "name": "Bus Trolley",
       "category": "Hospitality",
+      "subcategory": "Trolleys",
       "slug": "hospitality-bus-trolley",
       "primary_image": "Hospitality__Bus Trolley 1.png",
       "additional_images": [
@@ -1344,9 +1345,6 @@
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Trolleys",
       "search_keywords": [
         "trolleys",
         "trolley",
@@ -1354,21 +1352,21 @@
         "service",
         "wheeled",
         "cart"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0056",
       "name": "Speed Rack 3 Shelves",
       "category": "Hospitality",
+      "subcategory": "Carts",
       "slug": "hospitality-speed-rack-3-shelves",
       "primary_image": "Hospitality__Speed Rack 3 Shelves.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Carts",
       "search_keywords": [
         "cart",
         "carts",
@@ -1379,21 +1377,21 @@
         "rack",
         "truck",
         "utility"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0057",
       "name": "Plush Towels Double Stack x",
       "category": "Hospitality",
+      "subcategory": "Towels & Linens",
       "slug": "hospitality-plush-towels-double-stack-x",
       "primary_image": "Hospitality__Plush Towels Double Stack x 6.png",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Towels & Linens",
       "search_keywords": [
         "towel",
         "towels",
@@ -1402,21 +1400,21 @@
         "linen",
         "linens",
         "textile"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     },
     {
       "product_id": "HOSP-0058",
       "name": "Butler Trolley",
       "category": "Hospitality",
+      "subcategory": "Trolleys",
       "slug": "hospitality-butler-trolley",
       "primary_image": "Hospitality__Butler Trolley 1.jpg",
       "additional_images": [],
       "short_description": "",
       "status": "Active",
       "applications": [],
-      "pdf_spec_url": "",
-      "request_quote_url": "solution-portal.html?action=consult",
-      "subcategory": "Trolleys",
       "search_keywords": [
         "trolleys",
         "trolley",
@@ -1424,7 +1422,9 @@
         "service",
         "wheeled",
         "cart"
-      ]
+      ],
+      "pdf_spec_url": "",
+      "request_quote_url": "solution-portal.html?action=consult"
     }
   ],
   "specifications": [
