@@ -256,7 +256,7 @@
                 addToRFQ(p) {
                     const row=this.basket.find(x=>x.product_id===p.product_id);
                     if(row) row.quantity+=1;
-                    else this.basket.push({product_id:p.product_id,quantity:1});
+                    else this.basket.push({product_id:p.product_id,product_name:p.product_name || p.name || '',quantity:null});
                     this.saveBasket();
                 },
                 openRFQ() {
@@ -283,7 +283,7 @@
                 },
                 async init() {
                     try {const basket=JSON.parse(localStorage.getItem('dfwin_rfq_basket_v2')||'[]');
-                      if(Array.isArray(basket))this.basket=basket.filter(x=>x&&typeof x.product_id==='string'&&Number.isInteger(x.quantity)).slice(0,15);
+                      if(Array.isArray(basket))this.basket=basket.filter(x=>x&&typeof x.product_id==='string'&&(x.quantity==null || Number.isInteger(x.quantity))).slice(0,15);
                     } catch(_){}
                     const prior = new URLSearchParams(location.search);
                     const category = prior.get('category');
