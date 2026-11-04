@@ -214,7 +214,7 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" x-cloak>
                 <template x-for="product in filteredProducts" :key="product.product_id">
                   <div class="relative flex flex-col h-full">
-                    <a class="catalog-card group flex-grow" :href="detailHref(product)" :aria-label="'View specifications for '+product.name">
+                    <a class="catalog-card group flex-grow cursor-pointer" :href="detailHref(product)" @click.prevent="openDetail(product)" :aria-label="'View specifications for '+product.name">
                         <div class="catalog-image">
                             <img :src="product.image" :alt="product.name" :title="product.name" loading="lazy"
                                 @error="$el.style.display='none'; $el.nextElementSibling.style.display='flex';">
@@ -281,6 +281,15 @@
                     { value: 'hospitality', label: 'Hospitality' },
                     { value: 'marine', label: 'Marine' }
                 ],
+                openDetail(product) {
+                    // Explicit same-tab navigation. Keeps the catalog filters in the return URL.
+                    const url = this.detailHref(product);
+                    if (!product || !product.slug) {
+                        alert('This product detail link is not available. Please contact DFWIN.');
+                        return;
+                    }
+                    window.location.assign(url);
+                },
                 detailHref(product) {
                     const state = new URLSearchParams();
                     if (this.filter !== 'all') state.set('category', this.filter);
