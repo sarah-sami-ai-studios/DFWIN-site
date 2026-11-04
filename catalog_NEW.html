@@ -81,8 +81,36 @@
         }
 
         .catalog-card:hover img {
-            transform: scale(1.12);
+            transform: scale(1.07);
         }
+        .catalog-card {
+            flex-direction: column;
+            text-decoration: none;
+            transition: box-shadow .2s ease;
+        }
+        .catalog-card:hover, .catalog-card:focus-visible {
+            box-shadow: 0 0 0 2px #06b6d4, 0 12px 30px rgba(0,0,0,.18);
+        }
+        .catalog-image {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            min-height: 300px;
+            position: relative;
+        }
+        .catalog-label {
+            background: #04152d;
+            width: 100%;
+            text-align: center;
+            padding: 14px 12px;
+            margin-top: auto;
+        }
+        .catalog-label strong { display:block; color:#fff; font-size: 1rem; }
+        .catalog-label small { display:block; color:#22d3ee; text-transform:uppercase; font-size:.73rem; font-weight:700; letter-spacing:.1em; margin-top:5px; }
+        .catalog-label span { display:block; color:#b2d8e2; font-size:.77rem; margin-top:7px; opacity:0; transition:opacity .2s; }
+        .catalog-card:hover .catalog-label span, .catalog-card:focus-visible .catalog-label span {opacity:1;}
+        @media (hover:none) { .catalog-label span {opacity:1;} }
 
         .missing-image {
             display: none;
@@ -157,15 +185,17 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" x-cloak>
                 <template x-for="product in filteredProducts" :key="product.product_id">
                     <a class="catalog-card group" :href="product.href" :aria-label="'View specifications for '+product.name">
-                        <img
-                            :src="product.image"
-                            :alt="product.name"
-                            :title="product.name"
-                            loading="lazy"
-                            @error="$el.style.display='none'; $el.nextElementSibling.style.display='flex';"
-                        >
-                        <div class="missing-image" x-text="'Missing image: ' + product.filename"></div>
-                    </div>
+                        <div class="catalog-image">
+                            <img :src="product.image" :alt="product.name" :title="product.name" loading="lazy"
+                                @error="$el.style.display='none'; $el.nextElementSibling.style.display='flex';">
+                            <div class="missing-image" x-text="'Missing image: ' + product.filename"></div>
+                        </div>
+                        <div class="catalog-label">
+                            <strong x-text="product.name"></strong>
+                            <small x-text="product.category"></small>
+                            <span>View specifications →</span>
+                        </div>
+                    </a>
                 </template>
             </div>
 
