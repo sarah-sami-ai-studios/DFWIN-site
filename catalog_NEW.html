@@ -198,9 +198,10 @@
                 <p class="text-sm text-gray-400 md:col-span-2" x-show="!loading" x-text="filteredProducts.length + ' matching product groups'" aria-live="polite"></p>
             </div>
             <div class="flex flex-wrap gap-4 items-center mb-4 rounded-lg border border-cyan-500/30 bg-slate-900 p-4" aria-label="RFQ basket">
-              <strong class="text-white" x-text="'RFQ basket: '+basket.length+' distinct products'"></strong>
+              <strong class="text-white" x-text="'RFQ basket: '+basket.length+' selected products'"></strong>
               <button type="button" @click="openRFQ()" class="bg-cyan-500 text-slate-950 font-bold px-4 py-2 rounded-lg">Request quote for basket →</button>
               <button type="button" @click="basket=[];saveBasket()" class="text-gray-300 underline">Clear basket</button>
+              <span class="text-gray-300 text-sm" x-show="basket.length" x-text="basket.map(x=>x.product_name).join(' · ')"></span>
             </div>
             <p x-show="!loading && !error && !filteredProducts.length" class="text-gray-300 mb-6" role="status">No products match those filters. Try another keyword or select All subcategories.</p>
             <p x-show="loading" class="text-gray-300 mb-6" role="status">Loading products…</p>
@@ -255,15 +256,19 @@
                 saveBasket() {try{localStorage.setItem('dfwin_rfq_basket_v2',JSON.stringify(this.basket));}catch(_){}},
                 addToRFQ(p) {
                     const row=this.basket.find(x=>x.product_id===p.product_id);
-                    if(row) row.quantity+=1;
+                    if(row) { /* Product already selected; quantities are entered by the customer on the RFQ form. */ }
                     else this.basket.push({product_id:p.product_id,product_name:p.product_name || p.name || '',quantity:null});
                     this.saveBasket();
                 },
                 openRFQ() {
                     if(!this.basket.length){alert('Add at least one product to the RFQ basket.');return;}
-                    const endpoint=window.DFWIN_RFQ_URL;
+                    const endpoint=window.DFWIN_RFQ_URL || 'https://script.google.com/macros/s/AKfycbz71pe5aV7Vzpe0DDm9FjRZCXcqx8hPKhyS4A2QHAEoTdxfMxvXtepm7zTQPscPy-sN/exec';
                     if(!endpoint){alert('The RFQ submission form is not yet activated. Please use Request Consultation for now.');return;}
-                    window.open(endpoint+'?items='+encodeURIComponent(JSON.stringify(this.basket)),'_blank','noopener');
+                    // Only product IDs and display names leave the catalog; no customer data in URL.
+                     const items = this.basket.map(x=>({product_id:x.product_id,product_name:x.product_name}));
+                     const url=endpoint+'?items='+encodeURIComponent(JSON.stringify(items));
+                     const tab=window.open(url,'_blank','noopener');
+                     if(!tab) window.location.href=url;
                 },
                 filters: [
                     { value: 'all', label: 'All Products' },
