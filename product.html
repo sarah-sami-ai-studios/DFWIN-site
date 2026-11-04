@@ -13,7 +13,13 @@
 <script src="rfq-config.js"></script>
 </head>
 <body>
-  <main class="max-w-5xl mx-auto px-5 py-10">
+  <header class="border-b border-white/10 bg-slate-900/80">
+  <nav class="max-w-5xl mx-auto px-5 py-5 flex flex-wrap gap-5 text-cyan-200 text-sm font-semibold" aria-label="V2 Navigation">
+    <a href="index_V2.html">Home</a><a href="catalog_NEW.html">Product Catalog</a><a href="about_V2.html">About Us</a>
+    <a href="solution-portal_V2.html?action=consult">Consult an Expert</a><a href="catalog_NEW.html#rfq-basket">RFQ Basket</a>
+  </nav>
+</header>
+<main class="max-w-5xl mx-auto px-5 py-10">
     <a id="back-to-catalog" href="catalog_NEW.html" class="text-cyan-400 text-sm">&larr; Back to results</a>
     <section id="product" class="glass rounded-2xl p-6 md:p-8 mt-5"></section>
   </main>
@@ -29,7 +35,7 @@ if (returnTarget) {
     const parsed = new URL(returnTarget, location.href);
     const filename = parsed.pathname.split('/').pop();
     if (parsed.origin === location.origin &&
-        ['catalog_NEW.html', 'catalog.html'].includes(filename) &&
+        ['catalog_NEW.html'].includes(filename) &&
         parsed.pathname.replace(/[^/]+$/, '') === location.pathname.replace(/[^/]+$/, '')) {
       document.getElementById('back-to-catalog').href = parsed.pathname + parsed.search;
     }
@@ -83,17 +89,17 @@ async function init() {
       </div>
     </div>`;
 
-  const entry={product_id:product.product_id,quantity:1};
+  const entry={product_id:product.product_id,product_name:product.name,quantity:null};
   document.getElementById('add-to-rfq').addEventListener('click',()=>{
     let basket=[];try{basket=JSON.parse(localStorage.getItem('dfwin_rfq_basket_v2')||'[]');if(!Array.isArray(basket))basket=[];}catch(_){}
     const prior=basket.find(x=>x.product_id===entry.product_id);
-    if(prior)prior.quantity+=1;else basket.push(entry);
+    if(!prior)basket.push(entry);
     localStorage.setItem('dfwin_rfq_basket_v2',JSON.stringify(basket));
     alert(product.name+' added to your RFQ basket. Return to the catalog to submit.');
   });
   document.getElementById('request-single-rfq').addEventListener('click',()=>{
     if(window.DFWIN_RFQ_URL)window.open(window.DFWIN_RFQ_URL+'?items='+encodeURIComponent(JSON.stringify([entry])),'_blank','noopener');
-    else location.href=product.request_quote_url||'solution-portal.html?action=consult';
+    else location.href=product.request_quote_url||'solution-portal_V2.html?action=consult';
   });
   // Machine-readable Product schema for search/procurement agents.
   const schema = {

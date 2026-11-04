@@ -130,7 +130,12 @@
         [x-cloak] {
             display: none !important;
         }
-    </style>
+    
+/* Align RFQ controls at bottom of equally tall product cards */
+.catalog-card { height: 100%; display: flex; flex-direction: column; }
+.catalog-label { min-height: 116px; display:flex; flex-direction:column; align-items:center; justify-content:center; }
+.catalog-label strong { min-height: 2.8em; display:flex; align-items:center; justify-content:center; }
+</style>
 <script src="rfq-config.js"></script>
 </head>
 
@@ -148,10 +153,10 @@
                 </div>
 
                 <div class="hidden md:flex space-x-8 items-center">
-                    <a href="index.html" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide">Home</a>
-                    <a href="catalog.html" class="text-white border-b-2 border-cyan-400 pb-1 text-sm font-semibold tracking-wide">Product Catalog</a>
-                    <a href="about.html" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide">About Us</a>
-                    <a href="solution-portal.html?action=consult" class="bg-cyan-500 hover:bg-cyan-400 text-dark px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.3)] text-sm">Consult an Expert</a>
+                    <a href="index_V2.html" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide">Home</a>
+                    <a href="catalog_NEW.html" class="text-white border-b-2 border-cyan-400 pb-1 text-sm font-semibold tracking-wide">Product Catalog</a>
+                    <a href="about_V2.html" class="text-gray-300 hover:text-white transition-colors text-sm font-semibold tracking-wide">About Us</a>
+                    <a href="solution-portal_V2.html?action=consult" class="bg-cyan-500 hover:bg-cyan-400 text-dark px-6 py-2.5 rounded-full font-bold transition-all duration-300 shadow-[0_0_15px_rgba(6,182,212,0.3)] text-sm">Consult an Expert</a>
                 </div>
             </div>
         </div>
@@ -197,7 +202,7 @@
                 </label>
                 <p class="text-sm text-gray-400 md:col-span-2" x-show="!loading" x-text="filteredProducts.length + ' matching product groups'" aria-live="polite"></p>
             </div>
-            <div class="flex flex-wrap gap-4 items-center mb-4 rounded-lg border border-cyan-500/30 bg-slate-900 p-4" aria-label="RFQ basket">
+            <div class="flex flex-wrap gap-4 items-center mb-4 rounded-lg border border-cyan-500/30 bg-slate-900 p-4" aria-label="RFQ basket" id="rfq-basket">
               <strong class="text-white" x-text="'RFQ basket: '+basket.length+' selected products'"></strong>
               <button type="button" @click="openRFQ()" class="bg-cyan-500 text-slate-950 font-bold px-4 py-2 rounded-lg">Request quote for basket →</button>
               <button type="button" @click="basket=[];saveBasket()" class="text-gray-300 underline">Clear basket</button>
@@ -208,8 +213,8 @@
             <p x-show="error" x-text="error" class="text-red-300 mb-6" role="alert"></p>
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" x-cloak>
                 <template x-for="product in filteredProducts" :key="product.product_id">
-                  <div class="relative">
-                    <a class="catalog-card group" :href="detailHref(product)" :aria-label="'View specifications for '+product.name">
+                  <div class="relative flex flex-col h-full">
+                    <a class="catalog-card group flex-grow" :href="detailHref(product)" :aria-label="'View specifications for '+product.name">
                         <div class="catalog-image">
                             <img :src="product.image" :alt="product.name" :title="product.name" loading="lazy"
                                 @error="$el.style.display='none'; $el.nextElementSibling.style.display='flex';">
@@ -237,8 +242,8 @@
 
             <div class="flex flex-wrap justify-center gap-8">
                 <a href="catalog_NEW.html" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Products</a>
-                <a href="solution-portal.html?action=engineering" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Engineer New Product</a>
-                <a href="solution-portal.html?action=consult" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Request Consultation</a>
+                <a href="solution-portal_V2.html?action=engineering" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Engineer New Product</a>
+                <a href="solution-portal_V2.html?action=consult" class="text-sm font-semibold text-gray-500 hover:text-cyan-400 transition-colors uppercase tracking-widest">Request Consultation</a>
             </div>
         </div>
     </footer>
