@@ -1,0 +1,11 @@
+DFWIN V2 basket review fix — November 5, 2026
+
+Upload these FOUR files to the ROOT of the GitHub repo, replacing existing V2 files:
+  index_V2.html
+  catalog_NEW.html
+  product.html
+  rfq-basket.html (new file)
+
+DO NOT change index.html or the live catalog.html.
+
+The basket review page works independently of the external Google Apps Script RFQ form. If the form still does not display items, its separate Apps Script deployment must be updated; this package does not edit Apps Script.

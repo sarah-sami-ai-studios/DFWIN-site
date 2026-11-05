@@ -16,7 +16,7 @@
   <header class="border-b border-white/10 bg-slate-900/80">
   <nav class="max-w-5xl mx-auto px-5 py-5 flex flex-wrap gap-5 text-cyan-200 text-sm font-semibold" aria-label="V2 Navigation">
     <a href="index_V2.html">Home</a><a href="catalog_NEW.html">Product Catalog</a><a href="about_V2.html">About Us</a>
-    <a href="solution-portal_V2.html?action=consult">Consult an Expert</a><a href="catalog_NEW.html#rfq-basket">RFQ Basket</a>
+    <a href="solution-portal_V2.html?action=consult">Consult an Expert</a><a href="rfq-basket.html">RFQ Basket</a>
   </nav>
 </header>
 <main class="max-w-5xl mx-auto px-5 py-10">
@@ -90,7 +90,7 @@ async function init() {
         </div>
         <div class="flex flex-wrap gap-3 mt-5">
           <button id="add-to-rfq" type="button" class="bg-cyan-500 text-slate-950 font-bold rounded-full px-6 py-3">Add to RFQ basket</button>
-          <button id="request-single-rfq" type="button" class="border border-cyan-500 text-cyan-300 rounded-full px-6 py-3 font-bold">Request quote now</button>
+          <button id="request-single-rfq" type="button" class="border border-cyan-500 text-cyan-300 rounded-full px-6 py-3 font-bold">Review Basket / Request Quote</button>
           <a href="solution-portal_V2.html?action=consult" class="text-gray-200 underline p-3">Contact DFWin</a>
         </div>
       </div>
@@ -123,7 +123,7 @@ async function init() {
     const entry = selectedEntry();
     if (!entry) return;
     updateBasket(entry);
-    alert(`${productName} (quantity ${entry.quantity}) added to your RFQ basket.`);
+    if(confirm(`${productName} (quantity ${entry.quantity}) added to your RFQ basket.\n\nReview your basket now?`)) window.location.href = 'rfq-basket.html';
   });
   document.getElementById('request-single-rfq').addEventListener('click', () => {
     const entry = selectedEntry();
@@ -134,7 +134,7 @@ async function init() {
       quantity: Number.isSafeInteger(Number(x.quantity)) && Number(x.quantity) > 0 ? Number(x.quantity) : 1
     }));
     const rfqEndpoint = window.DFWIN_RFQ_URL || 'https://script.google.com/macros/s/AKfycbz71pe5aV7Vzpe0DDm9FjRZCXcqx8hPKhyS4A2QHAEoTdxfMxvXtepm7zTQPscPy-sN/exec';
-    window.location.href = rfqEndpoint + '?items=' + encodeURIComponent(JSON.stringify(items));
+    window.location.href = 'rfq-basket.html';
   });
   // Machine-readable Product schema for search/procurement agents.
   const schema = {

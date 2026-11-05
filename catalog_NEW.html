@@ -204,7 +204,7 @@
             </div>
             <div class="flex flex-wrap gap-4 items-center mb-4 rounded-lg border border-cyan-500/30 bg-slate-900 p-4" aria-label="RFQ basket" id="rfq-basket">
               <strong class="text-white" x-text="'RFQ basket: '+basket.length+' selected products'"></strong>
-              <button type="button" @click="openRFQ()" class="bg-cyan-500 text-slate-950 font-bold px-4 py-2 rounded-lg">Request quote for basket →</button>
+              <button type="button" @click="openRFQ()" class="bg-cyan-500 text-slate-950 font-bold px-4 py-2 rounded-lg">View Basket / Request Quote →</button>
               <button type="button" @click="basket=[];saveBasket()" class="text-gray-300 underline">Clear basket</button>
               <span class="text-gray-300 text-sm" x-show="basket.length" x-text="basket.map(x=>x.product_name).join(' · ')"></span>
             </div>
@@ -267,13 +267,8 @@
                 },
                 openRFQ() {
                     if(!this.basket.length){alert('Add at least one product to the RFQ basket.');return;}
-                    const endpoint=window.DFWIN_RFQ_URL || 'https://script.google.com/macros/s/AKfycbz71pe5aV7Vzpe0DDm9FjRZCXcqx8hPKhyS4A2QHAEoTdxfMxvXtepm7zTQPscPy-sN/exec';
-                    if(!endpoint){alert('The RFQ submission form is not yet activated. Please use Request Consultation for now.');return;}
-                    // Only product IDs and display names leave the catalog; no customer data in URL.
-                     const items = this.basket.map(x=>({product_id:x.product_id,product_name:x.product_name}));
-                     const url=endpoint+'?items='+encodeURIComponent(JSON.stringify(items));
-                     const tab=window.open(url,'_blank','noopener');
-                     if(!tab) window.location.href=url;
+                    this.saveBasket();
+                    window.location.href='rfq-basket.html';
                 },
                 filters: [
                     { value: 'all', label: 'All Products' },

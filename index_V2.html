@@ -26,7 +26,7 @@ nav{background:#041934f5;border-bottom:1px solid #547b9844;display:flex;align-it
 </style>
 </head>
 <body>
-<nav><a class="brand" href="index_V2.html" aria-label="DFWin homepage"><img src="images/dfwin_logo_dark.jpg" alt="DFWin logo"><span class="tagline">LOGISTICS &amp; NPI EXPERTS</span></a><div class="menu"><a href="catalog_NEW.html">Product Catalog ▾</a><a href="about_V2.html">About Us</a><a class="quote" href="solution-portal_V2.html?action=consult">Request a Quote / Consultation</a></div></nav>
+<nav><a class="brand" href="index_V2.html" aria-label="DFWin homepage"><img src="images/dfwin_logo_dark.jpg" alt="DFWin logo"><span class="tagline">LOGISTICS &amp; NPI EXPERTS</span></a><div class="menu"><a href="catalog_NEW.html">Product Catalog ▾</a><a href="about_V2.html">About Us</a><a href="rfq-basket.html" id="basket-nav">RFQ Basket <span id="basket-count"></span></a><a class="quote" href="solution-portal_V2.html?action=consult">Request a Quote / Consultation</a></div></nav>
 <main class="hero"><div class="content"><h1 class="headline">YOUR SUPPLY CHAIN PARTNER.</h1><p class="subtitle">Engineered. Sourced. Delivered.</p><div class="underline"></div><p class="intro">Explore our expanding portfolio of commercial products<br>and custom manufacturing solutions.</p>
 <form id="product-search" class="search" action="catalog_NEW.html" method="get"><input id="search" name="search" type="search" aria-label="Search products" placeholder="What products are you sourcing?" required><button type="submit">SEARCH →</button></form>
 <a href="catalog_NEW.html" class="explore">Explore Our Product Catalog &nbsp; →</a>
@@ -39,7 +39,7 @@ nav{background:#041934f5;border-bottom:1px solid #547b9844;display:flex;align-it
 <div id="updates" class="updates" hidden><strong>◎ &nbsp;DFWIN UPDATES</strong><span id="news-copy" class="news"></span><a id="news-link" href="#" hidden>Read More →</a></div>
 <p class="note">V2 trial homepage. Outdoor Furniture catalog category is planned; product listings will appear once added to the database.</p></div></main>
 <script>
-(function(){'use strict';
+(function(){'use strict';try{const b=JSON.parse(localStorage.getItem('dfwin_rfq_basket_v2')||'[]');if(Array.isArray(b)&&b.length)document.getElementById('basket-count').textContent='('+b.length+')';}catch(e){}
 const newsUrl='https://script.google.com/macros/s/AKfycbxg68bL-B8Ck3g70LZs5KJyiWX6MP7-vUSJB5lhLiT2tbmuG4vNxd7NZY78x3LXanCp/exec';
 const bar=document.getElementById('updates'),copy=document.getElementById('news-copy'),link=document.getElementById('news-link');
 fetch(newsUrl,{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('feed');return r.json()}).then(data=>{
