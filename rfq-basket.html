@@ -7,12 +7,12 @@
 <main><h1>Your RFQ Basket</h1><p class="muted">Review your selected products and quantities before proceeding to the request form. This is a nonbinding inquiry; no payment is taken.</p>
 <section id="items" aria-live="polite"></section><div id="empty" hidden>Your basket is empty. <a href="catalog_NEW.html">Browse the product catalog →</a></div>
 <div id="message" class="error" role="alert"></div><div class="actions"><a class="button secondary" href="catalog_NEW.html">← Add More Products</a><button class="button" id="proceed" type="button">Continue to Contact &amp; Quote Form →</button><button class="button secondary" id="clear" type="button">Clear Basket</button></div>
-<div class="help"><strong>What's next?</strong><p class="muted">The next screen collects your company and contact details. Your selected items should appear there, too. <strong>Confirm your products are visible there before submitting.</strong> If not, return here; we may need to update the separately deployed RFQ form.</p></div>
+<div class="help"><strong>What's next?</strong><p class="muted">The next screen collects your company and contact details. Your selected items and quantities are passed along automatically with your inquiry. You do not need to select them again.</p></div>
 <footer>DFWIN V2 Test • Sales inquiries are routed to braydai@dfwin-intl.com.</footer></main>
 <script>
 'use strict';
 const KEY='dfwin_rfq_basket_v2';
-const ENDPOINT='https://script.google.com/macros/s/AKfycbz71pe5aV7Vzpe0DDm9FjRZCXcqx8hPKhyS4A2QHAEoTdxfMxvXtepm7zTQPscPy-sN/exec';
+const ENDPOINT='https://script.google.com/macros/s/AKfycbybMy609ECWKqnZ8WNefvlvn0_lKup1_LR03--Id7MWa2xncL2GiyW-FBw5BBWrrs2X/exec';
 let basket=[];
 try{const raw=JSON.parse(localStorage.getItem(KEY)||'[]');if(Array.isArray(raw))basket=raw.filter(x=>x&&typeof x.product_id==='string').slice(0,15)}catch(e){}
 const root=document.getElementById('items'),empty=document.getElementById('empty'),msg=document.getElementById('message'),proceed=document.getElementById('proceed');
