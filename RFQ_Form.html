@@ -1,0 +1,79 @@
+<!doctype html>
+<html><head><base target="_top"><meta name="viewport" content="width=device-width,initial-scale=1">
+<style>
+*{box-sizing:border-box}body{font-family:Arial,system-ui,sans-serif;background:#081525;color:#eef6ff;margin:0;padding:22px}main{max-width:900px;margin:auto;background:#14253b;padding:28px;border-radius:15px}h1{margin-top:0}h2{font-size:1.15rem;margin-top:30px}.muted{color:#b8c9da;font-size:.93rem}.field{display:block;font-weight:600;margin:14px 0}input,select,textarea{width:100%;border:1px solid #9aaabd;border-radius:7px;background:#fff;color:#172032;font:inherit;padding:11px;margin-top:7px}.required::after{content:' *';color:#ffd084}.cols{display:grid;grid-template-columns:1fr 1fr;gap:0 18px}.product{background:#1c3049;border:1px solid #49627d;padding:18px;border-radius:10px;margin:14px 0}.prodhead{display:flex;gap:12px;justify-content:space-between;align-items:center}.prodname{font-weight:700;font-size:1.1rem}.small{color:#c6d6e3;font-size:.85rem}.btn{border:0;padding:12px 18px;border-radius:7px;background:#26cfe8;color:#092033;font-weight:bold;cursor:pointer;margin:9px 8px 0 0}.btn.secondary{background:#364d66;color:#f0f7ff}.btn:disabled{opacity:.45;cursor:not-allowed}.remove{color:#fff;border:1px solid #a5b7c8;background:transparent;padding:6px 11px;border-radius:5px;cursor:pointer}.error{color:#ffd2d2;font-size:.9rem}.hidden{display:none!important}.hp{position:absolute;left:-10000px;top:auto}.review{background:#0c192b;padding:18px;border-radius:9px;white-space:pre-wrap;line-height:1.6}#status{margin-top:16px}input:invalid:not(:placeholder-shown){border-color:#b56a6a}@media(max-width:620px){main{padding:18px}.cols{grid-template-columns:1fr}}
+</style></head><body><main>
+<h1>DFWIN — Request a Quote / Purchase Inquiry</h1>
+<p class="muted">Products and quantities are selected in the catalog basket. Complete your contact information here. Consultations and callbacks do not require products. This is a nonbinding inquiry.</p>
+<form id="rfq" novalidate>
+<h2>1. Your contact information</h2>
+<div class="cols"><label class="field required">Company<input name="company" required maxlength="160" autocomplete="organization" placeholder="Company name"></label>
+<label class="field required">Your name<input name="contact" required maxlength="100" autocomplete="name" placeholder="Full name"></label>
+<label class="field required">Business email<input name="email" type="email" required maxlength="180" autocomplete="email" placeholder="name@company.com"></label>
+<label class="field">Phone number<input name="phone" type="tel" maxlength="40" autocomplete="tel" placeholder="Optional except callbacks"></label></div>
+<div class="cols"><label class="field required">Request type<select name="request_type" required><option value="Quote">Request a quote</option><option value="Purchase inquiry">Purchase inquiry</option><option value="Callback">Request a callback</option></select></label>
+<label class="field">Delivery destination<input name="location" maxlength="200" placeholder="City, country or port"></label></div>
+<label class="field">Requested delivery date<input name="needed_by" type="date"></label>
+<!-- Basket review happens on the website; selected products travel invisibly with the request. -->
+<div id="items" class="hidden" aria-hidden="true"></div>
+<label class="field">Additional specifications / requirements<textarea name="notes" rows="4" maxlength="2500" placeholder="Packaging, customization, delivery instructions, or questions"></textarea></label>
+<label class="hp">Website<input name="website" tabindex="-1" autocomplete="off"></label>
+<p id="errors" class="error" role="alert"></p><button id="reviewBtn" class="btn" type="submit">Review request →</button>
+</form>
+<section id="review" class="hidden"><h2>Review your request</h2><p class="muted">Check your quantities and contact details before submitting to DFWIN sales.</p><div class="review" id="summary"></div>
+<p class="muted">By submitting, you authorize DFWIN to contact you about this inquiry. No payment or purchase commitment is processed.</p>
+<button type="button" class="btn secondary" id="edit">← Edit request</button><button type="button" class="btn" id="send">Submit inquiry to DFWIN</button></section>
+<p id="status" role="status" aria-live="polite"></p>
+</main>
+<script>
+// Apps Script must inject `prefill` using its existing server template.
+// Accept both JSON-string and object prefill. The item list remains hidden from this contact form.
+const templatePrefill = <?= prefill ?>;
+let prefill = {};
+try { prefill = typeof templatePrefill === 'string' ? JSON.parse(templatePrefill) : (templatePrefill || {}); }
+catch(e) { prefill = {}; }
+function parseItems(value) {
+  if (Array.isArray(value)) return value;
+  if (typeof value === 'string') { try { const x = JSON.parse(value); return Array.isArray(x) ? x : []; } catch(e) {} }
+  return [];
+}
+let incoming = parseItems(prefill.items || prefill.products || prefill.basket);
+if (!incoming.length && window.location.search) {
+  const qs = new URLSearchParams(window.location.search);
+  incoming = parseItems(qs.get('items') || qs.get('products') || qs.get('basket'));
+}
+const root=document.getElementById('items'),form=document.getElementById('rfq'),review=document.getElementById('review'),errors=document.getElementById('errors');let rows=[],pending=null;
+function addRow(item={}) {
+ if(rows.length>=15)return;
+ const productId=String(item.product_id||item.productId||item.id||'').trim().slice(0,60);
+ if(!productId || rows.some(r=>r.productId===productId))return;
+ const name=String(item.product_name||item.name||item.description||productId).slice(0,180);
+ const incomingQty=Number(item.quantity||item.qty||1);
+ const quantity=Number.isSafeInteger(incomingQty)&&incomingQty>=1&&incomingQty<=10000000?incomingQty:1;
+ rows.push({productId,name,quantity,requirements:String(item.requirements||'').slice(0,500)});
+}
+incoming.slice(0,15).forEach(addRow);
+function validate(){
+ errors.textContent='';if(!form.reportValidity())return false;
+ const email=form.elements.email.value.trim();if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){errors.textContent='Enter a valid email address.';form.elements.email.focus();return false;}
+ if(form.elements.request_type.value==='Callback'&&!form.elements.phone.value.trim()){errors.textContent='Please enter a phone number for a callback.';form.elements.phone.focus();return false;}
+ // No product section is required for consultations and callbacks.
+ // For quote inquiries, transport a basket if supplied; do not disable review just
+ // because Apps Script failed to pass query parameters. The receiver will validate.
+ const ids=new Set();for(const r of rows){
+  if(ids.has(r.productId)){errors.textContent='Duplicate product in basket.';return false;}
+  ids.add(r.productId);
+  if(!Number.isSafeInteger(r.quantity)||r.quantity<1||r.quantity>10000000){errors.textContent='Invalid quantity transferred from basket.';return false;}
+ }return true;
+}
+function payload(){const data=Object.fromEntries(new FormData(form).entries());data.items=rows.map(r=>({product_id:r.productId,quantity:r.quantity,requirements:r.requirements}));return data;}
+form.onsubmit=e=>{e.preventDefault();if(!validate())return;pending=payload();const d=pending;
+ document.getElementById('summary').textContent='Company: '+d.company+'\nContact: '+d.contact+'\nEmail: '+d.email+'\nPhone: '+(d.phone||'Not provided')+'\nRequest type: '+d.request_type+'\nDestination: '+(d.location||'Not specified')+'\nNeeded by: '+(d.needed_by||'Not specified')+'\n\nPRODUCTS\n'+(d.items.length?d.items.map(i=>i.product_id+'  —  Quantity: '+i.quantity+(i.requirements?'\n  Requirements: '+i.requirements:'')).join('\n'):'No products selected (consultation / callback or general inquiry)')+'\n\nAdditional notes: '+(d.notes||'None');
+ form.classList.add('hidden');review.classList.remove('hidden');window.scrollTo(0,0);
+};
+document.getElementById('edit').onclick=()=>{review.classList.add('hidden');form.classList.remove('hidden');pending=null;};
+document.getElementById('send').onclick=()=>{if(!pending)return;const btn=document.getElementById('send');btn.disabled=true;document.getElementById('status').textContent='Submitting your inquiry…';
+ google.script.run.withSuccessHandler(r=>{document.getElementById('status').textContent='Request received. Your reference number is '+r.rfq+(r.notified?' . DFWIN sales has been notified.':' . Sales notification requires attention; your inquiry has been recorded.');review.classList.add('hidden');})
+ .withFailureHandler(err=>{document.getElementById('status').textContent='Unable to submit: '+err.message;btn.disabled=false;}).submitRFQ(pending);
+};
+</script></body></html>
