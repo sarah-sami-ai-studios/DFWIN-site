@@ -82,7 +82,13 @@ async function init() {
               <div class="font-semibold">${esc(s.value)}${s.unit ? ' ' + esc(s.unit) : ''}</div>
             </div>`).join('') : '<p class="text-gray-400">Detailed specifications are being prepared. Please request product information below.</p>'}
         </div>
-        <div class="flex flex-wrap gap-3 mt-8">
+        <div class="mt-8 max-w-xs">
+          <label for="rfq-quantity" class="block font-semibold text-gray-100 mb-2">Quantity Required <span class="text-cyan-300">*</span></label>
+          <input id="rfq-quantity" type="number" inputmode="numeric" min="1" step="1" value="1" required
+            class="w-full rounded-lg bg-white text-slate-900 border border-slate-300 px-4 py-3 text-lg" aria-describedby="quantity-help">
+          <p id="quantity-help" class="text-sm text-gray-400 mt-2">Enter the number of units you want quoted. You can adjust it on the RFQ form.</p>
+        </div>
+        <div class="flex flex-wrap gap-3 mt-5">
           <button id="add-to-rfq" type="button" class="bg-cyan-500 text-slate-950 font-bold rounded-full px-6 py-3">Add to RFQ basket</button>
           <button id="request-single-rfq" type="button" class="border border-cyan-500 text-cyan-300 rounded-full px-6 py-3 font-bold">Request quote now</button>
           <a href="solution-portal_V2.html?action=consult" class="text-gray-200 underline p-3">Contact DFWin</a>
@@ -90,17 +96,45 @@ async function init() {
       </div>
     </div>`;
 
-  const entry={product_id:product.product_id,product_name:productName,quantity:null};
-  document.getElementById('add-to-rfq').addEventListener('click',()=>{
-    let basket=[];try{basket=JSON.parse(localStorage.getItem('dfwin_rfq_basket_v2')||'[]');if(!Array.isArray(basket))basket=[];}catch(_){}
-    const prior=basket.find(x=>x.product_id===entry.product_id);
-    if(!prior)basket.push(entry);
-    localStorage.setItem('dfwin_rfq_basket_v2',JSON.stringify(basket));
-    alert(productName+' added to your RFQ basket. Return to the catalog to submit.');
+  function selectedEntry() {
+    const field = document.getElementById('rfq-quantity');
+    const quantity = Number(field.value);
+    if (!Number.isSafeInteger(quantity) || quantity < 1) {
+      field.setCustomValidity('Enter a whole number of at least 1.');
+      field.reportValidity();
+      field.setCustomValidity('');
+      return null;
+    }
+    return {product_id:product.product_id, product_name:productName, quantity};
+  }
+  function readBasket() {
+    try {
+      const basket = JSON.parse(localStorage.getItem('dfwin_rfq_basket_v2') || '[]');
+      return Array.isArray(basket) ? basket : [];
+    } catch (_) { return []; }
+  }
+  function updateBasket(entry) {
+    const basket = readBasket().filter(x => x && x.product_id && x.product_id !== entry.product_id);
+    basket.push(entry);
+    localStorage.setItem('dfwin_rfq_basket_v2', JSON.stringify(basket));
+    return basket;
+  }
+  document.getElementById('add-to-rfq').addEventListener('click', () => {
+    const entry = selectedEntry();
+    if (!entry) return;
+    updateBasket(entry);
+    alert(`${productName} (quantity ${entry.quantity}) added to your RFQ basket.`);
   });
-  document.getElementById('request-single-rfq').addEventListener('click',()=>{
-    if(window.DFWIN_RFQ_URL)window.open(window.DFWIN_RFQ_URL+'?items='+encodeURIComponent(JSON.stringify([entry])),'_blank','noopener');
-    else location.href='solution-portal_V2.html?action=consult';
+  document.getElementById('request-single-rfq').addEventListener('click', () => {
+    const entry = selectedEntry();
+    if (!entry) return;
+    const items = updateBasket(entry).map(x => ({
+      product_id: String(x.product_id),
+      product_name: String(x.product_name || x.name || x.product_id),
+      quantity: Number.isSafeInteger(Number(x.quantity)) && Number(x.quantity) > 0 ? Number(x.quantity) : 1
+    }));
+    const rfqEndpoint = window.DFWIN_RFQ_URL || 'https://script.google.com/macros/s/AKfycbz71pe5aV7Vzpe0DDm9FjRZCXcqx8hPKhyS4A2QHAEoTdxfMxvXtepm7zTQPscPy-sN/exec';
+    window.location.href = rfqEndpoint + '?items=' + encodeURIComponent(JSON.stringify(items));
   });
   // Machine-readable Product schema for search/procurement agents.
   const schema = {
